@@ -4,6 +4,7 @@ $(document).ready(function () {
       loop: true,
       margin: 10,
       responsiveClass: true,
-      nav: true
+      nav: true,
+      dots: false
     });
 });
