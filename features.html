@@ -1,206 +1,541 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Features | wiw learn </title>
-    <link rel="stylesheet" href="assets/css/style-starter.css">
 
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>WIW LEARN</title>
+
+  <link href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap" rel="stylesheet">
+  <link href="//fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,800,900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/style-starter.css">
+  <style>
+    /* Styles for dialog window */
+    #small-dialog {
+      background: white;
+      padding: 5px;
+      max-width: 750px;
+      margin: 40px auto;
+      position: relative;
+    }
+
+    div#small-dialog iframe {
+      width: 100%;
+      height: 400px;
+      display: block;
+    }
+
+
+    /**
+   * Fade-zoom animation for first dialog
+   */
+
+    /* start state */
+    .my-mfp-zoom-in .zoom-anim-dialog {
+      opacity: 0;
+
+      -webkit-transition: all 0.2s ease-in-out;
+      -moz-transition: all 0.2s ease-in-out;
+      -o-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out;
+
+
+
+      -webkit-transform: scale(0.8);
+      -moz-transform: scale(0.8);
+      -ms-transform: scale(0.8);
+      -o-transform: scale(0.8);
+      transform: scale(0.8);
+    }
+
+    /* animate in */
+    .my-mfp-zoom-in.mfp-ready .zoom-anim-dialog {
+      opacity: 1;
+
+      -webkit-transform: scale(1);
+      -moz-transform: scale(1);
+      -ms-transform: scale(1);
+      -o-transform: scale(1);
+      transform: scale(1);
+    }
+
+    /* animate out */
+    .my-mfp-zoom-in.mfp-removing .zoom-anim-dialog {
+      -webkit-transform: scale(0.8);
+      -moz-transform: scale(0.8);
+      -ms-transform: scale(0.8);
+      -o-transform: scale(0.8);
+      transform: scale(0.8);
+
+      opacity: 0;
+    }
+
+    /* Dark overlay, start state */
+    .my-mfp-zoom-in.mfp-bg {
+      opacity: 0;
+      -webkit-transition: opacity 0.3s ease-out;
+      -moz-transition: opacity 0.3s ease-out;
+      -o-transition: opacity 0.3s ease-out;
+      transition: opacity 0.3s ease-out;
+    }
+
+    /* animate in */
+    .my-mfp-zoom-in.mfp-ready.mfp-bg {
+      opacity: 0.8;
+    }
+
+    /* animate out */
+    .my-mfp-zoom-in.mfp-removing.mfp-bg {
+      opacity: 0;
+    }
+
+
+
+    /**
+   * Fade-move animation for second dialog
+   */
+
+    /* at start */
+    .my-mfp-slide-bottom .zoom-anim-dialog {
+      opacity: 0;
+      -webkit-transition: all 0.2s ease-out;
+      -moz-transition: all 0.2s ease-out;
+      -o-transition: all 0.2s ease-out;
+      transition: all 0.2s ease-out;
+
+      -webkit-transform: translateY(-20px) perspective(600px) rotateX(10deg);
+      -moz-transform: translateY(-20px) perspective(600px) rotateX(10deg);
+      -ms-transform: translateY(-20px) perspective(600px) rotateX(10deg);
+      -o-transform: translateY(-20px) perspective(600px) rotateX(10deg);
+      transform: translateY(-20px) perspective(600px) rotateX(10deg);
+
+    }
+
+    /* animate in */
+    .my-mfp-slide-bottom.mfp-ready .zoom-anim-dialog {
+      opacity: 1;
+      -webkit-transform: translateY(0) perspective(600px) rotateX(0);
+      -moz-transform: translateY(0) perspective(600px) rotateX(0);
+      -ms-transform: translateY(0) perspective(600px) rotateX(0);
+      -o-transform: translateY(0) perspective(600px) rotateX(0);
+      transform: translateY(0) perspective(600px) rotateX(0);
+    }
+
+    /* animate out */
+    .my-mfp-slide-bottom.mfp-removing .zoom-anim-dialog {
+      opacity: 0;
+
+      -webkit-transform: translateY(-10px) perspective(600px) rotateX(10deg);
+      -moz-transform: translateY(-10px) perspective(600px) rotateX(10deg);
+      -ms-transform: translateY(-10px) perspective(600px) rotateX(10deg);
+      -o-transform: translateY(-10px) perspective(600px) rotateX(10deg);
+      transform: translateY(-10px) perspective(600px) rotateX(10deg);
+    }
+
+    /* Dark overlay, start state */
+    .my-mfp-slide-bottom.mfp-bg {
+      opacity: 0;
+
+      -webkit-transition: opacity 0.3s ease-out;
+      -moz-transition: opacity 0.3s ease-out;
+      -o-transition: opacity 0.3s ease-out;
+      transition: opacity 0.3s ease-out;
+    }
+
+    /* animate in */
+    .my-mfp-slide-bottom.mfp-ready.mfp-bg {
+      opacity: 0.8;
+    }
+
+    /* animate out */
+    .my-mfp-slide-bottom.mfp-removing.mfp-bg {
+      opacity: 0;
+    }
+  </style>
 </head>
-<body>
 
-    <!-- Header -->
-    <div class="wiw-bootstrap-header fixed-top">
-      <nav class="navbar navbar-expand-lg navbar-light p-2">
-        <div class="container">
-          <!-- <a class="navbar-brand" href="index.html"><span class="fa fa-diamond"></span>WIW Learn</a> -->
-           <!-- if logo is image enable this    -->
-         <a class="navbar-brand" href="/">
-            <img src="\assets\images\wiw logo-2.png" alt="Your logo" title="wiw logo" style="max-height:45px" /> 
-        </a> 
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-    
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="/about.html">About</a>
-              </li>
-              <li class="nav-item ">
-                <a class="nav-link" href="/features.html">Features</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/features.html">Courses</a>
-              </li>
-              
-              <li class="nav-item">
-                <a class="nav-link" href="/contact.html">Contact</a>
-              </li>
-            </ul>
-            <div class="form-inline">
-              <!-- <a href="#login.html" class="login mr-4">Log in</a> -->
-                <a href="#" class="btn btn-outline-primary">Subscribe</a>
+<body>
+  <div class="wiw-bootstrap-header fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light p-2">
+      <div class="container">
+        <!-- <a class="navbar-brand" href="index.html"><span class="fa fa-diamond"></span>WIW Learn</a> -->
+        <!-- if logo is image enable this    -->
+        <a class="navbar-brand" href="/">
+          <img src="/assets/images/wiwlogo.png" alt="Your logo" title="wiw logo" style="max-height:45px" />
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/about.html">About</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="/features.html">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/Packages.html">Packages</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/contact.html">Contact</a>
+            </li>
+          </ul>
+          <div class="form-inline">
+            <!-- <a href="#login.html" class="login mr-4">Log in</a> -->
+            <a href="#" class="btn btn-outline-primary">Subscribe</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- content-with-photo17 -->
+  <section class="wiw-index-block7 py-5">
+    <div class="container py-md-3">
+      <div class="row cwp17-two align-items-center">
+        <div class="col-md-6 cwp17-text">
+          <h2>Great features of app
+            that everyone Love</h2>
+          <p>Lorem Ipsum is not simply random text. It has roots in a piece of classical
+            Latin literature from 45 BC, making it over 2000 years old. </p>
+          <a href="#">Learn more &raquo;</a>
+        </div>
+        <div class="col-md-6 cwp17-image">
+          <img src="assets/images/mobile-app.png" class="img-fluid" alt="" />
+        </div>
+      </div>
+
+    </div>
+    <div class="container py-md-3">
+      <div class="row cwp17-two align-items-center">
+        <div class="col-md-6 cwp17-image">
+          <img src="assets/images/hero.png" class="img-fluid" alt="" />
+        </div>
+        <div class="col-md-6 cwp17-text">
+
+          <p>Lorem Ipsum is not simply random text. It has roots in a piece of classical
+            Latin literature from 45 BC, making it over 2000 years old. </p>
+          <a href="#">Learn more &raquo;</a>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+  <!-- content-with-photo17 -->
+  <section class="wiw-about5">
+    <div class="py-5">
+      <div class="container py-lg-3">
+        <div class="heading text-center mx-auto">
+          <h3 class="head">Virtual Tour Of WIW Learn App</h3>
+          <p class="my-3 head">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem quibusdam sed assumenda
+            laboriosam ipsa ipsam esse, sit facilis magni, est amet qui iure officia molestiae doloremque laborum.
+            Harum, necessitatibus minus.</p>
+        </div>
+        <div class="history-info mt-5">
+          <div class="position-relative">
+            <img src="assets/images/video.jpg" class="img-fluid" alt="video-popup" />
+            <!-- <a href="#popup-video" class="play-view text-center position-absolute">
+          <span class="video-play-icon">
+            <span class="fa fa-play"></span>
+          </span>
+        </a> -->
+
+            <a href="#small-dialog" class="popup-with-zoom-anim play-view text-center position-absolute">
+              <span class="video-play-icon">
+                <span class="fa fa-play"></span>
+              </span>
+            </a>
+
+            <!-- dialog itself, mfp-hide class is required to make dialog hidden -->
+            <div id="small-dialog" class="zoom-anim-dialog mfp-hide">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/6ryaq2ik5xA" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            </div>
+
+            <!-- popup -->
+            <div id="popup-video" class="pop-overlay">
+              <div class="popup">
+                <div class="align-popup-video">
+                  <iframe src="https://www.youtube.com/embed/JemJbNJ4ZtU" allowfullscreen></iframe>
+                  <a class="close" href="#portfolio">&times;</a>
+                </div>
+
+              </div>
+            </div>
+            <!-- /popup -->
+
+
+          </div>
+          <div class="history mt-5">
+            <h4>A Brief Description</h4>
+            <p class="mt-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. At, corrupti odit? At iure facere,
+              porro repellat officia quas laboriosam repudiandae dolorem ipsum, dolores magnam assumenda soluta odit
+              harum
+              voluptate inventore ipsa maiores fugiat accusamus eos nulla. Iure voluptatibus explicabo officia.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="container">
+    <div class="heading text-center mx-auto">
+      <h3 class="head">Explore Our Contents</h3>
+      <p class="my-3 head"> Wiw Learn is a One-App-One-Solution for Students. It allows students to access learning
+        solutions mapped to their curriculum. Learn from anywhere, anytime
+        while simultaneously allowing parents to track and evaluate the student’s performance.</p>
+    </div>
+
+    <div class="demo-classes owl-carousel owl-theme">
+
+      <div class="card">
+        <div class="card-body">
+
+          <video src="/test.mp4" controls></video>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <video src="/test2.mp4" controls></video>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <video src="/test3.mp4" controls></video>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- footer-28 block -->
+  <section class="wiw-market-footer">
+    <footer class="footer-28">
+      <div class="footer-bg-layer">
+        <div class="container py-lg-3">
+          <div class="row footer-top-28">
+            <div class="col-md-6 footer-list-28 mt-5">
+              <h6 class="footer-title-28">Contact information</h6>
+              <ul>
+                <li>
+                  <p><strong>Address</strong> : 3rd Floor MSons Arcade, Cherrotty Road, Calicut, Kerala-673001</p>
+                </li>
+                <li>
+                  <p><strong>Phone</strong> : <a href="tel:0495-2760366">0495-2760366</a></p>
+                </li>
+                <li>
+                  <p><strong>Email</strong> : <a
+                      href="mailto:info@thinkivatelearning.com">info@thinkivatelearning.com</a></p>
+                </li>
+              </ul>
+
+              <div class="main-social-footer-28 mt-3">
+                <ul class="social-icons">
+                  <li class="facebook">
+                    <a href="#link" title="Facebook">
+                      <span class="fa fa-facebook" aria-hidden="true"></span>
+                    </a>
+                  </li>
+                  <li class="twitter">
+                    <a href="#link" title="Twitter">
+                      <span class="fa fa-twitter" aria-hidden="true"></span>
+                    </a>
+                  </li>
+                  <li class="dribbble">
+                    <a href="#link" title="Dribbble">
+                      <span class="fa fa-dribbble" aria-hidden="true"></span>
+                    </a>
+                  </li>
+                  <li class="google">
+                    <a href="#link" title="Google">
+                      <span class="fa fa-google" aria-hidden="true"></span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="row">
+                <div class="col-md-4 footer-list-28 mt-5">
+                  <h6 class="footer-title-28">Company</h6>
+                  <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="#blog.html">Blog Posts</a></li>
+                    <li><a href="#pricing.html">FAQ</a></li>
+                    <li><a href="#pricing.html">Pricing</a></li>
+                  </ul>
+                </div>
+                <div class="col-md-4 footer-list-28 mt-5">
+                  <h6 class="footer-title-28">Support</h6>
+                  <ul>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="#signup.html">Create account</a></li>
+                    <li><a href="#learn.html">Learning Center</a></li>
+                    <li><a href="#career.html">Team</a></li>
+                  </ul>
+                </div>
+                <div class="col-md-4 footer-list-28 mt-5">
+                  <h6 class="footer-title-28">Product</h6>
+                  <ul>
+                    <li><a href="#URL">Market</a></li>
+                    <li><a href="#URL">VIP</a></li>
+                    <li><a href="#URL">Resources</a></li>
+                    <li><a href="#URL">Sale</a></li>
+                    <li><a href="#URL">Admin UI</a></li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </nav>
-    </div>
-    <!-- Header -->
-
-   <!-- content-with-photo17 -->
-<section class="wiw-index-block7 py-5">
-  <div class="container py-md-3">
-    <div class="row cwp17-two align-items-center">
-      <div class="col-md-6 cwp17-text">
-        <h2>Great features app
-            that everyone Love</h2>
-        <p>Lorem Ipsum is not simply random text. It has roots in a piece of classical
-          Latin literature from 45 BC, making it over 2000 years old. </p>
-        <a href="#">Learn more &raquo;</a>
-      </div>
-      <div class="col-md-6 cwp17-image">
-        <img src="assets/images/mobile-app.png" class="img-fluid" alt="" />
-      </div>
-    </div>
-
-  </div>
-  <div class="container py-md-3">
-    <div class="row cwp17-two align-items-center">
-      <div class="col-md-6 cwp17-image">
-        <img src="assets/images/hero.png" class="img-fluid" alt="" />
-      </div>
-      <div class="col-md-6 cwp17-text">
-        
-        <p>Lorem Ipsum is not simply random text. It has roots in a piece of classical
-          Latin literature from 45 BC, making it over 2000 years old. </p>
-        <a href="#">Learn more &raquo;</a>
-      </div>
-     
-    </div>
-    
-  </div>
-  <div class="container py-md-3">
-    <div class="row cwp17-two align-items-center">
-      <div class="col-md-6 cwp17-text">
-        
-        <p>Lorem Ipsum is not simply random text. It has roots in a piece of classical
-          Latin literature from 45 BC, making it over 2000 years old. </p>
-        <a href="#">Learn more &raquo;</a>
-      </div>
-      <div class="col-md-6 cwp17-image">
-        <img src="assets/images/mobile-app.png" class="img-fluid" alt="" />
-      </div>
-    </div>
-
-  </div>
-</section>
-<!-- content-with-photo17 -->
 
 
-
-
-      <!-- footer-28 block -->
-      <section class="wiw-market-footer">
-        <footer class="footer-28">
-          <div class="footer-bg-layer">
-            <div class="container py-lg-3">
-              <div class="row footer-top-28">
-                <div class="col-md-6 footer-list-28 mt-5">
-                  <h6 class="footer-title-28">Contact information</h6>
-                  <ul>
-                    <li>
-                      <p><strong>Address</strong> : 3rd Floor MSons Arcade, Cherrotty Road, Calicut, Kerala-673001</p>
-                    </li>
-                    <li>
-                      <p><strong>Phone</strong> : <a href="tel:0495-2760366">0495-2760366</a></p>
-                    </li>
-                    <li>
-                      <p><strong>Email</strong> : <a href="mailto:info@thinkivatelearning.com">info@thinkivatelearning.com</a></p>
-                    </li>
-                  </ul>
-
-                  <div class="main-social-footer-28 mt-3">
-                    <ul class="social-icons">
-                      <li class="facebook">
-                        <a href="#link" title="Facebook">
-                          <span class="fa fa-facebook" aria-hidden="true"></span>
-                        </a>
-                      </li>
-                      <li class="twitter">
-                        <a href="#link" title="Twitter">
-                          <span class="fa fa-twitter" aria-hidden="true"></span>
-                        </a>
-                      </li>
-                      <li class="dribbble">
-                        <a href="#link" title="Dribbble">
-                          <span class="fa fa-dribbble" aria-hidden="true"></span>
-                        </a>
-                      </li>
-                      <li class="google">
-                        <a href="#link" title="Google">
-                          <span class="fa fa-google" aria-hidden="true"></span>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="row">
-                    <div class="col-md-4 footer-list-28 mt-5">
-                      <h6 class="footer-title-28">Company</h6>
-                      <ul>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="#blog.html">Blog Posts</a></li>
-                        <li><a href="#pricing.html">FAQ</a></li>
-                        <li><a href="#pricing.html">Pricing</a></li>
-                      </ul>
-                    </div>
-                    <div class="col-md-4 footer-list-28 mt-5">
-                      <h6 class="footer-title-28">Support</h6>
-                      <ul>
-                        <li><a href="contact.html">Contact Us</a></li>
-                        <li><a href="#signup.html">Create account</a></li>
-                        <li><a href="#learn.html">Learning Center</a></li>
-                        <li><a href="#career.html">Team</a></li>
-                      </ul>
-                    </div>
-                    <div class="col-md-4 footer-list-28 mt-5">
-                      <h6 class="footer-title-28">Product</h6>
-                      <ul>
-                        <li><a href="#URL">Market</a></li>
-                        <li><a href="#URL">VIP</a></li>
-                        <li><a href="#URL">Resources</a></li>
-                        <li><a href="#URL">Sale</a></li>
-                        <li><a href="#URL">Admin UI</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-
-            <div class="midd-footer-28 align-center py-lg-4 py-3 mt-5">
-              <div class="container">
-                <p class="copy-footer-28 text-center"> &copy; 2020 WIW. All Rights Reserved
-              </div>
-            </div>
+        <div class="midd-footer-28 align-center py-lg-4 py-3 mt-5">
+          <div class="container">
+            <p class="copy-footer-28 text-center"> &copy; 2020 WIW. All Rights Reserved
           </div>
-        </footer>
+        </div>
+      </div>
+    </footer>
 
 
+    <script>
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function () {
+        scrollFunction()
+      };
 
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          document.getElementById("movetop").style.display = "block";
+        } else {
+          document.getElementById("movetop").style.display = "none";
+        }
+      }
 
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
+    <!-- /move top -->
+  </section>
+  <!-- //footer-28 block -->
 
-    
+  <!-- jQuery, Bootstrap JS -->
+  <script src="assets/js/jquery-3.3.1.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
 
-    <script src="assets/js/jquery-3.3.1.min.js"></script>
-    <script src="/assets/js/owl.carousel.js"></script>
-    <script src="assets/js/local.js"></script>
-    
+  <!-- Template JavaScript -->
+
+  <script src="assets/js/owl.carousel.js"></script>
+
+  <!-- script for owlcarousel -->
+  <script>
+    $(document).ready(function () {
+      $('.owl-one').owlCarousel({
+        loop: true,
+        margin: 0,
+        nav: true,
+        responsiveClass: true,
+        autoplay: false,
+        autoplayTimeout: 5000,
+        autoplaySpeed: 1000,
+        autoplayHoverPause: false,
+        responsive: {
+          0: {
+            items: 1,
+            nav: false
+          },
+          480: {
+            items: 1,
+            nav: false
+          },
+          667: {
+            items: 1,
+            nav: true
+          },
+          1000: {
+            items: 1,
+            nav: true
+          }
+        }
+      })
+    })
+
+    $(document).ready(function () {
+      $('.demo-classes').owlCarousel({
+        loop: true,
+        margin: 15,
+        nav: true,
+        autoWidth: true,
+        // autoplayHoverPause: false,
+        items: 3,
+        center: true
+      })
+    })
+  </script>
+  <!-- //script for owlcarousel -->
+
+  <!-- disable body scroll which navbar is in active -->
+  <script>
+    $(function () {
+      $('.navbar-toggler').click(function () {
+        $('body').toggleClass('noscroll');
+      })
+    });
+  </script>
+  <!-- disable body scroll which navbar is in active -->
+
+  <script src="assets/js/jquery.magnific-popup.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.popup-with-zoom-anim').magnificPopup({
+        type: 'inline',
+
+        fixedContentPos: false,
+        fixedBgPos: true,
+
+        overflowY: 'auto',
+
+        closeBtnInside: true,
+        preloader: false,
+
+        midClick: true,
+        removalDelay: 300,
+        mainClass: 'my-mfp-zoom-in'
+      });
+
+      $('.popup-with-move-anim').magnificPopup({
+        type: 'inline',
+
+        fixedContentPos: false,
+        fixedBgPos: true,
+
+        overflowY: 'auto',
+
+        closeBtnInside: true,
+        preloader: false,
+
+        midClick: true,
+        removalDelay: 300,
+        mainClass: 'my-mfp-slide-bottom'
+      });
+    });
+  </script>
+
 </body>
+
 </html>
 
 
@@ -261,7 +596,7 @@
       <div class="name">- Camilla</div>
     </div>
   </div> -->
-  <!-- <div class="item" style="max-width: 500px;">
+<!-- <div class="item" style="max-width: 500px;">
     <div class="slider-info mt-lg-4 mt-3">
       <div class="img-circle">
         <img src="assets/images/emp1.jpg" class="img-fluid rounded" alt="client image">
