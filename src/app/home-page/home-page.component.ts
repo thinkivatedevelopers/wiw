@@ -12,4 +12,8 @@ export class HomePageComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  moveTo($element){
+    $element.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+  }
+
 }
