@@ -1,3 +1,4 @@
 <header></header>
-<router-outlet></router-outlet>
-<wiw-footer></wiw-footer>
+<div [@fadeAnimation]="o.isActivated ? o.activatedRoute : ''" >
+    <router-outlet #o="outlet"></router-outlet>
+</div>
