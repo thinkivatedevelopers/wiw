@@ -9,3 +9,7 @@ router-outlet ~ * {
     padding: 90px 0px 90px 0px;
     min-height: 55vh;
 }
+
+.pointer {
+    cursor: pointer;
+}
