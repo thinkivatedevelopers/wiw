@@ -13,22 +13,23 @@ import { AboutPageComponent } from './about-page/about-page.component';
 
 
 const routes: Routes = [
-  
-  { path: '', component:HomePageComponent },
-  { path: 'about', component:AboutPageComponent },
-  { path: 'features',component:FeaturesPageComponent},
-  { path: 'packages',component:PackagesPageComponent},
-  { path: 'contact',component:ContactPageComponent},
-  { path: 'blogs',component:BlogPageComponent},
-  { path: 'faq',component:FaqPageComponent},
-  { path: 'terms-and-conditions',component:TermsAndConditionsPageComponent},
-  { path: 'privacy-policy',component:PrivacyPolicyPageComponent},
 
+  { path: '', component: HomePageComponent },
+  { path: 'about', component: AboutPageComponent },
+  { path: 'features', component: FeaturesPageComponent},
+  { path: 'packages', component: PackagesPageComponent},
+  { path: 'contact', component: ContactPageComponent},
+  { path: 'blogs', component: BlogPageComponent},
+  { path: 'faq', component: FaqPageComponent},
+  { path: 'terms-and-conditions', component: TermsAndConditionsPageComponent},
+  { path: 'privacy-policy', component: PrivacyPolicyPageComponent},
 
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {
+    scrollPositionRestoration: 'enabled'
+  })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
