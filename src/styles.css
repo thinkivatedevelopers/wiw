@@ -11,5 +11,9 @@ router-outlet ~ * {
 }
 
 .pointer {
-    cursor: pointer;
+    cursor: pointer !important;
+}
+
+.cap-cursor {
+    cursor: url('assets/cursor.cur') , pointer;
 }
