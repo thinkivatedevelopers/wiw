@@ -1,3 +1,4 @@
+import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
 import { FaqPageComponent } from './faq-page/faq-page.component';
 import { PrivacyPolicyPageComponent } from './privacy-policy-page/privacy-policy-page.component';
 import { TermsAndConditionsPageComponent } from './terms-and-conditions-page/terms-and-conditions-page.component';
@@ -15,6 +16,9 @@ import { AboutPageComponent } from './about-page/about-page.component';
 const routes: Routes = [
 
   { path: '', component: HomePageComponent },
+  { path: 'about/:username', component: HomePageComponent },
+  
+
   { path: 'about', component: AboutPageComponent },
   { path: 'features', component: FeaturesPageComponent},
   { path: 'packages', component: PackagesPageComponent},
@@ -23,6 +27,7 @@ const routes: Routes = [
   { path: 'faq', component: FaqPageComponent},
   { path: 'terms-and-conditions', component: TermsAndConditionsPageComponent},
   { path: 'privacy-policy', component: PrivacyPolicyPageComponent},
+  { path: '**', component: NotFoundPageComponent},
 
 ];
 
