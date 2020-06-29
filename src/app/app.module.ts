@@ -17,6 +17,7 @@ import { PrivacyPolicyPageComponent } from './privacy-policy-page/privacy-policy
 import { PriceAndPlansComponent } from './price-and-plans/price-and-plans.component';
 import { FaqPageComponent } from './faq-page/faq-page.component';
 import { BlogPageComponent } from './blog-page/blog-page.component';
+import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { BlogPageComponent } from './blog-page/blog-page.component';
     PrivacyPolicyPageComponent,
     PriceAndPlansComponent,
     FaqPageComponent,
-    BlogPageComponent
+    BlogPageComponent,
+    NotFoundPageComponent
   ],
   imports: [
     BrowserModule,
