@@ -18,6 +18,9 @@ import { PriceAndPlansComponent } from './price-and-plans/price-and-plans.compon
 import { FaqPageComponent } from './faq-page/faq-page.component';
 import { BlogPageComponent } from './blog-page/blog-page.component';
 import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
+import { CourseComponent } from './course/course.component';
+import { GradeComponent } from './grade/grade.component';
+import { PackageComponent } from './package/package.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +37,10 @@ import { NotFoundPageComponent } from './not-found-page/not-found-page.component
     PriceAndPlansComponent,
     FaqPageComponent,
     BlogPageComponent,
-    NotFoundPageComponent
+    NotFoundPageComponent,
+    CourseComponent,
+    GradeComponent,
+    PackageComponent
   ],
   imports: [
     BrowserModule,

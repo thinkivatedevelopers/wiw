@@ -11,6 +11,9 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { AboutPageComponent } from './about-page/about-page.component';
+import { CourseComponent } from './course/course.component';
+import { GradeComponent } from './grade/grade.component';
+import { PackageComponent } from './package/package.component';
 
 
 const routes: Routes = [
@@ -24,9 +27,9 @@ const routes: Routes = [
   { path: 'terms-and-conditions', component: TermsAndConditionsPageComponent},
   { path: 'privacy-policy', component: PrivacyPolicyPageComponent },
 // Dynamic Routes for Courses
-  { path: ':course', component: BlogPageComponent },
-  { path: ':course/:grade', component: AboutPageComponent },
-  { path: ':course/:grade/:package', component: FeaturesPageComponent },
+  { path: ':course', component: CourseComponent },
+  { path: ':course/:grade', component: GradeComponent },
+  { path: ':course/:grade/:package', component: PackageComponent },
 
   { path: '**', component: NotFoundPageComponent }
 ];

@@ -1,0 +1,12 @@
+<div *ngIf="package ; else not_found">
+    <section class="page-wrapper">
+        <div class="container">
+            <pre>{{package | json}}</pre>
+        </div>
+    </section>
+    <wiw-footer></wiw-footer>
+</div>
+
+<ng-template #not_found>
+    <app-not-found-page></app-not-found-page>
+</ng-template>
