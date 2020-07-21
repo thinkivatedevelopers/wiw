@@ -10,25 +10,25 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { AboutPageComponent } from './about-page/about-page.component';  
+import { AboutPageComponent } from './about-page/about-page.component';
 
 
 const routes: Routes = [
-
-  { path: '', component: HomePageComponent },
-  { path: 'about/:username', component: HomePageComponent },
-  
-
+  { path: '', component: HomePageComponent},
   { path: 'about', component: AboutPageComponent },
-  { path: 'features', component: FeaturesPageComponent},
-  { path: 'packages', component: PackagesPageComponent},
-  { path: 'contact', component: ContactPageComponent},
-  { path: 'blogs', component: BlogPageComponent},
-  { path: 'faq', component: FaqPageComponent},
+  { path: 'features', component: FeaturesPageComponent },
+  { path: 'packages', component: PackagesPageComponent },
+  { path: 'contact', component: ContactPageComponent },
+  { path: 'blogs', component: BlogPageComponent },
+  { path: 'faq', component: FaqPageComponent },
   { path: 'terms-and-conditions', component: TermsAndConditionsPageComponent},
-  { path: 'privacy-policy', component: PrivacyPolicyPageComponent},
-  { path: '**', component: NotFoundPageComponent},
+  { path: 'privacy-policy', component: PrivacyPolicyPageComponent },
+// Dynamic Routes for Courses
+  { path: ':course', component: BlogPageComponent },
+  { path: ':course/:grade', component: AboutPageComponent },
+  { path: ':course/:grade/:package', component: FeaturesPageComponent },
 
+  { path: '**', component: NotFoundPageComponent }
 ];
 
 @NgModule({
