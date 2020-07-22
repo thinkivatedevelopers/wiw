@@ -1,80 +1,65 @@
 import { Injectable } from '@angular/core';
+import { Course } from './models/course';
 
 @Injectable({
   providedIn: 'root',
 })
-
 export class DataService {
-  private data = {
-    'kerala-state': {
+  private state: Course[] = [
+    {
+      slug: 'kerala-state',
       name: 'Kerala State',
-      description: 'Keral state syllabus description',
+      description: 'desc',
+      image: '',
       grades: [
         {
           slug: 'plus-two',
           name: 'Plus Two',
-          description: 'kerala state plus two grade description',
-          image: 'imagepath',
+          decription: 'description of plus two',
+          image: 'plus-two.jpeg',
           packages: [
             {
-              slug: 'kerala-state-plus-two-offline-pack-combo',
-              name: 'Kerala state plus two offline compo pack',
-              image: 'image path',
+              slug: 'kerala-state-plus-two-offline-bundle-pack',
+              name: 'Keral State Plus Two Offline Bundle Pack',
+              description: 'description',
+              image: 'ks-pl-off.png',
+              isOnlinePack: true,
+              isComboPack: true,
+              validityDays: 150,
+              price: 12000,
               subjects: [
-                { name: 'chemistry', icon: 'icon path' },
-                { name: 'Biology', icon: 'icon path bio' },
+                { name: 'Biology', icon: 'boilogy-small.svg' },
+                { name: 'Chemistry', icon: 'chmemistry-small.svg' },
               ],
-              price: 8000,
-              description: 'package description',
-              mode: 'online',
-              type: 'combo'
-            },
-            {
-              slug: 'kerala-state-plus-two-online-compo-pack',
-              name: 'Kerala state plus two Online compo pack',
-              image: 'image path',
-              subjects: ['chemistry', 'Biology', 'Physics'],
             },
           ],
         },
-        {
-          name: 'plus-one',
-          description: 'kerala state plus one grade description',
-          image: 'image path',
-        },
       ],
     },
-    cbse: {},
-  };
+  ];
+
 
   constructor() {}
 
-  getCourse(slug: string) {
-    return this.data[slug] ? this.data[slug] : false;
+  getAllData() {
+    return this.state;
+  }
+
+  getCourse(courseSlug: string) {
+    return this.state.filter(c => c.slug === courseSlug)[0];
   }
 
   getGrade(courseSlug: string, gradeSlug: string) {
-    const grades = this.data[courseSlug]?.grades;
-    if (!grades) { return false; }
+    const course = this.getCourse(courseSlug);
+    if (!course) {return false; }
 
-    let gradeArr;
-
-    gradeArr = grades.filter(grade => grade.slug === gradeSlug);
-    return gradeArr.length === 0 ? false : gradeArr[0];
-
+    return course.grades.filter(g => g.slug === gradeSlug)[0];
   }
 
   getPackage(courseSlug: string, gradeSlug: string, packageSlug: string) {
-    const grades = this.data[courseSlug]?.grades;
-    if (!grades) { return false; }
+    const grade = this.getGrade(courseSlug, gradeSlug);
+    if (!grade) {return false; }
 
-    let gradeArr;
-    gradeArr = grades.filter(grade => grade.slug === gradeSlug);
-    if (gradeArr.length === 0) {return false; }
-
-    const packagesArr = gradeArr[0].packages;
-    if (!packagesArr || packagesArr.lenght === 0) {return false; }
-    const pack = packagesArr.filter(pack => pack.slug === packageSlug );
-    return pack.length === 0 ? false : pack[0];
+    return grade.packages.filter(p => p.slug === packageSlug)[0];
   }
 }
