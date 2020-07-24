@@ -1,8 +1,26 @@
 <div *ngIf="package ; else not_found">
     <section class="page-wrapper">
-        <div class="container">
+        <!-- <div class="container">
             <pre>{{package | json}}</pre>
-        </div>
+        </div> -->
+        <div class="container">
+            <div class="row">
+   
+                <div *ngFor="let pd of package.grades;" class="col-md-4 mb-4">
+                    <!-- <pre>{{co | json}}</pre> -->
+                   <div class="card bg-danger text-white">
+                       <div class="card-body">
+                           <a  routerLink="/{{courseSlug}}/{{gradeSlug}}/{{pd.name}}">{{pd.name}}</a> 
+                       </div>
+                     </div>
+                </div>
+                
+            </div>
+   
+   
+             <!-- <a class="btn btn-light btn-sm" routerLink="/kerala-state/plus-two">Plus Two Grade</a>
+              <pre>{{course | json}}</pre>   -->
+           </div>
     </section>
     <wiw-footer></wiw-footer>
 </div>
