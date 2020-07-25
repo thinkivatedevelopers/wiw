@@ -9,7 +9,7 @@ export interface Course {
 interface Grade {
   slug: string;
   name: string;
-  decription: string;
+  description: string;
   image: string;
   packages: Package[];
 }
