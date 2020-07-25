@@ -27,7 +27,7 @@ const routes: Routes = [
   { path: 'faq', component: FaqPageComponent },
   { path: 'terms-and-conditions', component: TermsAndConditionsPageComponent},
   { path: 'privacy-policy', component: PrivacyPolicyPageComponent },
-  { path: 'courses', component:CourseListComponent},
+  { path: 'courses', component: CourseListComponent},
 // Dynamic Routes for Courses
   { path: ':course', component: CourseComponent },
   { path: ':course/:grade', component: GradeComponent },
