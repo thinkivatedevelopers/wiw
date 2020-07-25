@@ -12,7 +12,10 @@ export class PackageComponent implements OnInit {
   courseSlug;
   gradeSlug;
   packageSlug;
+
   package;
+  grade;
+  course;
 
   constructor(
     private data: DataService,
@@ -25,6 +28,8 @@ export class PackageComponent implements OnInit {
 
   ngOnInit(): void {
     this.package = this.data.getPackage(this.courseSlug, this.gradeSlug, this.packageSlug );
+    // this.grade = this.data.getGrade(this.courseSlug, this.gradeSlug);
+    // this.course = this.data.getCourse(this.courseSlug);
   }
 
 }

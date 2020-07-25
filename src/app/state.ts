@@ -2,7 +2,7 @@ import { Course } from './models/course' ;
 
 export const state: Course[] = [
     {
-      slug: 'kerala-state',
+      slug: 'Kerala-state',
       name: 'Kerala State Board',
       description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.',
       image: 'kerala-state.png',
@@ -14,9 +14,11 @@ export const state: Course[] = [
           image: 'plus-two.jpeg',
           packages: [
             {
+
               slug: 'kerala-state-plus-one-offline-bundle-pack',
-              name: 'Keral State Plus One Offline Bundle Pack',
+              name: 'Kerala State Plus One Offline Bundle Pack',
               description: 'Keral State Plus Two Offline Bundle Pack Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.',
+
               image: 'ks-pl-off.png',
               isOnlinePack: false,
               isComboPack: true,
@@ -28,9 +30,11 @@ export const state: Course[] = [
               ],
             },
             {
+
               slug: 'kerala-state-plus-one-online-pack',
-              name: 'Keral State Plus One OnlinePack',
+              name: 'Kerala State Plus One OnlinePack',
               description: 'Keral State Plus Two Online Pack Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.',
+
               image: 'ks-pl-off.png',
               isOnlinePack: true,
               isComboPack: true,
@@ -51,8 +55,8 @@ export const state: Course[] = [
           image: 'plus-two.jpeg',
           packages: [
             {
-              slug: 'kerala-state-plus-two-offline-bundle-pack',
-              name: 'Keral State Plus Two Offline Bundle Pack',
+              slug: 'Kerala-state-plus-two-offline-bundle-pack',
+              name: 'Kerala State Plus Two Offline Bundle Pack',
               description: 'description',
               image: 'ks-pl-off.png',
               isOnlinePack: true,

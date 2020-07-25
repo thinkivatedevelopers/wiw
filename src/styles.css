@@ -8,6 +8,7 @@ router-outlet ~ * {
 .page-wrapper{
     padding: 90px 0px 90px 0px;
     min-height: 55vh;
+    /* background-color: rgb(248, 245, 240); */
 }
 
 .pointer {
