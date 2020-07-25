@@ -2,38 +2,36 @@
     <section class="page-wrapper">
         
         <div class="container">
-            <div class="text-center">
-                <h2>Available Packages in Kerala State Plus Two Grade</h2>
+            <div class="main-title text-center">
+                <h3 class="text-uppercase"><span> <a routerLink="/{{courseSlug}}" >{{course.name}}</a> </span>-  {{grade.name}} </h3>
+                <h4 class="text-uppercase mt-2">Available Packages</h4>
                 <p class="my-4">{{grade.description}} </p>
-               
             </div>
-            <div class="row">
 
-                <div *ngFor="let package of grade.packages;" class="col-md-4 mb-4">
-                    <div class="card border-success mb-3">
-                        <div class="card-body text-primary">
-                            <div>
-                                <span *ngIf="package.isOnlinePack">Online</span>
-                                <span *ngIf="!package.isOnlinePack">Offline</span>
+           
+                
+                        <div class="row justify-content-md-center">
+                            <div *ngFor="let package of grade.packages;" class="col-md-4 mb-4">
+                                <div class="card mb-3 " style="background:linear-gradient(135deg, #0062a6 0%,#af227a 100%); border:none; border-radius: 10px;">
+                                    <div class="card-body text-light">
+                                        <div>
+                                            <span *ngIf="package.isOnlinePack">Online</span>
+                                            <span *ngIf="!package.isOnlinePack">Offline</span>
+                                        </div>
+                                     
+                                        <h5 class="text-light">
+                                            <a  routerLink="/{{courseSlug}}/{{gradeSlug}}/{{package.slug}}" class="stretched-link text-light">{{package.name}}</a>
+                                        </h5>
+                                        <p class="lead">includes: <span *ngFor="let subject of package.subjects;"> {{subject.name}}</span></p>
+                                        <p> <strong>{{package.price | currency:"INR": 'symbol' :'1.0-0'}}</strong></p>
+                                    </div>
+                                </div> 
                             </div>
-                         
-                            <h5 class="">
-                                <a  routerLink="/{{courseSlug}}/{{gradeSlug}}/{{package.slug}}" class="stretched-link">{{package.name}}</a>
-                            </h5>
-                            <p class="lead">includes: <span *ngFor="let subject of package.subjects;"> {{subject.name}}</span></p>
-                            <p> <strong>{{package.price | currency:"INR": 'symbol' :'1.0-0'}}</strong></p>
-                        </div>
-                    </div> 
-                </div>
-                <!-- <pre>{{grade | json}}</pre> -->
+                       
 
+                
             </div>
-   
-   
-            <!-- <div class="container">
-            <a class="btn btn-light btn-sm" routerLink="/kerala-state/plus-two/kerala-state-plus-two-offline-bundle-pack">Kerala state plus two offline compo pack</a>
-            <pre>{{grade | json}}</pre>
-        </div> -->
+
            </div>
     </section>
     <wiw-footer></wiw-footer>
