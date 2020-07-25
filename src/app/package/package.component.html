@@ -4,18 +4,23 @@
             <pre>{{package | json}}</pre>
         </div> -->
         <div class="container">
-            <div class="row">
+            
+                <h3>{{package.name}}</h3>
+                <p class="lead">{{package.price | currency:"INR":true}}, {{package.validityDays}} Days.</p> 
+                <p>{{package.description}}</p>
    
-                <div *ngFor="let pd of package.grades;" class="col-md-4 mb-4">
-                    <!-- <pre>{{co | json}}</pre> -->
-                   <div class="card bg-danger text-white">
-                       <div class="card-body">
-                           <a  routerLink="/{{courseSlug}}/{{gradeSlug}}/{{pd.name}}">{{pd.name}}</a> 
-                       </div>
-                     </div>
+                <h5 class="mt-4">Subjects:</h5>
+                <div class="row">
+                    <div *ngFor="let subject of package.subjects;" class="col-md-4 my-4">
+                        <div class="card border-success mb-3">
+                            <div class="card-body text-primary">
+                                <h5 class="">{{ subject.name}}</h5>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 
-            </div>
+           
    
    
              <!-- <a class="btn btn-light btn-sm" routerLink="/kerala-state/plus-two">Plus Two Grade</a>
