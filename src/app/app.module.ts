@@ -22,6 +22,7 @@ import { CourseComponent } from './course/course.component';
 import { GradeComponent } from './grade/grade.component';
 import { PackageComponent } from './package/package.component';
 import { CourseListComponent } from './course-list/course-list.component';
+import { DemoVideosComponent } from './demo-videos/demo-videos.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { CourseListComponent } from './course-list/course-list.component';
     CourseComponent,
     GradeComponent,
     PackageComponent,
-    CourseListComponent
+    CourseListComponent,
+    DemoVideosComponent
   ],
   imports: [
     BrowserModule,

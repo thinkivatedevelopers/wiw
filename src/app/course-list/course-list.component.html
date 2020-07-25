@@ -4,27 +4,31 @@
         <div class="container">
             <div class="row">
    
-                <div *ngFor="let course of courseList;" class="col-md-4 mb-4">
+                <div *ngFor="let course of courseList;" class="col-md-4 mb-4" >
                     <!-- <pre>{{p| json}}</pre> -->
-                    <div class="card" >
-                        <img class="card-img-top" src="assets/images/video.jpg" style="opacity: 0.3;" alt="Card image">
-                        <div class="card-img-overlay">
-                          <h4 class="card-title" >
-                            <a  routerLink="/{{course.slug}}/{{course.grades.slug}}" class="stretched-link">{{course.name}}</a> 
-                          </h4>
-                          <p class="card-text" style="color: #AF227A !important;">{{course.description}}</p>
-                         
+                  
+
+                      <div class="card" style=" background-color:#0062A6 ; color: white !important; webkit-box-shadow: inset 1px -31px 39px 18px rgba(0,0,0,0.27);
+                      -moz-box-shadow: inset 1px -31px 39px 18px rgba(0,0,0,0.27);
+                      box-shadow: inset 1px -31px 39px 18px rgba(0,0,0,0.27);">
+                        <div class="card-body">
+                           <img src="assets/images/sylabus-icons/{{course.image}}" style=" display: block;margin-left: auto; margin-right: auto;width: 50%; max-height: 110px !important;"
+                           
+                             >
+                          <h4 class="card-title text-center"> <a  routerLink="/{{course.slug}}/{{course.grades.slug}}" class="stretched-link">{{course.name}}</a> </h4>
+                          <hr style="  width: 100%;
+                          height: 5px;
+                          margin-left: auto;
+                          margin-right: auto;
+                          background-color:#0000;
+                          border: 1 none;">
+                          <p class="card-text">{{course.description}}</p>
+                          
                         </div>
                       </div>
 
 
-                   <!-- <div class="card bg-danger text-white">
-                       <div class="card-body">
-                           
-                           <a  routerLink="/{{course.slug}}/{{course.grades.slug}}" class="stretched-link">{{course.name}}</a> 
-                           <p>{{course.description}}</p>
-                       </div>
-                     </div> -->
+                 
                 </div>
                 
             </div>
@@ -35,6 +39,8 @@
             <!-- <pre>{{courseList | json}}</pre> -->
         </div>
            </div>
+        
+           <app-demo-videos></app-demo-videos>
     </section>
     <wiw-footer></wiw-footer>
 </div>

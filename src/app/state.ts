@@ -4,19 +4,19 @@ export const state: Course[] = [
     {
       slug: 'kerala-state',
       name: 'Kerala State Board',
-      description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised',
-      image: '',
+      description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.',
+      image: 'kerala-state.png',
       grades: [
         {
           slug: 'plus-one',
           name: 'Plus One',
-          description: 'Plus one Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised',
+          description: 'Plus one Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.',
           image: 'plus-two.jpeg',
           packages: [
             {
               slug: 'kerala-state-plus-one-offline-bundle-pack',
               name: 'Keral State Plus One Offline Bundle Pack',
-              description: 'Keral State Plus Two Offline Bundle Pack Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised',
+              description: 'Keral State Plus Two Offline Bundle Pack Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.',
               image: 'ks-pl-off.png',
               isOnlinePack: false,
               isComboPack: true,
@@ -30,7 +30,7 @@ export const state: Course[] = [
             {
               slug: 'kerala-state-plus-one-online-pack',
               name: 'Keral State Plus One OnlinePack',
-              description: 'Keral State Plus Two Online Pack Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised',
+              description: 'Keral State Plus Two Online Pack Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.',
               image: 'ks-pl-off.png',
               isOnlinePack: true,
               isComboPack: true,
@@ -47,7 +47,7 @@ export const state: Course[] = [
         {
           slug: 'plus-two',
           name: 'Plus Two',
-          description: 'Plus two Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised',
+          description: 'Plus two Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting',
           image: 'plus-two.jpeg',
           packages: [
             {
@@ -71,19 +71,19 @@ export const state: Course[] = [
     {
       slug: 'cbse',
       name: 'CBSE Board',
-      description: ' CbseLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised',
-      image: '',
+      description: ' CbseLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.',
+      image: 'cbse-logo.png',
       grades: [
         {
           slug: 'plus-one',
           name: 'Plus One',
-          description: 'Plus one Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised',
+          description: 'Plus one Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.',
           image: 'plus-two.jpeg',
           packages: [
             {
               slug: 'cbse-plus-one-offline-bundle-pack',
               name: 'CBSE Plus One Offline Bundle Pack',
-              description: 'CBSE Plus Two Offline Bundle Pack Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised',
+              description: 'CBSE Plus Two Offline Bundle Pack Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.',
               image: 'ks-pl-off.png',
               isOnlinePack: false,
               isComboPack: true,
@@ -97,7 +97,7 @@ export const state: Course[] = [
             {
               slug: 'cbse-plus-one-online-pack',
               name: 'Cbse Plus One OnlinePack',
-              description: 'Cbse Plus Two Online Pack Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised',
+              description: 'Cbse Plus Two Online Pack Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.',
               image: 'ks-pl-off.png',
               isOnlinePack: true,
               isComboPack: true,
@@ -114,7 +114,7 @@ export const state: Course[] = [
         {
           slug: 'plus-two',
           name: 'Plus Two',
-          description: 'Plus two Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised',
+          description: 'Plus two Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.',
           image: 'plus-two.jpeg',
           packages: [
             {
@@ -138,19 +138,19 @@ export const state: Course[] = [
     {
       slug: 'icse',
       name: 'ICSE Board',
-      description: ' Icse Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised',
-      image: '',
+      description: ' Icse Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.',
+      image: 'cisce-logo.png',
       grades: [
         {
           slug: 'plus-one',
           name: 'Plus One',
-          description: 'Plus one Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised',
+          description: 'Plus one Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.',
           image: 'plus-two.jpeg',
           packages: [
             {
               slug: 'icse-plus-one-offline-bundle-pack',
               name: 'ICSE Plus One Offline Bundle Pack',
-              description: 'CBSE Plus Two Offline Bundle Pack Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised',
+              description: 'CBSE Plus Two Offline Bundle Pack Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.',
               image: 'ks-pl-off.png',
               isOnlinePack: false,
               isComboPack: true,
@@ -164,7 +164,7 @@ export const state: Course[] = [
             {
               slug: 'icse-plus-one-online-pack',
               name: 'ICSE Plus One OnlinePack',
-              description: 'Icse Plus Two Online Pack Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised',
+              description: 'Icse Plus Two Online Pack Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.',
               image: 'ks-pl-off.png',
               isOnlinePack: true,
               isComboPack: true,
@@ -181,7 +181,7 @@ export const state: Course[] = [
         {
           slug: 'plus-two',
           name: 'Plus Two',
-          description: 'Plus two Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised',
+          description: 'Plus two Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.',
           image: 'plus-two.jpeg',
           packages: [
             {
