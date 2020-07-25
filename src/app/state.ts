@@ -10,7 +10,7 @@ export const state: Course[] = [
         {
           slug: 'plus-one',
           name: 'Plus One',
-          decription: 'Plus one Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised',
+          description: 'Plus one Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised',
           image: 'plus-two.jpeg',
           packages: [
             {
@@ -23,8 +23,8 @@ export const state: Course[] = [
               validityDays: 150,
               price: 12000,
               subjects: [
-                { name: 'Biology', icon: 'boilogy-small.svg' },
-                { name: 'Chemistry', icon: 'chmemistry-small.svg' },
+                { name: 'Biology', icon: '/assets/icons/bio.png' },
+                { name: 'Chemistry', icon: '/assets/icons/che.png' },
               ],
             },
             {
@@ -37,9 +37,9 @@ export const state: Course[] = [
               validityDays: 250,
               price: 9000,
               subjects: [
-                { name: 'Biology', icon: 'boilogy-small.svg' },
-                { name: 'Chemistry', icon: 'chmemistry-small.svg' },
-                { name: 'Mathematics', icon: 'chmemistry-small.svg' },
+                { name: 'Physics', icon: '/assets/icons/phy.png' },
+                { name: 'Chemistry', icon : '/assets/icons/che.png' },
+                { name: 'Biology', icon: '/assets/icons/bio.png' },
               ],
             },
           ],
@@ -47,7 +47,7 @@ export const state: Course[] = [
         {
           slug: 'plus-two',
           name: 'Plus Two',
-          decription: 'Plus two Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised',
+          description: 'Plus two Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised',
           image: 'plus-two.jpeg',
           packages: [
             {
@@ -60,8 +60,8 @@ export const state: Course[] = [
               validityDays: 150,
               price: 12000,
               subjects: [
-                { name: 'Biology', icon: 'boilogy-small.svg' },
-                { name: 'Chemistry', icon: 'chmemistry-small.svg' },
+                { name: 'Biology', icon: '/assets/icons/bio.png' },
+                { name: 'Physics', icon: '/assets/icons/phy.png' },
               ],
             },
           ],
@@ -77,7 +77,7 @@ export const state: Course[] = [
         {
           slug: 'plus-one',
           name: 'Plus One',
-          decription: 'Plus one Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised',
+          description: 'Plus one Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised',
           image: 'plus-two.jpeg',
           packages: [
             {
@@ -90,8 +90,8 @@ export const state: Course[] = [
               validityDays: 150,
               price: 12000,
               subjects: [
-                { name: 'Biology', icon: 'boilogy-small.svg' },
-                { name: 'Chemistry', icon: 'chmemistry-small.svg' },
+                { name: 'Biology', icon: '/assets/icons/bio.png' },
+                { name: 'Chemistry', icon: '/assets/icons/che.png' },
               ],
             },
             {
@@ -104,9 +104,9 @@ export const state: Course[] = [
               validityDays: 250,
               price: 9000,
               subjects: [
-                { name: 'Biology', icon: 'boilogy-small.svg' },
-                { name: 'Chemistry', icon: 'chmemistry-small.svg' },
-                { name: 'Mathematics', icon: 'chmemistry-small.svg' },
+                { name: 'Biology', icon: '/assets/icons/bio.png' },
+                { name: 'Chemistry', icon: '/assets/icons/che.png' },
+                { name: 'Mathematics', icon: '/assets/icons/math.png' },
               ],
             },
           ],
@@ -114,7 +114,7 @@ export const state: Course[] = [
         {
           slug: 'plus-two',
           name: 'Plus Two',
-          decription: 'Plus two Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised',
+          description: 'Plus two Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised',
           image: 'plus-two.jpeg',
           packages: [
             {
@@ -127,8 +127,8 @@ export const state: Course[] = [
               validityDays: 150,
               price: 12000,
               subjects: [
-                { name: 'Biology', icon: 'boilogy-small.svg' },
-                { name: 'Chemistry', icon: 'chmemistry-small.svg' },
+                { name: 'Biology', icon: '/assets/icons/bio.png' },
+                { name: 'Mathematics', icon: '/assets/icons/math.png' },
               ],
             },
           ],
@@ -144,7 +144,7 @@ export const state: Course[] = [
         {
           slug: 'plus-one',
           name: 'Plus One',
-          decription: 'Plus one Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised',
+          description: 'Plus one Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised',
           image: 'plus-two.jpeg',
           packages: [
             {
@@ -157,8 +157,8 @@ export const state: Course[] = [
               validityDays: 150,
               price: 12000,
               subjects: [
-                { name: 'Biology', icon: 'boilogy-small.svg' },
-                { name: 'Chemistry', icon: 'chmemistry-small.svg' },
+                { name: 'Biology', icon: '/assets/icons/bio.png' },
+                { name: 'Mathematics', icon: '/assets/icons/math.png' },
               ],
             },
             {
@@ -171,9 +171,9 @@ export const state: Course[] = [
               validityDays: 250,
               price: 9000,
               subjects: [
-                { name: 'Biology', icon: 'boilogy-small.svg' },
-                { name: 'Chemistry', icon: 'chmemistry-small.svg' },
-                { name: 'Mathematics', icon: 'chmemistry-small.svg' },
+                { name: 'Biology', icon: '/assets/icons/bio.png' },
+                { name: 'Chemistry', icon: '/assets/icons/che.png' },
+                { name: 'Mathematics', icon: '/assets/icons/math.png' },
               ],
             },
           ],
@@ -181,7 +181,7 @@ export const state: Course[] = [
         {
           slug: 'plus-two',
           name: 'Plus Two',
-          decription: 'Plus two Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised',
+          description: 'Plus two Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised',
           image: 'plus-two.jpeg',
           packages: [
             {
@@ -194,8 +194,8 @@ export const state: Course[] = [
               validityDays: 150,
               price: 12000,
               subjects: [
-                { name: 'Biology', icon: 'boilogy-small.svg' },
-                { name: 'Chemistry', icon: 'chmemistry-small.svg' },
+                { name: 'Biology', icon: '/assets/icons/bio.png' },
+                { name: 'Mathematics', icon: '/assets/icons/math.png' },
               ],
             },
           ],
