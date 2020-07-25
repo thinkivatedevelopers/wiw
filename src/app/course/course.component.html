@@ -4,12 +4,20 @@
          <div class="row">
 
              <div *ngFor="let g of course.grades;" class="col-md-4 mb-4">
-                 <!-- <pre>{{co | json}}</pre> -->
-                <div class="card bg-danger text-white">
-                    <div class="card-body">
-                        <a  routerLink="/{{courseSlug}}/{{g.slug}}">{{g.name}}</a> 
+                 <pre>{{g | json}}</pre>
+
+                 <div class="card" >
+                    <img class="card-img-top" src="assets/images/video.jpg" style="opacity: 0.3;" alt="Card image">
+                    <div class="card-img-overlay">
+                      <h4 class="card-title" >
+                        <a  routerLink="/{{courseSlug}}/{{g.slug}}" class="stretched-link">{{g.name}}</a> 
+                        
+                      </h4>
+                      <p class="card-text" style="color: #AF227A !important;">{{g.description}}</p>
+                     
                     </div>
                   </div>
+                
              </div>
              
          </div>

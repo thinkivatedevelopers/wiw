@@ -6,11 +6,25 @@
    
                 <div *ngFor="let course of courseList;" class="col-md-4 mb-4">
                     <!-- <pre>{{p| json}}</pre> -->
-                   <div class="card bg-danger text-white">
+                    <div class="card" >
+                        <img class="card-img-top" src="assets/images/video.jpg" style="opacity: 0.3;" alt="Card image">
+                        <div class="card-img-overlay">
+                          <h4 class="card-title" >
+                            <a  routerLink="/{{course.slug}}/{{course.grades.slug}}" class="stretched-link">{{course.name}}</a> 
+                          </h4>
+                          <p class="card-text" style="color: #AF227A !important;">{{course.description}}</p>
+                         
+                        </div>
+                      </div>
+
+
+                   <!-- <div class="card bg-danger text-white">
                        <div class="card-body">
-                           <a  routerLink="/{{course.slug}}/{{course.grades.slug}}">{{course.name}}</a> 
+                           
+                           <a  routerLink="/{{course.slug}}/{{course.grades.slug}}" class="stretched-link">{{course.name}}</a> 
+                           <p>{{course.description}}</p>
                        </div>
-                     </div>
+                     </div> -->
                 </div>
                 
             </div>
@@ -18,7 +32,7 @@
    
             <div class="container">
             <!-- <a class="btn btn-light btn-sm" routerLink="/kerala-state/plus-two/kerala-state-plus-two-offline-bundle-pack">Kerala state plus two offline compo pack</a> -->
-            <pre>{{courseList | json}}</pre>
+            <!-- <pre>{{courseList | json}}</pre> -->
         </div>
            </div>
     </section>
