@@ -6,12 +6,25 @@
    
                 <div *ngFor="let p of grade.packages;" class="col-md-4 mb-4">
                     <!-- <pre>{{p| json}}</pre> -->
-                   <div class="card bg-danger text-white">
+                    <div class="card" >
+                        <img class="card-img-top" src="assets/images/video.jpg" style="opacity: 0.3;" alt="Card image">
+                        <div class="card-img-overlay">
+                          <h4 class="card-title" >
+                            <a  routerLink="/{{courseSlug}}/{{gradeSlug}}/{{p.slug}}" class="stretched-link">{{p.name}}</a> 
+                           
+                          </h4>
+                          <p class="card-text" style="color: #AF227A !important;">{{p.description}}</p>
+                         
+                        </div>
+                      </div>
+                   <!-- <div class="card bg-danger text-white">
                        <div class="card-body">
                            <a  routerLink="/{{courseSlug}}/{{gradeSlug}}/{{p.slug}}">{{p.name}}</a> 
                        </div>
-                     </div>
+                     </div> -->
                 </div>
+
+
                 
             </div>
    
