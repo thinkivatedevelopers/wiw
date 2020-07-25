@@ -1,0 +1,30 @@
+<div *ngIf="courseList ; else not_found">
+    <section class="page-wrapper">
+        
+        <div class="container">
+            <div class="row">
+   
+                <div *ngFor="let course of courseList;" class="col-md-4 mb-4">
+                    <!-- <pre>{{p| json}}</pre> -->
+                   <div class="card bg-danger text-white">
+                       <div class="card-body">
+                           <a  routerLink="/{{course.slug}}/{{course.grades.slug}}">{{course.name}}</a> 
+                       </div>
+                     </div>
+                </div>
+                
+            </div>
+   
+   
+            <div class="container">
+            <!-- <a class="btn btn-light btn-sm" routerLink="/kerala-state/plus-two/kerala-state-plus-two-offline-bundle-pack">Kerala state plus two offline compo pack</a> -->
+            <pre>{{courseList | json}}</pre>
+        </div>
+           </div>
+    </section>
+    <wiw-footer></wiw-footer>
+</div>
+
+<ng-template #not_found>
+    <app-not-found-page></app-not-found-page>
+</ng-template>

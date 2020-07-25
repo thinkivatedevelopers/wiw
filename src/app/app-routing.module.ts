@@ -1,3 +1,4 @@
+import { CourseListComponent } from './course-list/course-list.component';
 import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
 import { FaqPageComponent } from './faq-page/faq-page.component';
 import { PrivacyPolicyPageComponent } from './privacy-policy-page/privacy-policy-page.component';
@@ -26,6 +27,7 @@ const routes: Routes = [
   { path: 'faq', component: FaqPageComponent },
   { path: 'terms-and-conditions', component: TermsAndConditionsPageComponent},
   { path: 'privacy-policy', component: PrivacyPolicyPageComponent },
+  { path: 'courses', component:CourseListComponent},
 // Dynamic Routes for Courses
   { path: ':course', component: CourseComponent },
   { path: ':course/:grade', component: GradeComponent },

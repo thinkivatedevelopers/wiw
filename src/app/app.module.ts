@@ -21,6 +21,7 @@ import { NotFoundPageComponent } from './not-found-page/not-found-page.component
 import { CourseComponent } from './course/course.component';
 import { GradeComponent } from './grade/grade.component';
 import { PackageComponent } from './package/package.component';
+import { CourseListComponent } from './course-list/course-list.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { PackageComponent } from './package/package.component';
     NotFoundPageComponent,
     CourseComponent,
     GradeComponent,
-    PackageComponent
+    PackageComponent,
+    CourseListComponent
   ],
   imports: [
     BrowserModule,

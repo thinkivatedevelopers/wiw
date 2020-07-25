@@ -188,6 +188,188 @@ export class DataService {
         }
       ],
     },
+    {
+      slug: 'cbse',
+      name: 'CBSE',
+      description: 'desc',
+      image: '',
+      grades: [
+        {
+          slug: 'plus-one',
+          name: 'Plus One',
+          decription: 'description of plus two',
+          image: 'plus-two.jpeg',
+          packages: [
+            {
+              slug: 'kerala-state-plus-two-offline-bundle-pack',
+              name: 'Keral State Plus Two Offline Bundle Pack',
+              description: 'description',
+              image: 'ks-pl-off.png',
+              isOnlinePack: true,
+              isComboPack: true,
+              validityDays: 150,
+              price: 12000,
+              subjects: [
+                { name: 'Biology', icon: 'boilogy-small.svg' },
+                { name: 'Chemistry', icon: 'chmemistry-small.svg' },
+              ],
+            },
+            {
+              slug: 'kerala-state-plus-two-offline-bundle-pack',
+              name: 'Keral State Plus Two Offline Bundle Pack',
+              description: 'description',
+              image: 'ks-pl-off.png',
+              isOnlinePack: true,
+              isComboPack: true,
+              validityDays: 150,
+              price: 12000,
+              subjects: [
+                { name: 'Biology', icon: 'boilogy-small.svg' },
+                { name: 'Chemistry', icon: 'chmemistry-small.svg' },
+              ],
+            },
+            {
+              slug: 'kerala-state-plus-two-offline-bundle-pack',
+              name: 'Keral State Plus Two Offline Bundle Pack',
+              description: 'description',
+              image: 'ks-pl-off.png',
+              isOnlinePack: true,
+              isComboPack: true,
+              validityDays: 150,
+              price: 12000,
+              subjects: [
+                { name: 'Biology', icon: 'boilogy-small.svg' },
+                { name: 'Chemistry', icon: 'chmemistry-small.svg' },
+              ],
+            },
+            {
+              slug: 'kerala-state-plus-two-offline-bundle-pack',
+              name: 'Keral State Plus Two Offline Bundle Pack',
+              description: 'description',
+              image: 'ks-pl-off.png',
+              isOnlinePack: true,
+              isComboPack: true,
+              validityDays: 150,
+              price: 12000,
+              subjects: [
+                { name: 'Biology', icon: 'boilogy-small.svg' },
+                { name: 'Chemistry', icon: 'chmemistry-small.svg' },
+              ],
+            },
+          ],
+        },
+        {
+          slug: 'plus-two',
+          name: 'Plus Two',
+          decription: 'description of plus two',
+          image: 'plus-two.jpeg',
+          packages: [
+            {
+              slug: 'kerala-state-plus-two-offline-bundle-pack',
+              name: 'Keral State Plus Two Offline Bundle Pack',
+              description: 'description',
+              image: 'ks-pl-off.png',
+              isOnlinePack: true,
+              isComboPack: true,
+              validityDays: 150,
+              price: 12000,
+              subjects: [
+                { name: 'Biology', icon: 'boilogy-small.svg' },
+                { name: 'Chemistry', icon: 'chmemistry-small.svg' },
+              ],
+            },
+          ],
+        },
+        {
+          slug: 'plus-two',
+          name: 'Plus Two',
+          decription: 'description of plus two',
+          image: 'plus-two.jpeg',
+          packages: [
+            {
+              slug: 'kerala-state-plus-two-offline-bundle-pack',
+              name: 'Keral State Plus Two Offline Bundle Pack',
+              description: 'description',
+              image: 'ks-pl-off.png',
+              isOnlinePack: true,
+              isComboPack: true,
+              validityDays: 150,
+              price: 12000,
+              subjects: [
+                { name: 'Biology', icon: 'boilogy-small.svg' },
+                { name: 'Chemistry', icon: 'chmemistry-small.svg' },
+              ],
+            },
+          ],
+        },
+        {
+          slug: 'plus-two',
+          name: 'Plus Two',
+          decription: 'description of plus two',
+          image: 'plus-two.jpeg',
+          packages: [
+            {
+              slug: 'kerala-state-plus-two-offline-bundle-pack',
+              name: 'Keral State Plus Two Offline Bundle Pack',
+              description: 'description',
+              image: 'ks-pl-off.png',
+              isOnlinePack: true,
+              isComboPack: true,
+              validityDays: 150,
+              price: 12000,
+              subjects: [
+                { name: 'Biology', icon: 'boilogy-small.svg' },
+                { name: 'Chemistry', icon: 'chmemistry-small.svg' },
+              ],
+            },
+          ],
+        },
+        {
+          slug: 'plus-two',
+          name: 'Plus Two',
+          decription: 'description of plus two',
+          image: 'plus-two.jpeg',
+          packages: [
+            {
+              slug: 'kerala-state-plus-two-offline-bundle-pack',
+              name: 'Keral State Plus Two Offline Bundle Pack',
+              description: 'description',
+              image: 'ks-pl-off.png',
+              isOnlinePack: true,
+              isComboPack: true,
+              validityDays: 150,
+              price: 12000,
+              subjects: [
+                { name: 'Biology', icon: 'boilogy-small.svg' },
+                { name: 'Chemistry', icon: 'chmemistry-small.svg' },
+              ],
+            },
+          ],
+        },
+        {
+          slug: 'plus-two',
+          name: 'Plus Two',
+          decription: 'description of plus two',
+          image: 'plus-two.jpeg',
+          packages: [
+            {
+              slug: 'kerala-state-plus-two-offline-bundle-pack',
+              name: 'Keral State Plus Two Offline Bundle Pack',
+              description: 'description',
+              image: 'ks-pl-off.png',
+              isOnlinePack: true,
+              isComboPack: true,
+              validityDays: 150,
+              price: 12000,
+              subjects: [
+                { name: 'Biology', icon: 'boilogy-small.svg' },
+                { name: 'Chemistry', icon: 'chmemistry-small.svg' },
+              ],
+            },
+          ],
+        }
+      ],
+    }
   ];
 
 
