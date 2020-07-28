@@ -8,13 +8,27 @@
                     <!-- <pre>{{p| json}}</pre> -->
                   
 
-                      <div class="card" style=" background-color:#0062A6 ; color: white !important; webkit-box-shadow: inset 1px -31px 39px 18px rgba(0,0,0,0.27);
-                      -moz-box-shadow: inset 1px -31px 39px 18px rgba(0,0,0,0.27);
-                      box-shadow: inset 1px -31px 39px 18px rgba(0,0,0,0.27);">
+                      <div class="card" >
                         <div class="card-body">
-                           <img src="assets/images/sylabus-icons/{{course.image}}" style=" display: block;margin-left: auto; margin-right: auto;width: 50%; max-height: 110px !important;"
+                          <div class="coin">
+                            <div class="coin__front"></div>
+                            <div class="coin__edge">
+                              <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                              <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                              <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                              <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                               <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                              <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                              <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                              <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                          
+                            </div>
+                            <div class="coin__back"></div>
+                            <div class="coin__shadow"></div>
+                          </div>
+                           <!-- <img src="assets/images/sylabus-icons/{{course.image}}" style=" display: block;margin-left: auto; margin-right: auto;width: 50%; max-height: 110px !important;"
                            
-                             >
+                             > -->
                           <h4 class="card-title text-center"> <a  routerLink="/{{course.slug}}/{{course.grades.slug}}" class="stretched-link">{{course.name}}</a> </h4>
                           <hr style="  width: 100%;
                           height: 5px;
@@ -30,17 +44,18 @@
 
                  
                 </div>
-                
+               
             </div>
    
    
             <div class="container">
-            <!-- <a class="btn btn-light btn-sm" routerLink="/kerala-state/plus-two/kerala-state-plus-two-offline-bundle-pack">Kerala state plus two offline compo pack</a> -->
-            <!-- <pre>{{courseList | json}}</pre> -->
+              
+              <app-demo-videos></app-demo-videos>
+           
         </div>
            </div>
         
-           <app-demo-videos></app-demo-videos>
+           
     </section>
     <wiw-footer></wiw-footer>
 </div>

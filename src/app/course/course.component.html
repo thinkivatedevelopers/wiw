@@ -4,7 +4,7 @@
          <div class="row">
 
              <div *ngFor="let g of course.grades;" class="col-md-4 mb-4">
-                 <pre>{{g | json}}</pre>
+                 <!-- <pre>{{g | json}}</pre> -->
 
                  <div class="card" >
                     <img class="card-img-top" src="assets/images/video.jpg" style="opacity: 0.3;" alt="Card image">
@@ -26,7 +26,12 @@
           <!-- <a class="btn btn-light btn-sm" routerLink="/kerala-state/plus-two">Plus Two Grade</a>
            <pre>{{course | json}}</pre>   -->
         </div>
-
+        <div class="container">
+              
+          <app-demo-videos></app-demo-videos>
+       
+    </div>
+       
     </section>
     <wiw-footer></wiw-footer>
 </div>
