@@ -4,33 +4,37 @@
         <div class="container">
             <div class="main-title text-center">
                 <h3 class="text-uppercase"><span> <a routerLink="/{{courseSlug}}" >{{course.name}}</a> </span>-  {{grade.name}} </h3>
-                <h4 class="text-uppercase mt-2">Available Packages</h4>
+                
                 <p class="my-4">{{grade.description}} </p>
+                <h4 class="text-uppercase mt-2">Available Packages</h4>
             </div>
 
-           
-                
-                        <div class="row justify-content-md-center">
-                            <div *ngFor="let package of grade.packages;" class="col-md-4 mb-4">
-                                <div class="card mb-3 " style="background:linear-gradient(135deg, #0062a6 0%,#af227a 100%); border:none; border-radius: 10px;">
-                                    <div class="card-body text-light">
-                                        <div>
-                                            <span *ngIf="package.isOnlinePack">Online</span>
-                                            <span *ngIf="!package.isOnlinePack">Offline</span>
-                                        </div>
-                                     
-                                        <h5 class="text-light">
-                                            <a  routerLink="/{{courseSlug}}/{{gradeSlug}}/{{package.slug}}" class="stretched-link text-light">{{package.name}}</a>
-                                        </h5>
-                                        <p class="lead">includes: <span *ngFor="let subject of package.subjects;"> {{subject.name}}</span></p>
-                                        <p> <strong>{{package.price | currency:"INR": 'symbol' :'1.0-0'}}</strong></p>
-                                    </div>
-                                </div> 
+           <div class="container-fluid">
+            <div class="row justify-content-md-center">
+                <div *ngFor="let package of grade.packages;" class="col-sm-6 col-md-4 mb-4">
+                    <div class="card mb-3 "
+                        style="background:linear-gradient(135deg, #0062a6 0%,#af227a 100%); border:none; border-radius: 10px;">
+                        <div class="card-body text-light">
+                            <div>
+                                <span *ngIf="package.isOnlinePack">Online</span>
+                                <span *ngIf="!package.isOnlinePack">Offline</span>
                             </div>
-                       
-
-                
+            
+                            <h5 class="text-light">
+                                <a routerLink="/{{courseSlug}}/{{gradeSlug}}/{{package.slug}}"
+                                    class="stretched-link text-light">{{package.name}}</a>
+                            </h5>
+                            <p class="lead">includes: <span *ngFor="let subject of package.subjects;"> {{subject.name}}</span></p>
+                            <p> <strong>{{package.price | currency:"INR": 'symbol' :'1.0-0'}}</strong></p>
+                        </div>
+                    </div>
+                </div>
+            
+            
+            
             </div>
+           </div>
+                        
 
            </div>
     </section>
