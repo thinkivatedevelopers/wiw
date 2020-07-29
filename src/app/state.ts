@@ -26,8 +26,8 @@ export const state: Course[] = [
               validityDays: 150,
               price: 12000,
               subjects: [
-                { name: 'Biology', icon: '/assets/icons/bio.png' },
-                { name: 'Chemistry', icon: '/assets/icons/che.png' },
+                { name: 'Biology', icon: 'assets/icons/bio.svg' },
+                { name: 'Chemistry', icon: 'assets/icons/che.svg' },
               ],
             },
             {
@@ -42,10 +42,10 @@ export const state: Course[] = [
               validityDays: 250,
               price: 9000,
               subjects: [
-                { name: 'Physics', icon: '/assets/icons/phy.svg' },
-                { name: 'Chemistry', icon : '/assets/icons/che.svg' },
-                { name: 'Biology', icon: '/assets/icons/bio.svg' },
-                { name: 'Mathematics', icon: '/assets/icons/math.svg' },
+                { name: 'Physics', icon: 'assets/icons/phy.svg' },
+                { name: 'Chemistry', icon : 'assets/icons/che.svg' },
+                { name: 'Biology', icon: 'assets/icons/bio.svg' },
+                { name: 'Mathematics', icon: 'assets/icons/math.svg' },
               ],
             },
           ],
@@ -66,8 +66,8 @@ export const state: Course[] = [
               validityDays: 150,
               price: 12000,
               subjects: [
-                { name: 'Biology', icon: '/assets/icons/bio.png' },
-                { name: 'Physics', icon: '/assets/icons/phy.png' },
+                { name: 'Biology', icon: 'assets/icons/bio.svg' },
+                { name: 'Physics', icon: 'assets/icons/phy.svg' },
               ],
             },
           ],
@@ -97,8 +97,8 @@ export const state: Course[] = [
               validityDays: 150,
               price: 12000,
               subjects: [
-                { name: 'Biology', icon: '/assets/icons/bio.png' },
-                { name: 'Chemistry', icon: '/assets/icons/che.png' },
+                { name: 'Biology', icon: 'assets/icons/bio.svg' },
+                { name: 'Chemistry', icon: 'assets/icons/che.svg' },
               ],
             },
             {
@@ -111,9 +111,9 @@ export const state: Course[] = [
               validityDays: 250,
               price: 9000,
               subjects: [
-                { name: 'Biology', icon: '/assets/icons/bio.png' },
-                { name: 'Chemistry', icon: '/assets/icons/che.png' },
-                { name: 'Mathematics', icon: '/assets/icons/math.png' },
+                { name: 'Biology', icon: 'assets/icons/bio.svg' },
+                { name: 'Chemistry', icon: 'assets/icons/che.svg' },
+                { name: 'Mathematics', icon: 'assets/icons/math.svg' },
               ],
             },
           ],
@@ -134,8 +134,8 @@ export const state: Course[] = [
               validityDays: 150,
               price: 12000,
               subjects: [
-                { name: 'Biology', icon: '/assets/icons/bio.png' },
-                { name: 'Mathematics', icon: '/assets/icons/math.png' },
+                { name: 'Biology', icon: 'assets/icons/bio.svg' },
+                { name: 'Mathematics', icon: 'assets/icons/math.svg' },
               ],
             },
           ],
