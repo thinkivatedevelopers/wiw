@@ -156,7 +156,7 @@
     }
   </style>
 
-<link rel="stylesheet" href="styles.e7829cf3099e9f966f64.css"></head>
+<link rel="stylesheet" href="styles.78c6c3a2d84fa092b560.css"></head>
 <body class="cap-cursor">
 
   <!-- Github Pages hack to allow SPA refresh without receiving 404. -->
@@ -280,5 +280,24 @@
        });
      });
    </script>
-<script src="runtime-es2015.0dae8cbc97194c7caed4.js" type="module"></script><script src="runtime-es5.0dae8cbc97194c7caed4.js" nomodule defer></script><script src="polyfills-es5.177e85a9724683782539.js" nomodule defer></script><script src="polyfills-es2015.f332a089ad1600448873.js" type="module"></script><script src="main-es2015.c0f9528de94457aa1b77.js" type="module"></script><script src="main-es5.c0f9528de94457aa1b77.js" nomodule defer></script></body>
+   <script>
+    $(document).ready(function(){
+        /* Get iframe src attribute value i.e. YouTube video url
+        and store it in a variable */
+        var url = $("#cartoonVideo").attr('src');
+        
+        /* Assign empty url value to the iframe src attribute when
+        modal hide, which stop the video playing */
+        $("#myModal").on('hide.bs.modal', function(){
+            $("#cartoonVideo").attr('src', '');
+        });
+        
+        /* Assign the initially stored url back to the iframe src
+        attribute when modal is displayed again */
+        $("#myModal").on('show.bs.modal', function(){
+            $("#cartoonVideo").attr('src', url);
+        });
+    });
+    </script>
+<script src="runtime-es2015.0dae8cbc97194c7caed4.js" type="module"></script><script src="runtime-es5.0dae8cbc97194c7caed4.js" nomodule defer></script><script src="polyfills-es5.2237b5d0d7a85091411d.js" nomodule defer></script><script src="polyfills-es2015.f332a089ad1600448873.js" type="module"></script><script src="main-es2015.6b442509ef82b67252fc.js" type="module"></script><script src="main-es5.6b442509ef82b67252fc.js" nomodule defer></script></body>
 </html>
