@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import {Title, Meta} from '@angular/platform-browser';
+import { SEOService } from '../seo.service';
 
 @Component({
   selector: 'app-features-page',
@@ -9,17 +9,12 @@ import {Title, Meta} from '@angular/platform-browser';
 export class FeaturesPageComponent implements OnInit {
 
   constructor(
-    private title: Title,
-    private meta: Meta
+    private seoService: SEOService
   ) { }
 
   ngOnInit(): void {
-    this.title.setTitle('Features - WIW Learn');
-    this.meta.updateTag({name: 'description', content: 'my super decription'});
-  }
-
-  ngOndestroy(){
-    this.title.setTitle('sdfsdfsdf');
+    this.seoService.updateTitle('Features - WIW Learn');
+    this.seoService.updateDescription('Features of WIW Learn App')
   }
 
 }

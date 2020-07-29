@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { DataService } from '../data.service';
-import {Title, Meta} from '@angular/platform-browser';
+import { SEOService } from '../seo.service';
 
 
 @Component({
@@ -22,8 +22,7 @@ export class PackageComponent implements OnInit {
   constructor(
     private data: DataService,
     private route: ActivatedRoute,
-    private title: Title,
-    private meta: Meta
+    private seoService: SEOService
   ) {
     this.courseSlug = this.route.snapshot.paramMap.get('course');
     this.gradeSlug = this.route.snapshot.paramMap.get('grade');
@@ -33,15 +32,9 @@ export class PackageComponent implements OnInit {
   ngOnInit(): void {
     this.package = this.data.getPackage(this.courseSlug, this.gradeSlug, this.packageSlug );
     if (this.package){
-      this.title.setTitle(`${this.package.name} - Wiw Learn`);
-      this.meta.updateTag({name: `description`, content: `${this.package.description}`});
+      this.seoService.updateTitle(`${this.package.name} - Wiw Learn`);
+      this.seoService.updateDescription(`${this.package.description}`);
     }
-    else{
-      this.title.setTitle('Not found');
-      this.meta.updateTag({name: 'description', content: 'my super decription'});
-    }
-    // this.grade = this.data.getGrade(this.courseSlug, this.gradeSlug);
-    // this.course = this.data.getCourse(this.courseSlug);
   }
 
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SEOService } from '../seo.service';
 
 @Component({
   selector: 'app-faq-page',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FaqPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private seoService: SEOService
+  ) { }
 
   ngOnInit(): void {
+    this.seoService.updateTitle('FAQs - WIW Learn');
+    this.seoService.updateDescription('Wiw Learn is a One-App-One-Solution for Students. It allows students to access learning solutions mapped to their curriculum. Learn from anywhere, anytime while simultaneously allowing parents to track and evaluate the student’s performance.')
   }
 
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SEOService } from '../seo.service';
 
 @Component({
   selector: 'app-privacy-policy-page',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PrivacyPolicyPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private seoService: SEOService
+  ) { }
 
   ngOnInit(): void {
+    this.seoService.updateTitle('Privacy Policy - WIW Learn');
+    this.seoService.updateDescription('Our Privacy Policy');
   }
 
 }
