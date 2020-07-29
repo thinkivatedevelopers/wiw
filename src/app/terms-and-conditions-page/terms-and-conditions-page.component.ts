@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SEOService } from '../seo.service';
 
 @Component({
   selector: 'app-terms-and-conditions-page',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TermsAndConditionsPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private seoService: SEOService
+  ) { }
 
   ngOnInit(): void {
+    this.seoService.updateTitle('Terms and Conditions - WIW Learn');
+    this.seoService.updateDescription('Our Terms and conditions ');
   }
 
 }
