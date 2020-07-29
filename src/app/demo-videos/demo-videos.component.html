@@ -1,46 +1,18 @@
 <div class="heading text-center mx-auto">
-    <h3 class="head">Demo Videos</h3>
-    <p class="my-3 head"> Wiw Learn is a One-App-One-Solution for Students. It allows students to access learning
-      solutions mapped to their curriculum. Learn from anywhere, anytime
-      while simultaneously allowing parents to track and evaluate the student’s performance.</p>
+  <h3 class="head">Demo Videos</h3>
+  <p class="my-3 head"> Wiw Learn is a One-App-One-Solution for Students. It allows students to access learning
+    solutions mapped to their curriculum. Learn from anywhere, anytime
+    while simultaneously allowing parents to track and evaluate the student’s performance.</p>
+</div>
+
+<div class="row no-gutters">
+  <div *ngFor="let video of videos" class="col-md-4"> 
+      <div class="card" style="border:none">
+        <div class="card-body">
+          <iframe width="100%" [src]="video.link | safe" >
+          </iframe>
+        </div>
+      </div>
   </div>
 
-   <div class="row">
-       <div class="col-md-4 ">
-        <div class="card">
-            <div class="card-body">
-    
-            <iframe  width="350" height="300" src="https://www.youtube.com/embed/tgbNymZ7vqY">
-            </iframe>
-              
-            </div>
-          </div>
-       </div>
-       <div class="col-md-4">
-        <div class="card">
-            <div class="card-body">
-    
-            <iframe  width="350" height="300" src="https://www.youtube.com/embed/tgbNymZ7vqY">
-            </iframe>
-              
-            </div>
-          </div>
-       </div>
-       <div class="col-md-4">
-        <div class="card">
-            <div class="card-body">
-    
-            <iframe width="350" height="300" src="https://www.youtube.com/embed/tgbNymZ7vqY">
-            </iframe>
-              
-            </div>
-          </div>
-       </div>
-   </div>
- 
-
-      
-      
-      
-     
-    
+</div>

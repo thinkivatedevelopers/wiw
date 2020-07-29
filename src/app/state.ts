@@ -41,9 +41,10 @@ export const state: Course[] = [
               validityDays: 250,
               price: 9000,
               subjects: [
-                { name: 'Physics', icon: '/assets/icons/phy.png' },
-                { name: 'Chemistry', icon : '/assets/icons/che.png' },
-                { name: 'Biology', icon: '/assets/icons/bio.png' },
+                { name: 'Physics', icon: '/assets/icons/phy.svg' },
+                { name: 'Chemistry', icon : '/assets/icons/che.svg' },
+                { name: 'Biology', icon: '/assets/icons/bio.svg' },
+                { name: 'Mathematics', icon: '/assets/icons/math.svg' },
               ],
             },
           ],
@@ -205,6 +206,13 @@ export const state: Course[] = [
           ],
         }
       ],
+    },
+    {
+      description: '',
+      grades: [],
+      image: '',
+      name: 'saasd0',
+      slug: 'asasd'
     }
 
   ];
