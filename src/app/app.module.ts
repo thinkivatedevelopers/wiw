@@ -22,7 +22,7 @@ import { CourseComponent } from './course/course.component';
 import { GradeComponent } from './grade/grade.component';
 import { PackageComponent } from './package/package.component';
 import { CourseListComponent } from './course-list/course-list.component';
-import { DemoVideosComponent } from './demo-videos/demo-videos.component';
+import { DemoVideosComponent, SafePipe } from './demo-videos/demo-videos.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +44,8 @@ import { DemoVideosComponent } from './demo-videos/demo-videos.component';
     GradeComponent,
     PackageComponent,
     CourseListComponent,
-    DemoVideosComponent
+    DemoVideosComponent,
+    SafePipe
   ],
   imports: [
     BrowserModule,
