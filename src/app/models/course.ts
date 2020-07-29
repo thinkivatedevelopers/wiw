@@ -4,6 +4,7 @@ export interface Course {
   description: string;
   image: string;
   grades: Grade[];
+  isLive:boolean;
 }
 
 interface Grade {
@@ -12,6 +13,7 @@ interface Grade {
   description: string;
   image: string;
   packages: Package[];
+ 
 }
 
 interface Package {
@@ -24,6 +26,7 @@ interface Package {
   isComboPack: boolean;
   validityDays: number;
   subjects: Subject[];
+  
 }
 
 interface Subject {
