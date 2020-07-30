@@ -6,30 +6,26 @@
 </div>
 
 <div class="row no-gutters">
-  <div *ngFor="let video of videos; let videoIndex=index;" class="col-md-4"> 
-    
-      <div class="card" style="border:none">
-        <div class="card-body">
-          <!-- <iframe width="100%" [src]="video.link | safe" >
-          </iframe> --><div id="myModal{{videoIndex}}" class="modal fade">
-      <div class="modal-dialog">
-        <div class="modal-content">
-            
-            <div class="modal-body">
-              <iframe id="cartoonVideo"  width="470" height="220" frameborder="0" allowfullscreen [src]="video.link | safe" >
-              </iframe>
+
+  <div *ngFor="let video of videos; let videoIndex=index;" class="col-md-4">
+    <div class="card" style="border:none">
+      <div class="card-body">
+        <div id="myModal{{videoIndex}}" class="modal fade">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-body">
+                <iframe id="cartoonVideo"  width="470" height="220" frameborder="0" allowfullscreen
+                  [src]="video.link | safe">
+                </iframe>
                 <!-- <iframe id="cartoonVideo" width="560" height="315" src="//www.youtube.com/embed/YE7VzlLtp-4" frameborder="0" allowfullscreen></iframe> -->
+              </div>
             </div>
+          </div>
         </div>
-    </div>
-</div>
-          <a href="#myModal{{videoIndex}}"  data-toggle="modal"> <img src="{{video.thumb}}" width="350px" height="200"></a> &nbsp;
-        </div>
+        <a href="#myModal{{videoIndex}}" data-toggle="modal"> <img src="{{video.thumb}}" width="100%"></a>
+        
       </div>
+    </div>
   </div>
 
 </div>
-<div class="bs-example">
- 
-  
-</div>     

@@ -20,7 +20,6 @@ export class DemoVideosComponent implements OnInit {
     {
       link: 'https://www.youtube.com/embed/tgbNymZ7vqY',
       thumb: 'assets/images/presenters/video-thumb-2.png'
-     
     },
     {
       link: 'https://www.youtube.com/embed/_bZDjQOMf4U',
@@ -35,6 +34,8 @@ export class DemoVideosComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    // To shuffle video array
+    this.videos = this.videos.sort(() => Math.random() - 0.5);
   }
 
 }
