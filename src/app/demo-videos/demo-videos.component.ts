@@ -19,15 +19,16 @@ export class DemoVideosComponent implements OnInit {
   videos = [
     {
       link: 'https://www.youtube.com/embed/tgbNymZ7vqY',
-      thumb: 'first'
+      thumb: 'assets/images/presenters/video-thumb-2.png'
+     
     },
     {
       link: 'https://www.youtube.com/embed/_bZDjQOMf4U',
-      thumb: 'second'
+      thumb: 'assets/images/presenters/video-thumb-3.png'
     },
     {
       link: 'https://www.youtube.com/embed/ANyOZIcGvB8',
-      thumb: 'third'
+      thumb: 'assets/images/presenters/video-thumb-4.png'
     }
   ];
 
