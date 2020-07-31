@@ -237,6 +237,7 @@
    <!-- disable body scroll which navbar is in active -->
    <script>
      $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
        $('.navbar-toggler').click(function () {
          $('body').toggleClass('noscroll');
        })
@@ -247,6 +248,7 @@
    <script src="assets/js/jquery.magnific-popup.min.js"></script>
    <script>
      $(document).ready(function () {
+     
        $('.popup-with-zoom-anim').magnificPopup({
          type: 'inline',
  
@@ -280,7 +282,7 @@
        });
      });
    </script>
-   <script>
+   <!-- <script>
     $(document).ready(function(){
         /* Get iframe src attribute value i.e. YouTube video url
         and store it in a variable */
@@ -298,6 +300,7 @@
             $("#cartoonVideo").attr('src', url);
         });
     });
-    </script>
+    </script> -->
+   
 </body>
 </html>

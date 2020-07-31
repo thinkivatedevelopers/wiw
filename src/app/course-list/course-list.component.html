@@ -23,7 +23,7 @@
                         <div class="card-body">
                           <h5 class="text-center text-danger" *ngIf="course.isLive != true; else availableNow"  > Coming Soon ...</h5>
                            <ng-template #availableNow >
-                            <h5 class="text-center text-primary"  >Available Now</h5> 
+                            <h5 class="text-center text-secondary">Available Now</h5> 
                            </ng-template>
                           <div class="coin">
                             <div class="coin__front" style="background-image: url('{{course.image}}');"></div>
