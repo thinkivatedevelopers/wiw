@@ -13,16 +13,26 @@
         <div id="myModal{{videoIndex}}" class="modal fade">
           <div class="modal-dialog">
             <div class="modal-content">
+              <div class="modal-header"> 
+                <button type="button"
+                        class="close"
+                        data-dismiss="modal"
+                        aria-hidden="true">Close</button> 
+                
+            </div>
               <div class="modal-body">
-                <iframe id="cartoonVideo"  width="470" height="220" frameborder="0" allowfullscreen
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe id="cartoonVideo"  class="embed-responsive-item" [src]="video.link | safe"></iframe>
+                </div>
+                <!-- <iframe id="cartoonVideo"  width="470" height="220" frameborder="0" allowfullscreen
                   [src]="video.link | safe">
-                </iframe>
+                </iframe> -->
                 <!-- <iframe id="cartoonVideo" width="560" height="315" src="//www.youtube.com/embed/YE7VzlLtp-4" frameborder="0" allowfullscreen></iframe> -->
               </div>
             </div>
           </div>
         </div>
-        <a href="#myModal{{videoIndex}}" data-toggle="modal"> <img src="{{video.thumb}}" width="100%"></a>
+        <a href="#myModal{{videoIndex}}" data-toggle="modal"> <img src="{{video.thumb}}" class="img-responsive"></a>
         
       </div>
     </div>
