@@ -24,6 +24,7 @@ import { GradeComponent } from './grade/grade.component';
 import { PackageComponent } from './package/package.component';
 import { CourseListComponent } from './course-list/course-list.component';
 import { DemoVideosComponent, SafePipe } from './demo-videos/demo-videos.component';
+import { DownloadComponent } from './download/download.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { DemoVideosComponent, SafePipe } from './demo-videos/demo-videos.compone
     PackageComponent,
     CourseListComponent,
     DemoVideosComponent,
-    SafePipe
+    SafePipe,
+    DownloadComponent
   ],
   imports: [
     BrowserModule,
