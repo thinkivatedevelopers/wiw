@@ -1,3 +1,16 @@
 .wiw-header {
      box-shadow: 0 2px 4px -1px rgba(0,0,0,0.25)!important
 }
+
+.download-button{
+     background:linear-gradient(135deg, #0062A6 0%,#b33066 100%);
+     /* border:none !important; */
+     border-radius: 80px !important;
+     color: #fff !important; 
+ 
+ }
+
+ .form-inline:hover .download-button {
+     background:#fff;
+     color: #0062A6 !important; 
+   }
