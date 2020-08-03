@@ -1,0 +1,12 @@
+.download-button{
+    background:linear-gradient(135deg, #0062A6 0%,#b33066 100%);
+    /* border:none !important; */
+    border-radius: 50px !important;
+    color: #fff !important; 
+
+}
+
+.form-group:hover .download-button {
+    background:#fff;
+    color: #0062A6 !important; 
+  }
