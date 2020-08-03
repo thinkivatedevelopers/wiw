@@ -1,206 +1,89 @@
- <!-- PRICE AND PLANS GOES HERE -->
-             
- <div class="wiw-index-block4">
-    <div class="features-bg py-5">
-      <!-- features15 block -->
-      <div class="container-fluid py-md-3">
-        <div class="heading text-center mx-auto">
-          <h3 class="head">Our Plans and Prices</h3>
-          <p class="my-3 head">We provide the best and affordable price and plans.</p>
-        </div>
-        <br><br>
+<div *ngIf="courseList">
+  <section class="page-wrapper">
 
-        <div class="pack-container">
-
-          <!-- Tab -->
-          <ul class="nav nav-pills justify-content-center" role="tablist">
-
-            <li class="nav-item">
-              <a class="nav-link active tab-link"  data-toggle="pill" href="#online-sec">Online
-                Packages</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link tab-link" data-toggle="pill" href="#offline-sec">Offline Packages</a>
-            </li>
-          </ul>
-
-          <!-- Tab panes -->
-          <div class="tab-content">
-
-            <div id="online-sec" class="container tab-pane active"><br>
-              <div class="row">
-
-                <div class="col-md-6 features15-col-text">
-                  <a href="#url" class="d-flex flex-wrap feature-unit align-items-center">
-                    <!-- <div class="col-sm-3">
-                      <div class="features15-info">
-                        <span class="fa fa-pencil-square-o" aria-hidden="true"></span>
-                        <img src="assets/images/ed3.png">
-                      </div>
-                    </div> -->
-                    <div class="col mt-sm-0 mt-4 ">
-
-                      <div class="text-center">
-                        <img src="assets/images/ed3.png">
-                      </div>
-                      <div class="features15-para">
-                        <h4>Plus two Maths Package</h4>
-                        <p>It is a long established fact that a reader will be distracted by the readable content.</p>
-                        <div> <strong>Includes</strong>
-                          <ul>
-                            <li>Question Papers</li>
-                            <li>Practice Sessions</li>
-                            <li>Perfomance</li>
-                          </ul>
-                        </div>
-
-                        <h4><small style="text-decoration: line-through; color: brown;">₹ 200</small> &nbsp;
-                            ₹ 100</h4>
-                        <button class="btn btn-outline-primary mt-5"> Subscribe Now</button>
-
-                      </div>
-                    </div>
-                  </a>
-                </div>
-                
-                <div class="col-md-6 features15-col-text">
-                  <a href="#url" class="d-flex flex-wrap feature-unit align-items-center">
-                    <div class="col-sm-3">
-                      <div class="features15-info">
-                        <!-- <span class="fa fa-pencil-square-o" aria-hidden="true"></span> -->
-                        <img src="assets/images/ed3.png">
-                      </div>
-                    </div>
-                    <div class="col-sm-9 mt-sm-0 mt-4 ">
-                      <div class="features15-para">
-                        <h4>Plus two Maths Package</h4>
-                        <p>It is a long established fact that a reader will be distracted by the readable content.</p>
-                        <div> <strong>Includes</strong>
-                          <ul>
-                            <li>Question Papers</li>
-                            <li>Practice Sessions</li>
-                            <li>Perfomance</li>
-                          </ul>
-                        </div>
-
-                        <h4><small style=" text-decoration: line-through; color: brown;">₹200</small> &nbsp;
-                            ₹100</h4>
-                        <button class="btn btn-outline-primary mt-5"> Subscribe Now</button>
-
-                      </div>
-                    </div>
-                  </a>
-                </div>
-
-
-              </div>
-            </div>
-            <div id="offline-sec" class="container tab-pane fade"><br>
-              <div class="row">
-
-                <div class="col-md-4 features15-col-text">
-                  <a href="#url" class="d-flex flex-wrap feature-unit align-items-center">
-                    <!-- <div class="col-sm-3">
-                      <div class="features15-info">
-                        <img src="assets/images/ed3.png">
-                      </div>
-                    </div> -->
-                    <div class="col-sm-9 mt-sm-0 mt-4 ">
-                      <div class="features15-para">
-                        <h4>Plus two Maths Package</h4>
-                        <p>It is a long established fact that a reader will be distracted by the readable content.</p>
-                        <div> <strong>Includes</strong>
-                          <ul>
-                            <li>Question Papers</li>
-                            <li>Practice Sessions</li>
-                            <li>Perfomance</li>
-                          </ul>
-                        </div>
-
-                        <h4><small style=" text-decoration: line-through; color: brown;">₹200</small> &nbsp;
-                            ₹100</h4>
-                        <button class="btn btn-outline-primary mt-5"> Subscribe Now</button>
-
-                      </div>
-                    </div>
-                  </a>
-                </div>
-                <div class="col-md-4 features15-col-text">
-                  <a href="#url" class="d-flex flex-wrap feature-unit align-items-center">
-                    <!-- <div class="col-sm-3">
-                      <div class="features15-info">
-                        <img src="assets/images/ed3.png">
-                      </div>
-                    </div> -->
-                    <div class="col-sm-9 mt-sm-0 mt-4 ">
-                      <div class="features15-para">
-                        <h4>Plus two Maths Package</h4>
-                        <p>It is a long established fact that a reader will be distracted by the readable content.</p>
-                        <div> <strong>Includes</strong>
-                          <ul>
-                            <li>Question Papers</li>
-                            <li>Practice Sessions</li>
-                            <li>Perfomance</li>
-                          </ul>
-                        </div>
-
-                        <h4><small style="text-decoration: line-through; color: brown;">₹200</small> &nbsp;
-                            ₹100</h4>
-                        <button class="btn btn-outline-primary mt-5"> Subscribe Now</button>
-
-                      </div>
-                    </div>
-                  </a>
-                </div>
-                <div class="col-md-4 features15-col-text">
-                  <a href="#url" class="d-flex flex-wrap feature-unit align-items-center">
-                    <!-- <div class="col-sm-3">
-                      <div class="features15-info">
-                        <img src="assets/images/ed3.png">
-                      </div>
-                    </div> -->
-                    <div class="col-sm-9 mt-sm-0 mt-4 ">
-                      <div class="features15-para">
-                        <h4>Plus two Maths Package</h4>
-                        <p>It is a long established fact that a reader will be distracted by the readable content.</p>
-                        <div> <strong>Includes</strong>
-                          <ul>
-                            <li>Question Papers</li>
-                            <li>Practice Sessions</li>
-                            <li>Perfomance</li>
-                          </ul>
-                        </div>
-
-                        <h4><small style="text-decoration: line-through; color: brown;">₹200</small> &nbsp;
-                            ₹100</h4>
-                        <button class="btn btn-outline-primary mt-5"> Subscribe Now</button>
-
-                      </div>
-                    </div>
-                  </a>
-                </div>
-
-
-              </div>
-            </div>
-
-          </div>
-
-
-        </div>
-
-
-
-
-
-        <div>
-          <!-- features15 block -->
+    <div class="container mb-3">
+      <div class="row">
+        <div class="col">
+          <h2 class="text-center">Our Courses and Packages</h2>
+          <hr>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem ad tenetur error, adipisci tempora culpa ut dolor ratione veniam sunt facere, assumenda temporibus iste. Modi alias corrupti officiis eum harum.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta earum rerum necessitatibus, distinctio molestias, incidunt tempora reiciendis excepturi nostrum reprehenderit atque, soluta praesentium assumenda obcaecati sit quis odio quos. Nesciunt.</p>
         </div>
       </div>
     </div>
-  </div>
+   
+      
+      <div class="container">
+          <div class="row">
+ 
+              <div *ngFor="let course of courseList;" class="col-md-4 mb-4" >
+                  
+                    <!-- <div class="card"   style="-webkit-box-shadow: -1px 0px 13px 10px rgba(41, 41, 41, 0.24); -->
+                    <!-- <div class="card" style="background:linear-gradient(135deg, rgba(126, 8, 53, 0) 0%,#5b62bb 100%); border:none; border-radius: 10px;" > -->
+                    <div class="card" style="background:linear-gradient(135deg, #0062A6 0%,#e29ca0 100%); border:none; border-radius: 10px;" >
+                      <div class="card-body">
+                        <h6 class="text-center text-danger" *ngIf="course.isLive != true; else availableNow"  > Coming Soon ...</h6>
+                         <ng-template #availableNow >
+                          <h6 class="text-center text-light">Available Now</h6> 
+                         </ng-template>
+                        <div class="coin">
+                          <div class="coin__front" style="background-image: url('{{course.image}}');"></div>
+                          <div class="coin__edge">
+                            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                             <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+                        
+                          </div>
+                          <div class="coin__back" style="background-image: url('assets/images/sylabus-icons/wiw-logowithtext.png');"></div>
+                          <div class="coin__shadow"></div>
+                        </div>
+                        
+                        <h3 class="card-title text-center" style="color: aliceblue !important;" > 
+                          <a style="color: aliceblue !important;"  *ngIf="course.isLive; else notLive" routerLink="/{{course.slug}}/{{course.grades.slug}}" 
+                          class="stretched-link">
+                          {{course.name}}</a> 
+
+                          <ng-template #notLive>
+                            {{course.name}}
+                            
+                           </ng-template> 
+                        
+                        
+                       
+                        </h3>
+                       
+                        <hr style="  width: 100%;
+                        height: 5px;
+                        margin-left: auto;
+                        margin-right: auto;
+                        background-color:#0000;
+                        border: 1 none;">
+                        <p class="card-text" style="color: aliceblue !important;">{{course.description}}</p>
+                        
+                      </div>
+                    </div>
 
 
+               
+              </div>
+             
+          </div>
+ 
+ 
+          
+         </div>
+      
+         <div class="container">
+            
+          <app-demo-videos></app-demo-videos>
+       
+    </div>
+  </section>
+ 
+</div>
 
-
-   <!-- PRICE AND PLANS ENDS HERE -->
