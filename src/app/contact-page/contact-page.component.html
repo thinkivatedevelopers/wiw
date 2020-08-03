@@ -1,79 +1,107 @@
- <!-- contacts -->
- <section class="wiw-contact mt-5">
-    <div class="contacts-9 py-5 mt-5">
-      <div class="container py-lg-3">
-        <div class="row top-map">
-          <div class="cont-details col-md-5">
-            <div class="heading mb-lg-4 mb-4">
-              <h3 class="head">Contact us </h3>
+<!-- contacts -->
+<section class="wiw-contact mt-5">
+  <div class="contacts-9 py-5 mt-5">
+    <div class="container py-lg-3">
+      <div class="row top-map">
+        <div class="cont-details col-md-6 mb-5">
+          <div class="heading mb-lg-4 mb-4">
+            <h3 class="head">Contact us </h3>
+          </div>
+          <div class="cont-top">
+            <div class="cont-left">
+              <span class="fa fa-phone"></span>
             </div>
-            <div class="cont-top">
-              <div class="cont-left">
-                <span class="fa fa-phone"></span>
-              </div>
-              <div class="cont-right">
-                <p><a href="tel:+91 495 276 0366">+91 495 276 0366</a></p>
+            <div class="cont-right">
+              <p><a href="tel:+91 495 276 0366">+91 495 276 0366</a></p>
 
-              </div>
-            </div>
-            <div class="cont-top mt-4">
-              <div class="cont-left">
-                <span class="fa fa-envelope-o"></span>
-              </div>
-              <div class="cont-right">
-                <p><a href="mailto:mailid@mail.com" class="mail">info@thinkivatelearning.com</a></p>
-              </div>
-            </div>
-            <div class="cont-top mt-4">
-              <div class="cont-left">
-                <span class="fa fa-map-marker"></span>
-              </div>
-              <div class="cont-right">
-                <p>3rd Floor MSons Arcade, Cherrotty Road, Calicut, Kerala-673001</p>
-              </div>
             </div>
           </div>
-          <div class="map-content-9 col-md-7 mt-5 mt-md-0">
-            <form action="https://sendmail.wiwayouts.com/submitForm" method="post">
-              <div class="form-group row">
-                <div class="col-md-6">
-                  <label class="contact-textfield-label" for="wiwName">First Name</label>
-                  <input type="text" class="form-control" name="wiwName" id="wiwName" placeholder="" required="">
-                </div>
-                <div class="col-md-6 mt-md-0 mt-3">
-                  <label class="contact-textfield-label" for="wiwName">Last Name</label>
-                  <input type="text" class="form-control" name="wiwName" placeholder="" required="">
-                </div>
-              </div>
-              <div class="form-group row">
-                <div class="col-md-6">
-                  <label class="contact-textfield-label" for="wiwSender">Your Email ID</label>
-                  <input type="email" class="form-control" name="wiwSender" id="wiwSender" placeholder="" required="">
-                </div>
-                <div class="col-md-6 mt-md-0 mt-3">
-                  <label class="contact-textfield-label" for="wiwPhone">Phone Number</label>
-                  <input type="tel" class="form-control" name="wiwPhone" id="wiwPhone" placeholder="" required="">
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="contact-textfield-label" for="wiwSubject">Subject</label>
-                <input type="text" class="form-control" name="wiwSubject" id="wiwSubject" placeholder="" required="">
-              </div>
-              <div class="form-group">
-                <label class="contact-textfield-label" for="wiwMessage">Message</label>
-                <textarea name="wiwMessage" class="form-control" id="wiwMessage" placeholder="" required=""></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary btn-contact">Send Message</button>
-            </form>
+          <div class="cont-top mt-4">
+            <div class="cont-left">
+              <span class="fa fa-envelope-o"></span>
+            </div>
+            <div class="cont-right">
+              <p><a href="mailto:mailid@mail.com" class="mail">info@thinkivatelearning.com</a></p>
+            </div>
+          </div>
+          <div class="cont-top mt-4">
+            <div class="cont-left">
+              <span class="fa fa-map-marker"></span>
+            </div>
+            <div class="cont-right">
+              <p>3rd Floor MSons Arcade, Cherrotty Road, Calicut, Kerala-673001</p>
+            </div>
           </div>
         </div>
+        <div class="col-md-6">
+          <div class="card shadow" style="border:none; border-radius: 15px;" >
+            <div class="card-body">
+              <div class="mb-3">
+                <h4>Send your queries</h4>
+              <small>we are happy to help you..</small>
+              </div>
+              <form action="">
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input class="form-control" id="name" type="text">
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input class="form-control" id="email" type="email">
+                </div>
+                <div class="form-group">
+                  <label for="message">Message</label>
+                  <textarea class="form-control" id="message" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                  <input type="hidden" name="remarks">
+                  <input class="btn btn-primary" type="button" value="submit">
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="map-content-9 col-md- mt-5 mt-md-0">
+          <form action="https://sendmail.wiwayouts.com/submitForm" method="post">
+            <div class="form-group row">
+              <div class="col-md-6">
+                <label class="contact-textfield-label" for="wiwName">First Name</label>
+                <input type="text" class="form-control" name="wiwName" id="wiwName" placeholder="" required="">
+              </div>
+              <div class="col-md-6 mt-md-0 mt-3">
+                <label class="contact-textfield-label" for="wiwName">Last Name</label>
+                <input type="text" class="form-control" name="wiwName" placeholder="" required="">
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-md-6">
+                <label class="contact-textfield-label" for="wiwSender">Your Email ID</label>
+                <input type="email" class="form-control" name="wiwSender" id="wiwSender" placeholder="" required="">
+              </div>
+              <div class="col-md-6 mt-md-0 mt-3">
+                <label class="contact-textfield-label" for="wiwPhone">Phone Number</label>
+                <input type="tel" class="form-control" name="wiwPhone" id="wiwPhone" placeholder="" required="">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="contact-textfield-label" for="wiwSubject">Subject</label>
+              <input type="text" class="form-control" name="wiwSubject" id="wiwSubject" placeholder="" required="">
+            </div>
+            <div class="form-group">
+              <label class="contact-textfield-label" for="wiwMessage">Message</label>
+              <textarea name="wiwMessage" class="form-control" id="wiwMessage" placeholder="" required=""></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-contact">Send Message</button>
+          </form>
+        </div> -->
       </div>
     </div>
-    <div class=" container-fluid map">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3913.087246626858!2d75.77414511480505!3d11.254992091997856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x87c011f4155024f3!2sThinkivate%20Learning%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1592384979736!5m2!1sen!2sin"
-        allowfullscreen=""></iframe>
-    </div>
-  </section>
-  <!-- //contacts -->
-  <wiw-footer></wiw-footer>
+  </div>
+  <!-- <div class=" container-fluid map">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3913.087246626858!2d75.77414511480505!3d11.254992091997856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x87c011f4155024f3!2sThinkivate%20Learning%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1592384979736!5m2!1sen!2sin"
+      allowfullscreen=""></iframe>
+  </div> -->
+</section>
+<!-- //contacts -->
+<wiw-footer></wiw-footer>
