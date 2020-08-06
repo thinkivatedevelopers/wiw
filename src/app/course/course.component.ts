@@ -8,7 +8,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./course.component.css']
 })
 export class CourseComponent implements OnInit {
-
+  
   course;
   courseSlug;
 
