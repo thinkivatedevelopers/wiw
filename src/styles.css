@@ -43,6 +43,11 @@ router-outlet ~ * {
     cursor: url('assets/cursor.cur') , pointer;
 }
 
+p {
+  margin-top:10px;
+  margin-bottom: 10px;
+}
+
 .coin {
   position: relative;
   width: 100px;
