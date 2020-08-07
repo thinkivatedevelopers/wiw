@@ -10,12 +10,12 @@
                 <h4 class="text-uppercase mt-2">Available Packages</h4>
             </div>
 
-            <div class="container m-3">
+            <div class="container">
                 <div class="row ">
                   <div class="col">
-                   <mat-tab-group animationDuration="200ms">
+                   <mat-tab-group animationDuration="500ms">
                      <mat-tab label="All Packages"> 
-                    <div class="container-fluid m-3">
+                    <div class="container-fluid mt-4">
                         <div class="row justify-content-md-center">
                             <div *ngFor="let package of grade.packages;" class="col-sm-6 col-md-4 mb-4">
                                 <div class="card mb-3 "
@@ -42,7 +42,8 @@
                         </div>
                     </div></mat-tab>
                      <mat-tab label="Online Packages">
-                        <div class="container-fluid m-3">
+                         
+                        <div class="container-fluid mt-4">
                             <div class="row justify-content-md-center">
                                 <div *ngFor="let package of grade.packages;" class="col-sm-6 col-md-4 mb-4">
                                     <div class="card mb-3 "
@@ -70,7 +71,7 @@
                         </div>
                      </mat-tab>
                      <mat-tab label="Offline Packages">
-                        <div class="container-fluid m-3">
+                        <div class="container-fluid mt-4">
                             <div class="row justify-content-md-center">
                                 <div *ngFor="let package of grade.packages;" class="col-sm-6 col-md-4 mb-4">
                                     <div class="card mb-3 "
@@ -100,14 +101,18 @@
                    </mat-tab-group>
                   </div>
                 </div>
+                
+
               </div>
+
+
 
            
 
 
         </div>
-        <div class="container mt-5">
-            <hr class="mt-5">
+        <div class="container">
+            <hr>
             <app-demo-videos></app-demo-videos>
         </div>
     </section>
