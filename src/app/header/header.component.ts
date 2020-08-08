@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'header',
@@ -6,14 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  courses;
 
-
-   public isMenuCollapsed = true;
+  public isMenuCollapsed = true;
   //public isCollapsed=true;
 
-  constructor() { }
+  constructor(private data: DataService) { }
 
   ngOnInit(): void {
+    this.courses = this.data.getAllData();
+    // console.log(this.courses);
   }
 
 }

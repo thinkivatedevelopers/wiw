@@ -16,6 +16,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
+
     <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
@@ -25,11 +26,37 @@
           <a class="nav-link" routerLink="/features" (click)="isMenuCollapsed = true">Features</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/courses" (click)="isMenuCollapsed = true">Courses</a>
+          <a class="nav-link pointer" [matMenuTriggerFor]="courseMenu"  (click)="isMenuCollapsed = true">Courses</a>
         </li>
         <!-- <li class="nav-item">
           <a class="nav-link" routerLink="/packages">Packages</a>
         </li> -->
+        
+        <mat-menu #courseMenu="matMenu">
+  <ng-container *ngFor="let course of courses; let i = index;">
+
+    <ng-container *ngIf="course.grades && course.grades.length != 0; else noChildBlock">
+      <button mat-menu-item [matMenuTriggerFor]="sub_menu" routerLink="/{{course.slug}}">
+        {{course.name}}
+      </button>
+      <mat-menu #sub_menu="matMenu">
+        <ng-container *ngFor="let grade of course.grades; let gi = index;">
+          <button mat-menu-item routerLink="/{{course.slug}}/{{grade.slug}}">
+            {{grade.name}}
+          </button>
+        </ng-container>
+
+      </mat-menu>
+    </ng-container>
+
+    <ng-template #noChildBlock>
+      <button mat-menu-item disabled>
+        {{course.name}} <small>(coming soon)</small>
+      </button>
+    </ng-template>
+  </ng-container>
+
+</mat-menu>
 
         <!-- <li class="nav-item">
           <a class="nav-link" routerLink="/contact">Contact</a>
