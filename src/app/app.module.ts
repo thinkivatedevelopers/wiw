@@ -26,6 +26,9 @@ import { PackageComponent } from './package/package.component';
 import { CourseListComponent } from './course-list/course-list.component';
 import { DemoVideosComponent, SafePipe } from './demo-videos/demo-videos.component';
 import { DownloadComponent } from './download/download.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
+
 
 @NgModule({
   declarations: [
@@ -57,6 +60,9 @@ import { DownloadComponent } from './download/download.component';
     AppRoutingModule,
     MatExpansionModule,
     MatTabsModule,
+    NgbModule,
+   
+   
    
   ],
   providers: [],

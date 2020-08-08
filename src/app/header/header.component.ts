@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+
+   public isMenuCollapsed = true;
+  //public isCollapsed=true;
+
   constructor() { }
 
   ngOnInit(): void {
