@@ -1,32 +1,38 @@
 
 <!-- header starts here -->
 
-  <div class="wiw-bootstrap-header fixed-top">
-    <nav class=" wiw-header navbar navbar-expand-lg navbar-light p-2">
-      <div class="container">
-        <!-- <a class="navbar-brand" href="index.html"><span class="fa fa-diamond"></span>WIW Learn</a> -->
-        <!-- if logo is image enable this    -->
-        <a class="navbar-brand" routerLink ="/">
-          <img src="assets/images/wiw-logo-full.png" alt="Your logo" title="wiw logo" style="height: 55px;" />
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+<nav class=" wiw-header navbar navbar-expand-lg navbar-light p-2">
+  <div class="container">
+    <!-- <a class="navbar-brand" href="index.html"><span class="fa fa-diamond"></span>WIW Learn</a> -->
+    <!-- if logo is image enable this    -->
+    <a class="navbar-brand" routerLink ="/">
+      <img src="assets/images/wiw-logo-full.png" alt="Your logo" title="wiw logo" style="height: 55px;" />
+    </a>
+    <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" (click)="isCollapsed = !isCollapsed" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button> -->
+    <button  class="navbar-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-              <a class="nav-link" routerLink="/about">About Us</a>
-            </li>
-            <li class="nav-item ">
-              <a class="nav-link" routerLink="/features">Features</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link pointer" [matMenuTriggerFor]="courseMenu" >Courses</a>
-            </li>
 
-<mat-menu #courseMenu="matMenu">
+    <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/about" (click)="isMenuCollapsed = true">About Us</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" routerLink="/features" (click)="isMenuCollapsed = true">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link pointer" [matMenuTriggerFor]="courseMenu"  (click)="isMenuCollapsed = true">Courses</a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link" routerLink="/packages">Packages</a>
+        </li> -->
+        
+        <mat-menu #courseMenu="matMenu">
   <ng-container *ngFor="let course of courses; let i = index;">
 
     <ng-container *ngIf="course.grades && course.grades.length != 0; else noChildBlock">
@@ -52,31 +58,25 @@
 
 </mat-menu>
 
-
-            <!-- <li class="nav-item">
-              <a class="nav-link" routerLink="/packages">Packages</a>
-            </li> -->
-
-            <!-- <li class="nav-item">
-              <a class="nav-link" routerLink="/contact">Contact</a>
-            </li> -->
-           
-          </ul>
-          <div class="form-inline" >
-            <!-- <a href="#login.html" class="login mr-4">Log in</a> -->
-            <img src="assets/images/contact-image.svg" height="45px" width="45px" > &nbsp;
-            <div>
-              <strong  style="color:#0062A6 !important ;">Contact Our Team </strong> <br>
-              <span style="color:#AF227A">+91 123456789</span>
-              
-             
-            </div> &nbsp;&nbsp;
-           
-            <a routerLink="/contact" class="btn btn-outline-primary download-button">Contact Us</a>
-          </div>
-        </div>
+        <!-- <li class="nav-item">
+          <a class="nav-link" routerLink="/contact">Contact</a>
+        </li> -->
+       
+      </ul>
+      <div class="form-inline" >
+        <!-- <a href="#login.html" class="login mr-4">Log in</a> -->
+        <img src="assets/images/contact-image.svg" height="45px" width="45px" > &nbsp;
+        <div>
+          <strong  style="color:#0062A6 !important ;">Contact Our Team </strong> <br>
+          <span style="color:#AF227A">+91 123456789</span>
+          
+         
+        </div> &nbsp;&nbsp;
+       
+        <a (click)="isMenuCollapsed = true" routerLink="/contact" class="btn btn-outline-primary download-button">Contact Us</a>
       </div>
-    </nav>
+    </div>
   </div>
+</nav>
 
   <!-- header ends here -->

@@ -1,9 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
-import {MatExpansionModule} from '@angular/material/expansion';
-import {MatTabsModule} from '@angular/material/tabs';
-import {MatMenuModule} from '@angular/material/menu';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatMenuModule } from '@angular/material/menu';
 import { AppRoutingModule } from './app-routing.module';
 
 
@@ -28,6 +28,9 @@ import { PackageComponent } from './package/package.component';
 import { CourseListComponent } from './course-list/course-list.component';
 import { DemoVideosComponent, SafePipe } from './demo-videos/demo-videos.component';
 import { DownloadComponent } from './download/download.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
+
 
 @NgModule({
   declarations: [
@@ -60,6 +63,8 @@ import { DownloadComponent } from './download/download.component';
     MatExpansionModule,
     MatTabsModule,
     MatMenuModule
+    NgbModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

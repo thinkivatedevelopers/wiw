@@ -7,8 +7,11 @@ import { DataService } from '../data.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
   courses;
+
+  public isMenuCollapsed = true;
+  //public isCollapsed=true;
+
   constructor(private data: DataService) { }
 
   ngOnInit(): void {
