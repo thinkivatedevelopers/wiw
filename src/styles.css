@@ -48,6 +48,10 @@ p {
   margin-bottom: 10px;
 }
 
+.cdk-overlay-container {
+  z-index: 2000;
+}
+
 .coin {
   position: relative;
   width: 100px;

@@ -9791,7 +9791,7 @@ h4.sub-title {
 /*--/content with photo5--*/
 .wiw-index-block1 .content {
   position: relative;
-  background: var(--light-bg-color);
+  /* background: var(--light-bg-color); */
   z-index: 1;
   overflow: hidden; }
 

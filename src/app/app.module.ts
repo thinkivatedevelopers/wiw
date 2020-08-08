@@ -62,7 +62,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     AppRoutingModule,
     MatExpansionModule,
     MatTabsModule,
-    MatMenuModule
+    MatMenuModule,
     NgbModule,
 
   ],

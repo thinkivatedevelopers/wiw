@@ -1,6 +1,6 @@
 
 <!-- header starts here -->
-
+<div class="wiw-bootstrap-header fixed-top">
 <nav class=" wiw-header navbar navbar-expand-lg navbar-light p-2">
   <div class="container">
     <!-- <a class="navbar-brand" href="index.html"><span class="fa fa-diamond"></span>WIW Learn</a> -->
@@ -26,7 +26,7 @@
           <a class="nav-link" routerLink="/features" (click)="isMenuCollapsed = true">Features</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link pointer" [matMenuTriggerFor]="courseMenu"  (click)="isMenuCollapsed = true">Courses</a>
+          <a class="nav-link pointer" [matMenuTriggerFor]="courseMenu">Courses</a>
         </li>
         <!-- <li class="nav-item">
           <a class="nav-link" routerLink="/packages">Packages</a>
@@ -36,12 +36,12 @@
   <ng-container *ngFor="let course of courses; let i = index;">
 
     <ng-container *ngIf="course.grades && course.grades.length != 0; else noChildBlock">
-      <button mat-menu-item [matMenuTriggerFor]="sub_menu" routerLink="/{{course.slug}}">
+      <button mat-menu-item [matMenuTriggerFor]="sub_menu">
         {{course.name}}
       </button>
       <mat-menu #sub_menu="matMenu">
         <ng-container *ngFor="let grade of course.grades; let gi = index;">
-          <button mat-menu-item routerLink="/{{course.slug}}/{{grade.slug}}">
+          <button mat-menu-item routerLink="/{{course.slug}}/{{grade.slug}}" (click)="isMenuCollapsed = true">
             {{grade.name}}
           </button>
         </ng-container>
@@ -78,5 +78,5 @@
     </div>
   </div>
 </nav>
-
+</div>
   <!-- header ends here -->
