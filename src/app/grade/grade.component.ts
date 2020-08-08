@@ -20,11 +20,20 @@ export class GradeComponent implements OnInit {
     private data: DataService,
     private route: ActivatedRoute,
     private seoService: SEOService) {
-      this.courseSlug = this.route.snapshot.paramMap.get('course');
-      this.gradeSlug = this.route.snapshot.paramMap.get('grade');
+
+      route.params.subscribe((params) => {
+        this.courseSlug = params['course'];
+        this.gradeSlug = params['grade'];
+        this.ngOnInit();
+      });
+
+      // this.courseSlug = this.route.snapshot.paramMap.get('course');
+      // this.gradeSlug = this.route.snapshot.paramMap.get('grade');
+
     }
 
   ngOnInit(): void {
+
     this.grade = this.data.getGrade(this.courseSlug, this.gradeSlug);
     this.course = this.data.getCourse(this.courseSlug);
 

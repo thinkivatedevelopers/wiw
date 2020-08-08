@@ -147,75 +147,15 @@ export const state: Course[] = [
       name: 'CBSE Board',
       description: ' CbseLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.',
       image: 'assets/images/sylabus-icons/wiw-coinCBSE.png',
-      isLive:false,
-      grades: [
-        {
-          slug: 'plus-one',
-          name: 'Plus One',
-          description: 'Plus one Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.',
-          image: 'plus-two.jpeg',
-          packages: [
-            {
-              slug: 'cbse-plus-one-offline-bundle-pack',
-              name: 'CBSE Plus One Offline Bundle Pack',
-              description: 'CBSE Plus Two Offline Bundle Pack Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.',
-              image: 'ks-pl-off.png',
-              isOnlinePack: false,
-              isComboPack: true,
-              validityDays: 150,
-              price: 12000,
-              subjects: [
-                { name: 'Biology', icon: 'assets/icons/bio.svg' },
-                { name: 'Chemistry', icon: 'assets/icons/che.svg' },
-              ],
-            },
-            {
-              slug: 'cbse-plus-one-online-pack',
-              name: 'Cbse Plus One OnlinePack',
-              description: 'Cbse Plus Two Online Pack Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.',
-              image: 'ks-pl-off.png',
-              isOnlinePack: true,
-              isComboPack: true,
-              validityDays: 250,
-              price: 9000,
-              subjects: [
-                { name: 'Biology', icon: 'assets/icons/bio.svg' },
-                { name: 'Chemistry', icon: 'assets/icons/che.svg' },
-                { name: 'Mathematics', icon: 'assets/icons/math.svg' },
-              ],
-            },
-          ],
-        },
-        {
-          slug: 'plus-two',
-          name: 'Plus Two',
-          description: 'Plus two Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.',
-          image: 'plus-two.jpeg',
-          packages: [
-            {
-              slug: 'cbse-plus-two-offline-bundle-pack',
-              name: 'Cbse Plus Two Offline Bundle Pack',
-              description: 'description',
-              image: 'ks-pl-off.png',
-              isOnlinePack: true,
-              isComboPack: true,
-              validityDays: 150,
-              price: 12000,
-              subjects: [
-                { name: 'Biology', icon: 'assets/icons/bio.svg' },
-                { name: 'Mathematics', icon: 'assets/icons/math.svg' },
-              ],
-            },
-          ],
-        }
-      ],
+      isLive: false,
+      grades: [],
     },
     {
       slug: 'icse',
       name: 'ICSE Board',
       description: ' Icse Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.',
       image: 'assets/images/sylabus-icons/wiw-coinICSE.png',
-      isLive:false,
+      isLive: false,
       grades: [],
     }
 
