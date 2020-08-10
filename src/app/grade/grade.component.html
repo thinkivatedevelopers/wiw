@@ -12,103 +12,70 @@
 
             <div class="container">
                 <div class="row ">
-                  <div class="col">
-                   <mat-tab-group animationDuration="500ms">
-                     <mat-tab label="All Packages"> 
-                    <div class="container-fluid mt-4">
-                        <div class="row justify-content-md-center">
-                            <div *ngFor="let package of grade.packages;" class="col-sm-6 col-md-4 mb-4">
-                                <div class="card mb-3 "
-                                    style="background:linear-gradient(135deg, #0062a6 0%,#af227a 100%); border:none; border-radius: 10px; min-height:220px;">
-                                    <div class="card-body text-light">
-                                        <div class="float-right">
-                                            <span *ngIf="package.isOnlinePack" class="badge badge-success">Online</span>
-                                            <span *ngIf="!package.isOnlinePack" class="badge badge-warning">Offline</span>
+                    <div class="col">
+                        <mat-tab-group animationDuration="500ms">
+                            <mat-tab label="All Packages">
+                                <div class="container-fluid mt-4">
+                                    <div class="row justify-content-md-center">
+                                        <div *ngFor="let package of grade.packages;" class="col-sm-6 col-md-4 mb-4">
+                                            <package-card [package]="package" [courseSlug]="courseSlug"
+                                                [gradeSlug]="gradeSlug">
+                                            </package-card>
                                         </div>
-        
-                                        <h5 class="text-light">
-                                            <a routerLink="/{{courseSlug}}/{{gradeSlug}}/{{package.slug}}"
-                                                class="stretched-link text-light">{{package.name}}</a>
-                                        </h5>
-                                        <p class="lead">includes: <span *ngFor="let subject of package.subjects;">
-                                                {{subject.name}}</span></p>
-                                        <p > <strong>{{package.price | currency:"INR": 'symbol' :'1.0-0'}}</strong></p>
+
+
+
                                     </div>
                                 </div>
-                            </div>
-        
-        
-        
-                        </div>
-                    </div></mat-tab>
-                     <mat-tab label="Online Packages">
-                         
-                        <div class="container-fluid mt-4">
-                            <div class="row justify-content-md-center">
-                                <div *ngFor="let package of grade.packages;" class="col-sm-6 col-md-4 mb-4">
-                                    <div class="card mb-3 "
-                                        style="background:linear-gradient(135deg, #0062a6 0%,#af227a 100%); border:none; border-radius: 10px; min-height:220px;">
-                                        <div class="card-body text-light">
-                                            <div class="float-right">
-                                                <span *ngIf="package.isOnlinePack" class="badge badge-success">Online</span>
-                                                <span *ngIf="!package.isOnlinePack" class="badge badge-warning">Offline</span>
+                            </mat-tab>
+                            <mat-tab label="Online Packages">
+
+                                <div class="container-fluid mt-4">
+                                    <div class="row justify-content-md-center">
+                                        <ng-container *ngIf="grade.onlinePacks.length; else noPacksBlock;">
+                                            <div *ngFor="let package of grade.onlinePacks;"
+                                                class="col-sm-6 col-md-4 mb-4">
+
+                                                <package-card [package]="package" [courseSlug]="courseSlug"
+                                                    [gradeSlug]="gradeSlug">
+                                                </package-card>
+
+
                                             </div>
-            
-                                            <h5 class="text-light">
-                                                <a routerLink="/{{courseSlug}}/{{gradeSlug}}/{{package.slug}}"
-                                                    class="stretched-link text-light">{{package.name}}</a>
-                                            </h5>
-                                            <p class="lead">includes: <span *ngFor="let subject of package.subjects;">
-                                                    {{subject.name}}</span></p>
-                                            <p > <strong>{{package.price | currency:"INR": 'symbol' :'1.0-0'}}</strong></p>
-                                        </div>
+                                        </ng-container>
+
+
+
                                     </div>
                                 </div>
-            
-            
-            
-                            </div>
-                        </div>
-                     </mat-tab>
-                     <mat-tab label="Offline Packages">
-                        <div class="container-fluid mt-4">
-                            <div class="row justify-content-md-center">
-                                <div *ngFor="let package of grade.packages;" class="col-sm-6 col-md-4 mb-4">
-                                    <div class="card mb-3 "
-                                        style="background:linear-gradient(135deg, #0062a6 0%,#af227a 100%); border:none; border-radius: 10px; min-height:220px;">
-                                        <div class="card-body text-light">
-                                            <div class="float-right">
-                                                <span *ngIf="package.isOnlinePack" class="badge badge-success">Online</span>
-                                                <span *ngIf="!package.isOnlinePack" class="badge badge-warning">Offline</span>
+                            </mat-tab>
+                            <mat-tab label="Offline Packages">
+                                <div class="container-fluid mt-4">
+                                    <div class="row justify-content-md-center">
+                                        <ng-container *ngIf="grade.offlinePacks.length; else noPacksBlock;">
+                                            <div *ngFor="let package of grade.offlinePacks;"
+                                                class="col-sm-6 col-md-4 mb-4">
+                                                <package-card [package]="package" [courseSlug]="courseSlug"
+                                                    [gradeSlug]="gradeSlug">
+                                                </package-card>
                                             </div>
-            
-                                            <h5 class="text-light">
-                                                <a routerLink="/{{courseSlug}}/{{gradeSlug}}/{{package.slug}}"
-                                                    class="stretched-link text-light">{{package.name}}</a>
-                                            </h5>
-                                            <p class="lead">includes: <span *ngFor="let subject of package.subjects;">
-                                                    {{subject.name}}</span></p>
-                                            <p > <strong>{{package.price | currency:"INR": 'symbol' :'1.0-0'}}</strong></p>
-                                        </div>
+                                        </ng-container>
+
+
                                     </div>
                                 </div>
-            
-            
-            
-                            </div>
-                        </div>
-                     </mat-tab>
-                   </mat-tab-group>
-                  </div>
+                            </mat-tab>
+                        </mat-tab-group>
+
+                        <ng-template #noPacksBlock>
+                            <h5 class="text-cemter my-5">No Packages Available</h5>
+                        </ng-template>
+
+                    </div>
                 </div>
-                
-
-              </div>
 
 
-
-           
-
+            </div>
 
         </div>
         <div class="container">

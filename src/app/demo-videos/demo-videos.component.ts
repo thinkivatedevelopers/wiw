@@ -1,5 +1,6 @@
-import { Component, OnInit, Pipe, PipeTransform } from '@angular/core';
+import { Component, OnInit, Pipe, PipeTransform, Inject } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 
 
 @Pipe({ name: 'safe' })
@@ -8,6 +9,10 @@ export class SafePipe implements PipeTransform {
   transform(url) {
     return this.sanitizer.bypassSecurityTrustResourceUrl(url);
   }
+}
+
+export interface DialogData {
+  url: string;
 }
 
 @Component({
@@ -31,11 +36,41 @@ export class DemoVideosComponent implements OnInit {
     }
   ];
 
-  constructor() { }
+  constructor(private dialog: MatDialog) { }
 
   ngOnInit(): void {
     // To shuffle video array
     this.videos = this.videos.sort(() => Math.random() - 0.5);
+  }
+
+  openDialog(url: string): void {
+    const dialogRef = this.dialog.open(DialogComponent, {
+      width: '700',
+      height: '400',
+      data: {url}
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+      // this.animal = result;
+    });
+  }
+
+}
+
+
+@Component({
+  selector: 'dialog-comp',
+  templateUrl: 'dialog-comp.html',
+})
+export class DialogComponent {
+
+  constructor(
+    public dialogRef: MatDialogRef<DialogComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: DialogData) {}
+
+  onNoClick(): void {
+    this.dialogRef.close();
   }
 
 }

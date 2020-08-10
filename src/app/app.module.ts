@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatMenuModule } from '@angular/material/menu';
+import {MatDialogModule} from '@angular/material/dialog';
 import { AppRoutingModule } from './app-routing.module';
 
 
@@ -26,10 +27,9 @@ import { CourseComponent } from './course/course.component';
 import { GradeComponent } from './grade/grade.component';
 import { PackageComponent } from './package/package.component';
 import { CourseListComponent } from './course-list/course-list.component';
-import { DemoVideosComponent, SafePipe } from './demo-videos/demo-videos.component';
+import { DemoVideosComponent, SafePipe, DialogComponent } from './demo-videos/demo-videos.component';
 import { DownloadComponent } from './download/download.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { PackageContainerComponent } from './grade/package-container/package-container.component';
 import { PackageCardComponent } from './grade/package-card/package-card.component';
 
 
@@ -57,8 +57,8 @@ import { PackageCardComponent } from './grade/package-card/package-card.componen
     DemoVideosComponent,
     SafePipe,
     DownloadComponent,
-    PackageContainerComponent,
-    PackageCardComponent
+    PackageCardComponent,
+    DialogComponent
   ],
   imports: [
     BrowserModule,
@@ -68,6 +68,7 @@ import { PackageCardComponent } from './grade/package-card/package-card.componen
     MatTabsModule,
     MatMenuModule,
     NgbModule,
+    MatDialogModule
 
   ],
   providers: [],

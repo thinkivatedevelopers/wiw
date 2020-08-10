@@ -36,14 +36,14 @@
   <ng-container *ngFor="let course of courses; let i = index;">
 
     <ng-container *ngIf="course.grades && course.grades.length != 0; else noChildBlock">
-      <button mat-menu-item [matMenuTriggerFor]="sub_menu">
+      <a mat-menu-item [matMenuTriggerFor]="sub_menu">
         {{course.name}}
-      </button>
+      </a>
       <mat-menu #sub_menu="matMenu">
         <ng-container *ngFor="let grade of course.grades; let gi = index;">
-          <button mat-menu-item routerLink="/{{course.slug}}/{{grade.slug}}" (click)="isMenuCollapsed = true">
+          <a mat-menu-item routerLink="/{{course.slug}}/{{grade.slug}}" (click)="isMenuCollapsed = true" style="text-decoration: none !important;">
             {{grade.name}}
-          </button>
+          </a>
         </ng-container>
 
       </mat-menu>
@@ -51,7 +51,7 @@
 
     <ng-template #noChildBlock>
       <button mat-menu-item disabled>
-        {{course.name}} <small>(coming soon)</small>
+        {{course.name}} <span>(coming soon)</span>
       </button>
     </ng-template>
   </ng-container>
