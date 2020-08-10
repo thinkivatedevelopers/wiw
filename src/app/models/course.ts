@@ -4,19 +4,18 @@ export interface Course {
   description: string;
   image: string;
   grades: Grade[];
-  isLive:boolean;
+  isLive: boolean;
 }
 
-interface Grade {
+export interface Grade {
   slug: string;
   name: string;
   description: string;
   image: string;
   packages: Package[];
- 
 }
 
-interface Package {
+export interface Package {
   slug: string;
   name: string;
   image: string;
@@ -26,10 +25,9 @@ interface Package {
   isComboPack: boolean;
   validityDays: number;
   subjects: Subject[];
-  
 }
 
-interface Subject {
+export interface Subject {
   name: string;
   icon: string;
 }

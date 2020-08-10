@@ -38,6 +38,12 @@ export class GradeComponent implements OnInit {
     this.course = this.data.getCourse(this.courseSlug);
 
     if (this.grade){
+
+      // filter grade array
+      this.grade.onlinePacks = this.grade.packages.filter(p => p.isOnlinePack );
+      this.grade.offlinePacks = this.grade.packages.filter(p => !p.isOnlinePack );
+
+
       this.seoService.updateTitle(`${this.course.name} - ${this.grade.name} - Wiw Learn`);
       this.seoService.updateDescription(`${this.grade.desciption}`);
     }

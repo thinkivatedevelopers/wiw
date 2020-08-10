@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatMenuModule } from '@angular/material/menu';
+import {MatDialogModule} from '@angular/material/dialog';
 import { AppRoutingModule } from './app-routing.module';
 
 
@@ -29,6 +30,7 @@ import { CourseListComponent } from './course-list/course-list.component';
 import { DemoVideosComponent, SafePipe } from './demo-videos/demo-videos.component';
 import { DownloadComponent } from './download/download.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { PackageCardComponent } from './grade/package-card/package-card.component';
 
 
 
@@ -54,7 +56,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     CourseListComponent,
     DemoVideosComponent,
     SafePipe,
-    DownloadComponent
+    DownloadComponent,
+    PackageCardComponent,
   ],
   imports: [
     BrowserModule,
@@ -64,6 +67,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     MatTabsModule,
     MatMenuModule,
     NgbModule,
+    MatDialogModule
 
   ],
   providers: [],
