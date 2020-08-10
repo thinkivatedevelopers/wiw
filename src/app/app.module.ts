@@ -27,7 +27,7 @@ import { CourseComponent } from './course/course.component';
 import { GradeComponent } from './grade/grade.component';
 import { PackageComponent } from './package/package.component';
 import { CourseListComponent } from './course-list/course-list.component';
-import { DemoVideosComponent, SafePipe, DialogComponent } from './demo-videos/demo-videos.component';
+import { DemoVideosComponent, SafePipe } from './demo-videos/demo-videos.component';
 import { DownloadComponent } from './download/download.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PackageCardComponent } from './grade/package-card/package-card.component';
@@ -58,7 +58,6 @@ import { PackageCardComponent } from './grade/package-card/package-card.componen
     SafePipe,
     DownloadComponent,
     PackageCardComponent,
-    DialogComponent
   ],
   imports: [
     BrowserModule,

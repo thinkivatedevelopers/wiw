@@ -1,42 +1,18 @@
 <div class="heading text-center mx-auto">
   <h3 class="head" >Demo Videos</h3>
-  <button class="btn btn-success btn-sm">open</button>
   <p class="my-3 head"> Wiw Learn is a One-App-One-Solution for Students. It allows students to access learning
     solutions mapped to their curriculum. Learn from anywhere, anytime
     while simultaneously allowing parents to track and evaluate the student’s performance.</p>
 </div>
 
 <div class="row no-gutters">
-
+  
   <div *ngFor="let video of videos; let videoIndex=index;" class="col-md-4">
     <div class="card" style="border:none">
       <div class="card-body">
-        <!-- <div id="myModal{{videoIndex}}" class="modal fade">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header"> 
-                <button type="button"
-                        class="close"
-                        data-dismiss="modal"
-                        aria-hidden="true">Close</button> 
-                
-            </div>
-              <div class="modal-body">
-                <div class="embed-responsive embed-responsive-16by9">
-                  <iframe id="cartoonVideo"  class="embed-responsive-item" [src]="video.link | safe"></iframe>
-                </div>
-               
-              </div>
-            </div>
-          </div>
-        </div> -->
-        <a data-toggle="modal" (click)="openDialog(video.link)"> 
+        <a class="video-popup" href="{{video.link}}"> 
           <img src="{{video.thumb}}" class="img-responsive demo-image">
           <div class="middle">
-            <!-- <div class="text">
-              Watch Now
-            
-            </div> -->
           </div>
         </a>
         
