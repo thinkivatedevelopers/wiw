@@ -39,3 +39,7 @@ p {
   background:#fff;
   color: #0062A6 !important; 
 }
+
+.radius-15 {
+  border-radius: 15px;
+}
