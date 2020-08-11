@@ -10772,7 +10772,9 @@ button.owl-next {
   width: 4px;
   height: 100%;
   margin-left: -2px;
-  background: var(--secondary-color);}
+  /* background: var(--secondary-color); */
+  background: linear-gradient(135deg, #0061a6c7 0%,#af2279c0 100%);
+}
 
 .wiw-about3 .timeline li {
   padding: 1em 0; }
@@ -10820,12 +10822,15 @@ button.owl-next {
   width: 34px;
   height: 34px;
   margin-top: -10px;
-  background: var(--secondary-color);
+  /* background: var(--secondary-color); */
+  background: #6f42c1;
   border-radius: 10px;
   border: 10px solid #fff;
   border-radius: 50%;
   z-index: 8;
-  box-shadow: var(--card-box-shadow); }
+  /* box-shadow: var(--card-box-shadow);  */
+  box-shadow: 0 0 20px -5px #6f42c1;
+}
 
 .wiw-about3 .direction-r .flag:before {
   left: -47px; }
