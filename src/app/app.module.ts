@@ -31,6 +31,7 @@ import { DemoVideosComponent, SafePipe } from './demo-videos/demo-videos.compone
 import { DownloadComponent } from './download/download.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PackageCardComponent } from './grade/package-card/package-card.component';
+import { CourseCardComponent } from './course-list/course-card/course-card.component';
 
 
 
@@ -58,6 +59,7 @@ import { PackageCardComponent } from './grade/package-card/package-card.componen
     SafePipe,
     DownloadComponent,
     PackageCardComponent,
+    CourseCardComponent,
   ],
   imports: [
     BrowserModule,

@@ -191,6 +191,31 @@
 </section>
 
 <price-and-plans></price-and-plans>
+<div *ngIf="courseList">
+  <div class="container mb-5">
+    <div class="row">
+      <div class="col">
+        <div class="heading text-center mx-auto">
+          <h3 class="head">Our Courses and Packages</h3>
+          <p>Exercitationem ad tenetur error, adipisci tempora culpa ut dolor ratione veniam sunt facere, assumenda
+            temporibus iste. Modi alias corrupti officiis eum harum.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+
+      <div *ngFor="let course of courseList;" class="col-md-4 mb-4">
+        <course-card [course]="course"></course-card>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
 <div class="container">
             
   <app-demo-videos></app-demo-videos>
