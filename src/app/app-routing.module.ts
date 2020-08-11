@@ -5,7 +5,6 @@ import { PrivacyPolicyPageComponent } from './privacy-policy-page/privacy-policy
 import { TermsAndConditionsPageComponent } from './terms-and-conditions-page/terms-and-conditions-page.component';
 import { BlogPageComponent } from './blog-page/blog-page.component';
 import { ContactPageComponent } from './contact-page/contact-page.component';
-import { PackagesPageComponent } from './packages-page/packages-page.component';
 import { FeaturesPageComponent } from './features-page/features-page.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { NgModule } from '@angular/core';
@@ -21,7 +20,6 @@ const routes: Routes = [
   { path: '', component: HomePageComponent},
   { path: 'about', component: AboutPageComponent },
   { path: 'features', component: FeaturesPageComponent },
-  { path: 'packages', component: PackagesPageComponent },
   { path: 'contact', component: ContactPageComponent },
   { path: 'blogs', component: BlogPageComponent },
   { path: 'faq', component: FaqPageComponent },
