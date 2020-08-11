@@ -1,0 +1,7 @@
+.card-body:hover .overlay {
+    opacity: 0.5
+}
+  
+.card-body:hover .demo-image {
+    opacity: 0.3;
+}

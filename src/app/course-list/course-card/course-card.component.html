@@ -1,0 +1,123 @@
+<!-- <div class="card"   style="-webkit-box-shadow: -1px 0px 13px 10px rgba(41, 41, 41, 0.24); -->
+<!-- <div class="card" style="background:linear-gradient(135deg, rgba(126, 8, 53, 0) 0%,#5b62bb 100%); border:none; border-radius: 10px;" > -->
+<div class="card"
+    style="background:linear-gradient(135deg, #0062A6 0%,#e29ca0 100%); border:none; border-radius: 10px;">
+    <div class="card-body">
+        <h6 class="text-center text-danger" *ngIf="course.isLive != true; else availableNow"> Coming Soon ...</h6>
+        <ng-template #availableNow>
+            <h6 class="text-center text-light">Available Now</h6>
+        </ng-template>
+        <div class="coin">
+            <div class="coin__front" style="background-image: url('{{course.image}}');"></div>
+            <div class="coin__edge">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+
+            </div>
+            <div class="coin__back" style="background-image: url('assets/images/sylabus-icons/wiw-logowithtext.png');">
+            </div>
+            <div class="coin__shadow"></div>
+        </div>
+
+        <h3 class="card-title text-center" style="color: aliceblue !important;">
+            <a style="color: aliceblue !important;" *ngIf="course.isLive; else notLive"
+                routerLink="/{{course.slug}}/{{course.grades.slug}}" class="stretched-link">
+                {{course.name}}</a>
+
+            <ng-template #notLive>
+                {{course.name}}
+
+            </ng-template>
+
+
+
+        </h3>
+
+        <!-- <hr style="  width: 100%;
+      height: 5px;
+      margin-left: auto;
+      margin-right: auto;
+      background-color:#0000;
+      border: 1 none;"> -->
+        <!-- <p class="card-text" style="color: aliceblue !important;">{{course.description}}</p> -->
+
+    </div>
+</div>

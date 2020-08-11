@@ -16,10 +16,8 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { AboutPageComponent } from './about-page/about-page.component';
 import { ContactPageComponent } from './contact-page/contact-page.component';
 import { FeaturesPageComponent } from './features-page/features-page.component';
-import { PackagesPageComponent } from './packages-page/packages-page.component';
 import { TermsAndConditionsPageComponent } from './terms-and-conditions-page/terms-and-conditions-page.component';
 import { PrivacyPolicyPageComponent } from './privacy-policy-page/privacy-policy-page.component';
-import { PriceAndPlansComponent } from './price-and-plans/price-and-plans.component';
 import { FaqPageComponent } from './faq-page/faq-page.component';
 import { BlogPageComponent } from './blog-page/blog-page.component';
 import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
@@ -31,6 +29,7 @@ import { DemoVideosComponent, SafePipe } from './demo-videos/demo-videos.compone
 import { DownloadComponent } from './download/download.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PackageCardComponent } from './grade/package-card/package-card.component';
+import { CourseCardComponent } from './course-list/course-card/course-card.component';
 
 
 
@@ -43,10 +42,8 @@ import { PackageCardComponent } from './grade/package-card/package-card.componen
     AboutPageComponent,
     ContactPageComponent,
     FeaturesPageComponent,
-    PackagesPageComponent,
     TermsAndConditionsPageComponent,
     PrivacyPolicyPageComponent,
-    PriceAndPlansComponent,
     FaqPageComponent,
     BlogPageComponent,
     NotFoundPageComponent,
@@ -58,6 +55,7 @@ import { PackageCardComponent } from './grade/package-card/package-card.componen
     SafePipe,
     DownloadComponent,
     PackageCardComponent,
+    CourseCardComponent,
   ],
   imports: [
     BrowserModule,
