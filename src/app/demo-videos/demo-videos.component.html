@@ -10,10 +10,8 @@
   <div *ngFor="let video of videos; let videoIndex=index;" class="col-md-4">
     <div class="card" style="border:none">
       <div class="card-body">
-        <a class="video-popup" href="{{video.link}}"> 
+        <a class="video-popup overlay" href="{{video.link}}"> 
           <img src="{{video.thumb}}" class="img-responsive demo-image">
-          <div class="middle">
-          </div>
         </a>
         
       </div>
