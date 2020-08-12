@@ -23,18 +23,18 @@
                               </nav> -->
 
                     <h3 class="mt-3">{{package.name}}</h3>
-                    <p class="lead"><strong>{{package.price | currency:"INR": 'symbol' :'1.0-0'}}</strong></p>
-                    <p><small>{{package.validityDays}} Days</small></p>
+                    <p class="lead"><strong>Pricing : {{package.price | currency:"INR": 'symbol' :'1.0-0'}}</strong></p>
+                    <p class="lead"><strong>{{package.validityDays}}</strong> days Subscription**</p>
+                    <p class="text-secondary">** If you purchase this package today, you can access the contents upto {{calulateDate(package.validityDays) | date:'dd MMMM yyyy' }}. </p>
                     <a href="https://play.google.com/store/apps/details?id=appn.wiwlearn&hl=en" target="_blank"
-                        class="btn btn-outline-primary download-button my-3">Download App</a>
+                        class="btn btn-outline-primary download-button my-3 shadow">Download App</a>
                     <p>{{package.description}}</p>
                 </div>
                 <div class="col-xl-4">
                     <h4 class="my-3">Subjects Included:</h4>
                     <div class="row">
                         <div *ngFor="let subject of package.subjects;" class="col">
-                            <div class="card mb-3 border-none shadow"
-                                style="background:linear-gradient(135deg, #0061a6c7 0%,#af2279c0 100%); border:none; border-radius: 10px;">
+                            <div class="card mb-3 wiw-bg radius-15 border-none shadow">
                                 <div class="card-body text-light text-center">
                                     <img src="{{subject.icon}}" alt="" height="50px">
                                     <h6 class="mt-2">{{ subject.name}}</h6>

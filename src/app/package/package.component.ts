@@ -37,4 +37,8 @@ export class PackageComponent implements OnInit {
     }
   }
 
+  calulateDate(days: number) {
+    return new Date().setDate(new Date().getDate() + (days + 1));
+  }
+
 }
