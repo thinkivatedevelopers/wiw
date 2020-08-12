@@ -19,14 +19,18 @@
 
     <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/about" (click)="isMenuCollapsed = true">About Us</a>
-        </li>
+        
         <li class="nav-item ">
           <a class="nav-link" routerLink="/features" (click)="isMenuCollapsed = true">Features</a>
         </li>
         <li class="nav-item">
           <a class="nav-link pointer" [matMenuTriggerFor]="courseMenu">Courses</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/about" (click)="isMenuCollapsed = true">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link pointer" routerLink="/contact" >Contact</a>
         </li>
         <!-- <li class="nav-item">
           <a class="nav-link" routerLink="/packages">Packages</a>
@@ -67,13 +71,14 @@
         <!-- <a href="#login.html" class="login mr-4">Log in</a> -->
         <img src="assets/images/contact-image.svg" height="45px" width="45px" > &nbsp;
         <div>
-          <strong  style="color:#0062A6 !important ;">Contact Our Team </strong> <br>
-          <span style="color:#AF227A">+91 123456789</span>
+          <strong  style="color:#0062A6 !important ;">Let's Talk </strong> <br>
+          <!-- <span style="color:#AF227A"></span> -->
+          <a href="tel:+911234567890" style="text-decoration: none !important; color:#0062A6 !important;">+91 1234567890</a>
           
          
-        </div> &nbsp;&nbsp;
+        </div>
        
-        <a (click)="isMenuCollapsed = true" routerLink="/contact" class="btn btn-outline-primary download-button">Contact Us</a>
+       
       </div>
     </div>
   </div>
