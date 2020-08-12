@@ -43,3 +43,10 @@ p {
 .radius-15 {
   border-radius: 15px;
 }
+.border-none {
+  border: none !important;
+}
+
+.wiw-bg {
+  background: linear-gradient(135deg, #0062a6 0%,#af227a 100%) !important;
+}
