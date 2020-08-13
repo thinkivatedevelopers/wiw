@@ -27,4 +27,6 @@ export class HomePageComponent implements OnInit {
     $element.scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});
   }
 
+  
+
 }
