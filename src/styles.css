@@ -50,3 +50,8 @@ p {
 .wiw-bg {
   background: linear-gradient(135deg, #0062a6 0%,#af227a 100%) !important;
 }
+.gr-heading{
+  background: -webkit-linear-gradient(360deg, #0062a6 0%,#af227a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
