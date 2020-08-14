@@ -19,11 +19,23 @@
         <div *ngFor="let g of course.grades;" class="col-sm-4 col-md-3 mb-4">
 
           <div class="card mb-3 shadow border-none radius-15"
-            style="background:linear-gradient(135deg, #557a92 0%,#2230af 100%);">
+            style="background:linear-gradient(135deg, #557a92 0%,#2230af 100%);
+            min-height: 120px;">
             <div class="card-body text-light">
 
               <h3 class="text-light text-center">
-                <a routerLink="/{{courseSlug}}/{{g.slug}}" class="stretched-link text-light">{{g.name}}</a>
+             
+                  <a routerLink="/{{courseSlug}}/{{g.slug}}" class="stretched-link text-light" *ngIf="g.isLive; else notActive">{{g.name}}</a>
+                
+
+                <ng-template #notActive>
+                  <h3>
+                    {{g.name}}
+                  </h3>
+                  <small class="text-sm">(Coming Soon)</small>
+                  
+                </ng-template>
+                
               </h3>
 
             </div>

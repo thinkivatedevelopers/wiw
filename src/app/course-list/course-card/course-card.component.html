@@ -3,7 +3,7 @@
 <div class="card wiw-bg radius-15 border-none" 
     >
     <div class="card-body">
-        <h6 class="text-center text-danger" *ngIf="course.isLive != true; else availableNow"> Coming Soon ...</h6>
+        <h6 class="text-center text-danger" *ngIf="course.grades.length === 1; else availableNow"> Coming Soon ...</h6>
         <ng-template #availableNow>
             <h6 class="text-center text-light">Available Now</h6>
         </ng-template>
@@ -98,7 +98,7 @@
         </div>
 
         <h3 class="card-title text-center" style="color: aliceblue !important;">
-            <a style="color: aliceblue !important; text-decoration: none !important;" *ngIf="course.isLive; else notLive"
+            <a style="color: aliceblue !important; text-decoration: none !important;" *ngIf="course.grades.length != 1; else notLive"
                 routerLink="/{{course.slug}}/{{course.grades.slug}}" class="stretched-link">
                 {{course.name}}</a>
 
