@@ -24,15 +24,15 @@ export class DemoVideosComponent implements AfterViewInit {
   videos = [
     {
       link: 'https://www.youtube.com/watch?v=fqVUBzQIuko',
-      thumb: 'assets/images/presenters/video-thumb-2.png'
+      thumb: 'assets/images/21.jpg'
     },
     {
       link: 'https://www.youtube.com/watch?v=pBbsvavno8I',
-      thumb: 'assets/images/presenters/video-thumb-3.png'
+      thumb: 'assets/images/video.jpg'
     },
     {
       link: 'https://www.youtube.com/watch?v=IEv3Pnh1O4M',
-      thumb: 'assets/images/presenters/video-thumb-4.png'
+      thumb: 'assets/images/21.jpg'
     }
   ];
 

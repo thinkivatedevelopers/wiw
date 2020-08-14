@@ -30,37 +30,50 @@
           <a class="nav-link" routerLink="/about" (click)="isMenuCollapsed = true">About Us</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link pointer" routerLink="/contact" >Contact</a>
+          <a class="nav-link pointer" routerLink="/contact" (click)="isMenuCollapsed = true" >Contact</a>
         </li>
         <!-- <li class="nav-item">
           <a class="nav-link" routerLink="/packages">Packages</a>
         </li> -->
         
         <mat-menu #courseMenu="matMenu">
-  <ng-container *ngFor="let course of courses; let i = index;">
-
-    <ng-container *ngIf="course.grades && course.grades.length != 0; else noChildBlock">
-      <a mat-menu-item [matMenuTriggerFor]="sub_menu">
-        {{course.name}}
-      </a>
-      <mat-menu #sub_menu="matMenu">
-        <ng-container *ngFor="let grade of course.grades; let gi = index;">
-          <a mat-menu-item routerLink="/{{course.slug}}/{{grade.slug}}" (click)="isMenuCollapsed = true" style="text-decoration: none !important;">
-            {{grade.name}}
-          </a>
-        </ng-container>
-
-      </mat-menu>
-    </ng-container>
-
-    <ng-template #noChildBlock>
-      <button mat-menu-item disabled>
-        {{course.name}} <span>(coming soon)</span>
-      </button>
-    </ng-template>
-  </ng-container>
-
-</mat-menu>
+          <ng-container *ngFor="let course of courses; let i = index;">
+        
+            <ng-container *ngIf="course.grades && course.isLive; else notLiveCourse">
+              <a mat-menu-item [matMenuTriggerFor]="sub_menu">
+                {{course.name}}
+              </a>
+              <mat-menu #sub_menu="matMenu">
+                <ng-container *ngFor="let grade of course.grades; let gi = index;">
+                  <!-- <pre>{{grade | json}}</pre> -->
+                
+                  <ng-container *ngIf="grade.isLive; else notLiveGrade">
+                    <a mat-menu-item routerLink="/{{course.slug}}/{{grade.slug}}" (click)="isMenuCollapsed = true"
+                      style="text-decoration: none !important;">
+                      {{grade.name}}
+                    </a>
+                  </ng-container>
+                  <ng-template #notLiveGrade>
+                    <a mat-menu-item disabled routerLink="/" (click)="isMenuCollapsed = true"
+                      style="text-decoration: none !important;">
+                      {{grade.name}} <span class="text-primary" >(Coming Soon)</span>
+                    </a>
+                  </ng-template>
+                </ng-container>
+        
+              </mat-menu>
+            </ng-container>
+        
+            <ng-template #notLiveCourse>
+              <button mat-menu-item disabled>
+                {{course.name}} <span>(coming soon)</span>
+              </button>
+            </ng-template>
+        
+        
+          </ng-container>
+        
+        </mat-menu>
 
         <!-- <li class="nav-item">
           <a class="nav-link" routerLink="/contact">Contact</a>

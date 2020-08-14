@@ -12,6 +12,7 @@ export interface Grade {
   name: string;
   description: string;
   image: string;
+  isLive: boolean;
   packages: Package[];
 }
 

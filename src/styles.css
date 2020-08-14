@@ -60,3 +60,8 @@ p {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.latest-font{
+  font-family: 'Poppins', sans-serif;
+      font-weight: 300 !important;
+}

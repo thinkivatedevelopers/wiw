@@ -6,12 +6,12 @@
     border-radius: 15px;
 }
 .quotation{
-    font-family: 'Palanquin', sans-serif;
-    font-size: 30px;
-    margin: 0 auto;
-    quotes: "\201C""\201D""\2018""\2019";
-    padding: 10px 20px;
-    line-height: 1.4;
+    font-family: 'Palanquin', sans-serif !important;
+    font-size: 16px !important;
+    margin: 0 auto !important;
+    quotes: "\201C""\201D""\2018""\2019" !important;
+    padding: 10px 20px !important;
+    line-height: 1.4 !important;
     color: #000  !important;
   }
 .quotation:before {
@@ -39,6 +39,6 @@
   footer{
     margin:0;
     text-align: right;
-    font-size: 1.5em;
+    font-size: 1.3em;
     font-style: italic;
   }
