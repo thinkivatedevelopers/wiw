@@ -98,7 +98,7 @@
         </div>
 
         <h3 class="card-title text-center" style="color: aliceblue !important;">
-            <a style="color: aliceblue !important;" *ngIf="course.isLive; else notLive"
+            <a style="color: aliceblue !important; text-decoration: none !important;" *ngIf="course.isLive; else notLive"
                 routerLink="/{{course.slug}}/{{course.grades.slug}}" class="stretched-link">
                 {{course.name}}</a>
 

@@ -3,6 +3,7 @@ router-outlet ~ * {
     position: absolute;
     height: 100%;
     width: 100%;
+    -webkit-backface-visibility: hidden;
   }
 
 .page-wrapper{
@@ -51,6 +52,10 @@ p {
   background: linear-gradient(135deg, #0062a6 0%,#af227a 100%) !important;
 }
 .gr-heading{
+  /* font-family: 'Noto Sans', sans-serif; */
+  /* font-family: 'Baloo Tamma 2', cursive; */
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600 !important;
   background: -webkit-linear-gradient(360deg, #0062a6 0%,#af227a 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
