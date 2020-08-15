@@ -30,6 +30,7 @@ import { DownloadComponent } from './download/download.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PackageCardComponent } from './grade/package-card/package-card.component';
 import { CourseCardComponent } from './course-list/course-card/course-card.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -65,7 +66,9 @@ import { CourseCardComponent } from './course-list/course-card/course-card.compo
     MatTabsModule,
     MatMenuModule,
     NgbModule,
-    MatDialogModule
+    MatDialogModule,
+    ReactiveFormsModule
+
 
   ],
   providers: [],
