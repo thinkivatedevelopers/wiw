@@ -6,12 +6,10 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatMenuModule } from '@angular/material/menu';
 import {MatDialogModule} from '@angular/material/dialog';
 import { AppRoutingModule } from './app-routing.module';
-
-
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-
+import {HttpClientModule} from '@angular/common/http';
 import { HomePageComponent } from './home-page/home-page.component';
 import { AboutPageComponent } from './about-page/about-page.component';
 import { ContactPageComponent } from './contact-page/contact-page.component';
@@ -67,7 +65,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatMenuModule,
     NgbModule,
     MatDialogModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
 
 
   ],
