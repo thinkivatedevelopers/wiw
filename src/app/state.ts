@@ -18,7 +18,7 @@ export const state: Course[] = [
             {
               slug: 'Kerala-state-plus-two-offline-bundle-pack',
               name: 'Kerala State Plus Two Offline Bundle Pack',
-              description: 'description',
+              description: 'Our offline package comes with an encrypted pendrive that contains our video classes with the option of purchasing a tablet computer at an extra cost upon subscription.',
               image: 'ks-pl-off.png',
               isOnlinePack: false,
               isComboPack: true,
@@ -33,7 +33,7 @@ export const state: Course[] = [
             {
               slug: 'Kerala-state-plus-two-online-bundle-pack',
               name: 'Kerala State Plus Two Online Bundle Pack',
-              description: 'description',
+              description: 'Our online package gives you the ability to stream high quality classes, give mock tests and clear doubts if you have an Internet connection.',
               image: 'ks-pl-off.png',
               isOnlinePack: true,
               isComboPack: true,
@@ -124,9 +124,9 @@ export const state: Course[] = [
             {
               slug: 'Kerala-state-plus-two-offline-bundle-pack',
               name: 'Kerala State Plus Two Offline Bundle Pack',
-              description: 'description',
+              description: 'Our offline package comes with an encrypted pendrive that contains our video classes with the option of purchasing a tablet computer at an extra cost upon subscription.',
               image: 'ks-pl-off.png',
-              isOnlinePack: true,
+              isOnlinePack: false,
               isComboPack: true,
               validityDays: 150,
               price: 12000,
