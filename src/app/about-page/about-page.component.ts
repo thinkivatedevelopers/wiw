@@ -44,6 +44,8 @@ export class AboutPageComponent implements OnInit {
         },
       },
     });
+
+    $('.image-popup').magnificPopup({type: 'image'});
   }
 
 }
