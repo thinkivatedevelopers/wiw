@@ -58,28 +58,71 @@
                 <h4>Have a doubt ? Ask Us.</h4>
               <small>we are happy to help you..</small>
               </div>
-              <form action="">
+
+
+              <form action="" name="form" [formGroup]="form" (ngSubmit)="form.valid && onSubmit()">
                 <div class="form-group">
                   <label for="name">Name</label>
-                  <input class="form-control" id="name" type="text">
+                  <input class="form-control" id="name" type="text" 
+                  formControlName="name" 
+                  [ngClass]="{
+                    'is-invalid':form.get('name').touched && form.get('name').invalid
+                  }"
+                  >
+                  <div class="invalid-feedback">
+                    <div>Name is required</div>
+                  </div>
                 </div>
                 <div class="form-group">
                   <label for="email">Email</label>
-                  <input class="form-control" id="email" type="email">
+                  <input class="form-control" id="email" type="email"
+                  formControlName="email" 
+                  [ngClass]="{
+                    'is-invalid':form.get('email').touched && form.get('email').invalid
+                  }"
+                  >
+                  <div *ngIf="form.get('email').touched && form.get('email').invalid" class="invalid-feedback">
+                    <div *ngIf="form.get('email').errors.required">Email is required</div>
+                    <div *ngIf="form.get('email').errors.email">Email must be a valid email Address</div>
+                  </div>
                 </div>
                 <div class="form-group">
-                  <label for="email">Mobile</label>
-                  <input class="form-control" id="tel" type="tel">
+                  <label for="mobile">Mobile</label>
+                  <input class="form-control" id="mobile" type="tel"
+                  formControlName="mobile" 
+                  [ngClass]="{
+                    'is-invalid':form.get('mobile').touched && form.get('mobile').invalid
+                  }"
+                  >
+                  <div *ngIf="form.get('mobile').touched && form.get('mobile').invalid" class="invalid-feedback">
+                    <div *ngIf="form.get('mobile').errors.required">Mobile Number is required</div>
+                    <div *ngIf="form.get('mobile').errors.minlength">Minimum 10 Digits Mobile Number</div>
+                    <!-- <div *ngIf="form.get('mobile').errors.pattern">Minimum 10 Digits Mobile Number</div> -->
+                  </div>
                 </div>
                 <div class="form-group">
                   <label for="message">Message</label>
-                  <textarea class="form-control" id="message" rows="3"></textarea>
+                  <textarea class="form-control" id="message" rows="3"
+                  formControlName="message" 
+                  [ngClass]="{
+                    'is-invalid':form.get('message').touched && form.get('message').invalid
+                  }"
+                  ></textarea>
+                  <div *ngIf="form.get('message').touched && form.get('message').invalid" class="invalid-feedback">
+                    <div *ngIf="form.get('message').errors.required">Message  is required</div>
+                    <div *ngIf="form.get('message').errors.minlength">Minimum 5 charecters are required</div>
+                  </div>
                 </div>
                 <div class="form-group">
                   <input type="hidden" name="remarks">
-                  <input class="btn btn-outline-primary download-button" type="button" value="Submit">
+                  <!-- <input  type="button" value="Submit"> -->
+                  <button class="btn btn-outline-primary download-button" [disabled]="!form.valid" type="submit">Submit</button>
                 </div>
               </form>
+
+
+
+
             </div>
           </div>
         </div>
