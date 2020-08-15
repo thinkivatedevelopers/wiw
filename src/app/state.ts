@@ -20,15 +20,32 @@ export const state: Course[] = [
               name: 'Kerala State Plus Two Offline Bundle Pack',
               description: 'description',
               image: 'ks-pl-off.png',
-              isOnlinePack: true,
+              isOnlinePack: false,
               isComboPack: true,
               validityDays: 150,
-              price: 12000,
+              price: 8500,
               subjects: [
                 { name: 'Biology', icon: 'assets/icons/bio.svg' },
                 { name: 'Physics', icon: 'assets/icons/phy.svg' },
+                { name: 'Chemistry', icon: 'assets/icons/che.svg' }
               ],
             },
+            {
+              slug: 'Kerala-state-plus-two-online-bundle-pack',
+              name: 'Kerala State Plus Two Online Bundle Pack',
+              description: 'description',
+              image: 'ks-pl-off.png',
+              isOnlinePack: true,
+              isComboPack: true,
+              validityDays: 150,
+              price: 11000,
+              subjects: [
+                { name: 'Biology', icon: 'assets/icons/bio.svg' },
+                { name: 'Physics', icon: 'assets/icons/phy.svg' },
+                { name: 'Chemistry', icon: 'assets/icons/che.svg' },
+                { name: 'Mathmatics', icon: 'assets/icons/math.svg' },
+              ],
+            }
           ],
         },
         {
