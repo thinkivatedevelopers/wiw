@@ -15,6 +15,13 @@ export class DataService {
     return this.state;
   }
 
+  contactFormData(data){
+    
+    console.log(data);
+    
+
+  }
+
   getCourse(courseSlug: string) {
     return this.state.filter(c => c.slug === courseSlug)[0];
   }

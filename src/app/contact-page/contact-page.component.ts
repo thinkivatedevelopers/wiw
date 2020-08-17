@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { SEOService } from '../seo.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { ContactFormServiceService } from '../contact-form-service.service';
+
 
 @Component({
   selector: 'app-contact-page',
@@ -18,7 +20,8 @@ export class ContactPageComponent implements OnInit {
 
 
   constructor(
-    private seoService: SEOService
+    private seoService: SEOService,
+    private contactService:ContactFormServiceService
   ) { }
 
   ngOnInit(): void {
@@ -27,7 +30,29 @@ export class ContactPageComponent implements OnInit {
   }
 
   onSubmit(){
-    alert(JSON.stringify(this.form.value))
+    
+    //alert(JSON.stringify(this.form.value))
+   
+      // this.contactService.submitContactForm()
+      //   .subscribe(() =>{} );
+    
+    // https://script.google.com/macros/s/AKfycbzNZKf1Lwipg44dzUMlKZfgafOGYUla6ll-sQ2o-VZUa-mq4I4/exec
+    
+//     var $form = $('form#test-form'),
+//     url = 'https://script.google.com/macros/s/abcdefghijklmnopqrstuvwxyz1234567890/exec'
+
+// $('#submit-form').on('click', function(e) {
+//   e.preventDefault();
+//   var jqxhr = $.ajax({
+//     url: url,
+//     method: "GET",
+//     dataType: "json",
+//     data: $form.serializeObject()
+//   }).success(
+//     // do something
+//   );
+// })
+  
   }
 
 }

@@ -18,17 +18,34 @@ export const state: Course[] = [
             {
               slug: 'Kerala-state-plus-two-offline-bundle-pack',
               name: 'Kerala State Plus Two Offline Bundle Pack',
-              description: 'description',
+              description: 'Our offline package comes with an encrypted pendrive that contains our video classes with the option of purchasing a tablet computer at an extra cost upon subscription.',
+              image: 'ks-pl-off.png',
+              isOnlinePack: false,
+              isComboPack: true,
+              validityDays: 150,
+              price: 8500,
+              subjects: [
+                { name: 'Biology', icon: 'assets/icons/bio.svg' },
+                { name: 'Physics', icon: 'assets/icons/phy.svg' },
+                { name: 'Chemistry', icon: 'assets/icons/che.svg' }
+              ],
+            },
+            {
+              slug: 'Kerala-state-plus-two-online-bundle-pack',
+              name: 'Kerala State Plus Two Online Bundle Pack',
+              description: 'Our online package gives you the ability to stream high quality classes, give mock tests and clear doubts if you have an Internet connection.',
               image: 'ks-pl-off.png',
               isOnlinePack: true,
               isComboPack: true,
               validityDays: 150,
-              price: 12000,
+              price: 11000,
               subjects: [
                 { name: 'Biology', icon: 'assets/icons/bio.svg' },
                 { name: 'Physics', icon: 'assets/icons/phy.svg' },
+                { name: 'Chemistry', icon: 'assets/icons/che.svg' },
+                { name: 'Mathmatics', icon: 'assets/icons/math.svg' },
               ],
-            },
+            }
           ],
         },
         {
@@ -107,9 +124,9 @@ export const state: Course[] = [
             {
               slug: 'Kerala-state-plus-two-offline-bundle-pack',
               name: 'Kerala State Plus Two Offline Bundle Pack',
-              description: 'description',
+              description: 'Our offline package comes with an encrypted pendrive that contains our video classes with the option of purchasing a tablet computer at an extra cost upon subscription.',
               image: 'ks-pl-off.png',
-              isOnlinePack: true,
+              isOnlinePack: false,
               isComboPack: true,
               validityDays: 150,
               price: 12000,
@@ -183,7 +200,7 @@ export const state: Course[] = [
       slug: 'icse',
       name: 'ICSE Board',
       description: ' Icse Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.',
-      image: 'assets/images/sylabus-icons/wiw-coinICSE.png',
+      image: 'assets/images/sylabus-icons/wiw-logowithtext.png',
       isLive: true,
       grades: [
         {
@@ -200,7 +217,7 @@ export const state: Course[] = [
       slug: 'jee',
       name: 'JEE',
       description: ' Icse Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.',
-      image: 'assets/images/sylabus-icons/wiw-coinICSE.png',
+      image: 'assets/images/sylabus-icons/wiw-logowithtext.png',
       isLive: true,
       grades: [
         {
@@ -217,7 +234,7 @@ export const state: Course[] = [
       slug: 'upse',
       name: 'UPSC',
       description: ' Icse Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.',
-      image: 'assets/images/sylabus-icons/wiw-coinICSE.png',
+      image: 'assets/images/sylabus-icons/wiw-logowithtext.png',
       isLive: true,
       grades: [
         {
@@ -234,7 +251,7 @@ export const state: Course[] = [
       slug: 'neet',
       name: 'NEET',
       description: ' Icse Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.',
-      image: 'assets/images/sylabus-icons/wiw-coinICSE.png',
+      image: 'assets/images/sylabus-icons/wiw-logowithtext.png',
       isLive: true,
       grades: [
         {
