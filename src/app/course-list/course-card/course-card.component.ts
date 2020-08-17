@@ -12,7 +12,7 @@ export class CourseCardComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.course)
+    // console.log(this.course)
   }
 
 }

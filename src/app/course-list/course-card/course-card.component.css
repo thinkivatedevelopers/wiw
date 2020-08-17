@@ -9,6 +9,7 @@
             animation: rotate3d 8s linear infinite;
     -webkit-transition: all .3s;
     transition: all .3s;
+    
    
   }
   
@@ -20,6 +21,7 @@
     border-radius: 50%;
     overflow: hidden;
     background-color: #E8D0BB;
+    
    
   }
   .coin__front:after,
@@ -35,6 +37,8 @@
     opacity: 0.3;
     -webkit-animation: shine linear 4s infinite;
             animation: shine linear 4s infinite;
+            -webkit-backface-visibility: hidden;
+            -webkit-transform-style: preserve-3d;
     
   }
   
@@ -43,6 +47,8 @@
     background-size: cover;
     -webkit-transform: translateZ(2.5px);
             transform: translateZ(2.5px);
+    -webkit-backface-visibility: hidden;
+    -webkit-transform-style: preserve-3d;
            
   }
   
@@ -51,7 +57,8 @@
     background-size: cover;
     -webkit-transform: translateZ(-2.5px) rotateY(180deg);
             transform: translateZ(-2.5px) rotateY(180deg);
-           
+    -webkit-backface-visibility: hidden;
+    -webkit-transform-style: preserve-3d;
   }
   
   .coin__edge div:nth-child(1) {
