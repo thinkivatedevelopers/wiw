@@ -15,7 +15,7 @@ export class CourseListComponent implements OnInit {
 
   ngOnInit(): void {
     this.courseList = this.data.getAllData();
-    console.log(this.data.getAllData());
+    // console.log(this.data.getAllData());
   }
 
 }
