@@ -19,6 +19,31 @@ export class AppComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    const isDisplayed = localStorage.getItem('isDisplayed')
+    
+    if (isDisplayed != 'true') {
+
+      $.magnificPopup.open({
+        items: [
+          {
+            src: 'assets/images/onam-pic.jpg'
+          },
+          {
+            src: 'assets/images/education.png'
+          }
+        ],
+        type: 'image', 
+        gallery: {
+          enabled: true
+        }
+      })
+
+      localStorage.setItem('isDisplayed', 'true')
+    }
+
+    
+
+
     $('.video-popup').magnificPopup({
       type: 'iframe',
       showCloseBtn: true,
