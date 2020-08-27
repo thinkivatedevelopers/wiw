@@ -14,7 +14,7 @@
               </div>
               <div class="cont-right">
                 <p><a href="tel:0495-2760366">0495-2760366</a></p>
-  
+
               </div>
             </div>
             <div class="cont-top">
@@ -23,7 +23,7 @@
               </div>
               <div class="cont-right">
                 <p><a href="tel:+916235803333">+91 6235803333</a></p>
-  
+
               </div>
             </div>
             <div class="cont-top mt-4">
@@ -44,8 +44,8 @@
             </div>
             <div class="cont-top mt-4">
               <div class="cont-left">
-  
-  
+
+
               </div>
               <div class="cont-right">
                 <p style="font-weight: bold !important;">Working Hours : 9 AM to 5 PM (Monday to saturday)</p>
@@ -53,88 +53,83 @@
             </div>
           </div>
           <div class="col-md-6">
-            <div class="card radius-15" >
+            <div class="card radius-15">
               <div class="card-body">
                 <div class="mb-3">
                   <h4>Have a doubt ? Ask Us.</h4>
-                <small>we are happy to help you..</small>
+                  <small>we are happy to help you..</small>
                 </div>
-  
-  
+
                 <form action="" name="form" [formGroup]="form" (ngSubmit)="form.valid && onSubmit()">
                   <div class="form-group">
                     <label for="name">Name</label>
-                    <input class="form-control" id="name" type="text" name="name"
-                    formControlName="name" 
-                    [ngClass]="{
+                    <input class="form-control" id="name" type="text" name="name" formControlName="name" [ngClass]="{
                       'is-invalid':form.get('name').touched && form.get('name').invalid
-                    }"
-                    >
+                    }">
                     <div class="invalid-feedback">
                       <div>Name is required</div>
                     </div>
                   </div>
-                  <div class="form-group">
-                    <label for="email">Email</label>
-                    <input class="form-control" id="email" type="email" name="email"
-                    formControlName="email" 
-                    [ngClass]="{
-                      'is-invalid':form.get('email').touched && form.get('email').invalid
-                    }"
-                    >
-                    <div *ngIf="form.get('email').touched && form.get('email').invalid" class="invalid-feedback">
-                      <div *ngIf="form.get('email').errors.required">Email is required</div>
-                      <div *ngIf="form.get('email').errors.email">Email must be a valid email Address</div>
-                    </div>
-                  </div>
-                  <div class="form-group">
+                  
+                  <div class="row">
+                    <div class="col-6"><div class="form-group">
                     <label for="mobile">Mobile</label>
-                    <input class="form-control" id="mobile" type="tel" name="mobile"
-                    formControlName="mobile" 
-                    [ngClass]="{
+                    <input class="form-control" id="mobile" type="tel" name="mobile" formControlName="mobile" [ngClass]="{
                       'is-invalid':form.get('mobile').touched && form.get('mobile').invalid
-                    }"
-                    >
+                    }">
+                    <!-- <span>{{form.get('mobile').errors | json}}</span> -->
                     <div *ngIf="form.get('mobile').touched && form.get('mobile').invalid" class="invalid-feedback">
                       <div *ngIf="form.get('mobile').errors.required">Mobile Number is required</div>
                       <div *ngIf="form.get('mobile').errors.minlength">Minimum 10 Digits Mobile Number</div>
                       <!-- <div *ngIf="form.get('mobile').errors.pattern">Minimum 10 Digits Mobile Number</div> -->
                     </div>
+                  </div></div>
+                    <div class="col-6"><div class="form-group">
+                    <label for="email">Email</label>
+                    <input class="form-control" id="email" type="email" name="email" formControlName="email" [ngClass]="{
+                      'is-invalid':form.get('email').touched && form.get('email').invalid
+                    }">
+                    <div *ngIf="form.get('email').touched && form.get('email').invalid" class="invalid-feedback">
+                      <div *ngIf="form.get('email').errors.required">Email is required</div>
+                      <div *ngIf="form.get('email').errors.email">Email must be a valid email Address</div>
+                    </div>
+                  </div></div>
                   </div>
+                  
                   <div class="form-group">
                     <label for="message">Message</label>
-                    <textarea class="form-control" id="message" rows="3" name="message"
-                    formControlName="message" 
-                    [ngClass]="{
+                    <textarea class="form-control" id="message" rows="3" name="message" formControlName="message"
+                      [ngClass]="{
                       'is-invalid':form.get('message').touched && form.get('message').invalid
-                    }"
-                    ></textarea>
+                    }"></textarea>
                     <div *ngIf="form.get('message').touched && form.get('message').invalid" class="invalid-feedback">
-                      <div *ngIf="form.get('message').errors.required">Message  is required</div>
+                      <div *ngIf="form.get('message').errors.required">Message is required</div>
                       <div *ngIf="form.get('message').errors.minlength">Minimum 5 charecters are required</div>
                     </div>
                   </div>
-                  <div class="form-group">
+                  <!-- <div class="form-group"> -->
                     <input type="hidden" name="remarks">
                     <!-- <input  type="button" value="Submit"> -->
-                    <button class="btn btn-outline-primary download-button" [disabled]="!form.valid" type="submit">Submit</button>
-                  </div>
+                    <button class="btn btn-outline-primary download-button" [ngClass]="{disabled:!form.valid || onLoading}" [disabled]="!form.valid || onLoading"
+                      type="submit">Submit</button>
+                      <!--  -->
+                  <!-- </div> -->
                 </form>
-  
-  
-  
-  
-  
+                
+               
+
+
+
               </div>
             </div>
-    
+
           </div>
 
         </div>
-       
+
       </div>
     </div>
-  
+
   </section>
   <section class="wiw-about4">
     <div class="contact1-bg pt-2">
@@ -148,21 +143,21 @@
                   allowfullscreen=""></iframe>
               </div>
             </div>
-  
+
           </div>
           <div class="col-md-6">
             <div class="column">
               <h3 class="header mb-4">We Are Here For You, Always.</h3>
             </div>
             <div class="column2">
-  
+
               <h6 class="contact-address">Thinkivate Learning - 3rd Floor MSons Arcade, Cherrotty Road, Calicut,
                 Kerala-673001, India</h6>
-  
+
             </div>
           </div>
-          
-  
+
+
         </div>
       </div>
     </div>
