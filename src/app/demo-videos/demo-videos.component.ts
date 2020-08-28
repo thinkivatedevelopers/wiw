@@ -23,20 +23,24 @@ export class DemoVideosComponent implements AfterViewInit {
 
   videos = [
     {
+      subject: 'Biology',
       link: 'https://www.youtube.com/watch?v=URrXh0LJ6JE',
-      thumb: 'assets/bio.png'
+      thumb: 'assets/icons/bio-fill.svg'
     },
     {
+      subject: 'Physics',
       link: 'https://www.youtube.com/watch?v=uh6bHORgC-Y',
-      thumb: 'assets/phy.png'
+      thumb: 'assets/icons/phy-fill.svg'
     },
     {
+      subject: 'Chemistry',
       link: 'https://www.youtube.com/watch?v=t8x3wdXZGEY',
-      thumb: 'assets/che.png'
+      thumb: 'assets/icons/che-fill.svg'
     },
     {
+      subject: 'Maths',
       link: 'https://www.youtube.com/watch?v=64643Op6WJo',
-      thumb: 'assets/math.png'
+      thumb: 'assets/icons/math-fill.svg'
     }
   ];
 
