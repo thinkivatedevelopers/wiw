@@ -3,15 +3,16 @@
 </div>
 
 <div class="row">
-  
+
   <div *ngFor="let video of videos; let videoIndex=index;" class="col-xs-6 col-sm-6 col-md-3 my-1">
     <div class="card shadow border-none radius-15" style="background-color: rgb(175 34 122 / 8%)">
       <div class="card-body" style="margin-left: auto; margin-right: auto;">
-        <a class="video-popup overlay stretched-link" href="{{video.link}}"> 
+        <a class="video-popup overlay stretched-link" href="{{video.link}}">
           <img src="{{video.thumb}}" class="img-responsive demo-image" height="100">
         </a>
-        <h3 class="text-dark py-2">{{video.subject}}</h3>
-        <!-- Demo video -->
+        <div class="mt-4 text-center">
+          <span class="h5 text-dark latest-font text-uppercase">{{video.subject}}</span>
+        </div>
       </div>
     </div>
   </div>
