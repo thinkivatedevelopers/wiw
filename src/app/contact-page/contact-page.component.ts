@@ -43,13 +43,15 @@ export class ContactPageComponent implements OnInit {
     // disable submit button
     // post data
     // on success, reset form, show success message and fade of message
-
+    console.log(this.form.value)
 
     const body = new FormData();
     body.append('name', this.form.value.name);
     body.append('email', this.form.value.email);
     body.append('message', this.form.value.message);
     body.append('mobile', this.form.value.mobile);
+
+    
 
     this.http.post('https://script.google.com/macros/s/AKfycbzbt0Hh5jNMKnGxoWqfGl-X8p9gM2leWCOjgsaJv6l2qCCnGc8/exec', body).subscribe(res => {
       // console.log(res)
