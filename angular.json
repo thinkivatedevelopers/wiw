@@ -21,6 +21,7 @@
             "aot": true,
             "assets": [
               "src/favicon.ico",
+              "src/wiw.png",
               "src/assets",
               "src/404.html"
             ],
