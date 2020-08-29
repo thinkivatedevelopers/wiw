@@ -1,38 +1,38 @@
 <div *ngIf="courseList ; else not_found">
-    <section class="page-wrapper">
+  <section class="page-wrapper">
 
-      <div class="container mb-3">
-        <div class="row">
-          <div class="col">
-            <h2 class="text-center gr-heading">Courses.</h2>
-           
-          </div>
+    <div class="container mb-3">
+      <div class="row">
+        <div class="col">
+          <h2 class="text-center gr-heading">Courses.</h2>
+
         </div>
       </div>
-     
-        
-        <div class="container">
-            <div class="row">
-   
-                <div *ngFor="let course of courseList;" class="col-md-4 mb-4" >
-                      <course-card [course]="course"></course-card>  
-                </div>
-               
-            </div>
-   
-   
-            
-           </div>
-        
-           <div class="container">
-              
-            <app-demo-videos></app-demo-videos>
-         
+    </div>
+
+
+    <div class="container">
+      <div class="row">
+
+        <div *ngFor="let course of courseList;" class="col-md-4 mb-4">
+          <course-card [course]="course"></course-card>
+        </div>
+
       </div>
-    </section>
-    <wiw-footer></wiw-footer>
+
+
+
+    </div>
+
+    <div class="container">
+
+      <app-demo-videos></app-demo-videos>
+
+    </div>
+  </section>
+  <wiw-footer></wiw-footer>
 </div>
 
 <ng-template #not_found>
-    <app-not-found-page></app-not-found-page>
+  <app-not-found-page></app-not-found-page>
 </ng-template>

@@ -27,7 +27,6 @@ export class HeaderComponent implements OnInit {
       window.scrollTo(0, 0)
     }
     else {
-      console.log(this.router.url)
       this.router.navigate(['/'])
     }
 
