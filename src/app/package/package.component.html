@@ -25,14 +25,14 @@
                     <p class="latest-font">{{package.description}}</p>
                     <h4 class="my-3 gr-heading">Subjects Included:</h4>
                     <div class="row">
+
                         <div *ngFor="let subject of package.subjects;" class="col">
                             <div class="card mb-3 wiw-bg radius-15 border-none shadow">
                                 <div class="card-body text-light text-center">
-                                    <img src="{{subject.icon}}" alt="" height="50px">
+                                    <img src="{{subject.icon}}" alt="" height="50px" alt="{{subject.name}} icon">
                                     <h6 class="mt-2">{{ subject.name}}</h6>
                                 </div>
                             </div>
-
                         </div>
 
                     </div>
@@ -57,9 +57,9 @@
                                         </h5>
                                         <a class="stretched-link"
                                             href="https://play.google.com/store/apps/details?id=appn.wiwlearn"
-                                            target="_blank">
+                                            target="_blank" rel="noreferrer" title="get it on google play">
                                             <img style="max-height: 50px; object-fit: cover;"
-                                                src="assets/icons/google-sm.png">
+                                                src="assets/icons/google-sm.png" alt="gogle play icon">
                                         </a>
                                     </div>
                                 </div>
