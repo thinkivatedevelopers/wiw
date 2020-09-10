@@ -43,24 +43,38 @@ export class ContactPageComponent implements OnInit {
     // disable submit button
     // post data
     // on success, reset form, show success message and fade of message
-    console.log(this.form.value)
 
-    const body = new FormData();
-    body.append('name', this.form.value.name);
-    body.append('email', this.form.value.email);
-    body.append('message', this.form.value.message);
-    body.append('mobile', this.form.value.mobile);
+    let data = {
+      name: this.form.value.name,
+      email: this.form.value.email,
+      mobile: this.form.value.mobile,
+      message: this.form.value.message,
+      method: 'WIW Learn Website',
+      against: 'WIW Learn'
+    }
 
-    
+    const endPoint = 'http://3.129.204.135/enquiries'
 
-    this.http.post('https://script.google.com/macros/s/AKfycbzbt0Hh5jNMKnGxoWqfGl-X8p9gM2leWCOjgsaJv6l2qCCnGc8/exec', body).subscribe(res => {
-      // console.log(res)
-
+    this.http.post(endPoint, data).subscribe(
+      (res: any) => {
+      console.log(res)
+      if (res && res.status === 200) {
+        loadSnack.dismiss()
+        this.snackBar.open('Thank you, we\'ll get back to you. 😊😊', '', { duration: 4000, horizontalPosition: 'right', verticalPosition: 'bottom' })
+      }
+      else {
+        loadSnack.dismiss()
+        this.snackBar.open('Something went wrong, Please try again 🙁', '', { duration: 4000, horizontalPosition: 'right', verticalPosition: 'bottom' })
+      }
       this.form.reset();
       this.onLoading = false
-
+    }, 
+    (err) => {
+      console.log(err)
       loadSnack.dismiss()
-      this.snackBar.open('Thank you, we\'ll get back to you. 😊😊', '', { duration: 4000, horizontalPosition: 'right', verticalPosition: 'bottom' })
+      this.snackBar.open('Something went wrong, Please try again 🙁', '', { duration: 4000, horizontalPosition: 'right', verticalPosition: 'bottom' })
+      this.form.reset();
+      this.onLoading = false
     })
 
   }
