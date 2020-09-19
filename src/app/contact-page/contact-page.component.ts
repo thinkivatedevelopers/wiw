@@ -53,7 +53,7 @@ export class ContactPageComponent implements OnInit {
       against: 'WIW Learn'
     }
 
-    const endPoint = 'http://localhost:3000/api/enquiries'
+    const endPoint = 'https://office.thinkivatelearning.com/api/enquiries'
 
     this.http.post(endPoint, data).subscribe(
       (res: any) => {
