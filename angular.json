@@ -23,7 +23,8 @@
               "src/favicon.ico",
               "src/wiw.png",
               "src/assets",
-              "src/404.html"
+              "src/404.html",
+              "src/sitemap.xml"
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
