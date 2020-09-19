@@ -53,7 +53,7 @@ export class ContactPageComponent implements OnInit {
       against: 'WIW Learn'
     }
 
-    const endPoint = 'http://3.129.204.135/enquiries'
+    const endPoint = 'http://localhost:3000/api/enquiries'
 
     this.http.post(endPoint, data).subscribe(
       (res: any) => {

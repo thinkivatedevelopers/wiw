@@ -15,21 +15,21 @@ export const state: Course[] = [
           image: '',
           isLive: true,
           packages: [
-            {
-              slug: 'Kerala-state-plus-two-offline-bundle-pack',
-              name: 'Kerala State Plus Two Offline Bundle Pack',
-              description: 'Our offline package comes with an encrypted pendrive that contains our video classes with the option of purchasing a tablet computer at an extra cost upon subscription.',
-              image: 'ks-pl-off.png',
-              isOnlinePack: false,
-              isComboPack: true,
-              validityDays: 150,
-              price: 8500,
-              subjects: [
-                { name: 'Biology', icon: 'assets/icons/bio.svg' },
-                { name: 'Physics', icon: 'assets/icons/phy.svg' },
-                { name: 'Chemistry', icon: 'assets/icons/che.svg' }
-              ],
-            },
+            // {
+            //   slug: 'Kerala-state-plus-two-offline-bundle-pack',
+            //   name: 'Kerala State Plus Two Offline Bundle Pack',
+            //   description: 'Our offline package comes with an encrypted pendrive that contains our video classes with the option of purchasing a tablet computer at an extra cost upon subscription.',
+            //   image: 'ks-pl-off.png',
+            //   isOnlinePack: false,
+            //   isComboPack: true,
+            //   validityDays: 150,
+            //   price: 8500,
+            //   subjects: [
+            //     { name: 'Biology', icon: 'assets/icons/bio.svg' },
+            //     { name: 'Physics', icon: 'assets/icons/phy.svg' },
+            //     { name: 'Chemistry', icon: 'assets/icons/che.svg' }
+            //   ],
+            // },
             {
               slug: 'Kerala-state-plus-two-online-bundle-pack',
               name: 'Kerala State Plus Two Online Bundle Pack',
@@ -121,20 +121,20 @@ export const state: Course[] = [
           image: '',
           isLive: true,
           packages: [
-            {
-              slug: 'Kerala-state-plus-two-offline-bundle-pack',
-              name: 'Kerala State Plus Two Offline Bundle Pack',
-              description: 'Our offline package comes with an encrypted pendrive that contains our video classes with the option of purchasing a tablet computer at an extra cost upon subscription.',
-              image: 'ks-pl-off.png',
-              isOnlinePack: false,
-              isComboPack: true,
-              validityDays: 150,
-              price: 12000,
-              subjects: [
-                { name: 'Biology', icon: 'assets/icons/bio.svg' },
-                { name: 'Physics', icon: 'assets/icons/phy.svg' },
-              ],
-            },
+            // {
+            //   slug: 'Kerala-state-plus-two-offline-bundle-pack',
+            //   name: 'Kerala State Plus Two Offline Bundle Pack',
+            //   description: 'Our offline package comes with an encrypted pendrive that contains our video classes with the option of purchasing a tablet computer at an extra cost upon subscription.',
+            //   image: 'ks-pl-off.png',
+            //   isOnlinePack: false,
+            //   isComboPack: true,
+            //   validityDays: 150,
+            //   price: 12000,
+            //   subjects: [
+            //     { name: 'Biology', icon: 'assets/icons/bio.svg' },
+            //     { name: 'Physics', icon: 'assets/icons/phy.svg' },
+            //   ],
+            // },
           ],
         },
         {

@@ -24,24 +24,44 @@ export class DemoVideosComponent implements AfterViewInit {
   videos = [
     {
       subject: 'Biology',
-      link: 'https://www.youtube.com/watch?v=URrXh0LJ6JE',
+      link: 'https://www.youtube.com/watch?v=edcqMvXVGi4',
       thumb: 'assets/icons/bio-fill.svg'
     },
     {
       subject: 'Physics',
-      link: 'https://www.youtube.com/watch?v=uh6bHORgC-Y',
+      link: 'https://www.youtube.com/watch?v=edcqMvXVGi4',
       thumb: 'assets/icons/phy-fill.svg'
     },
     {
       subject: 'Chemistry',
-      link: 'https://www.youtube.com/watch?v=t8x3wdXZGEY',
+      link: 'https://www.youtube.com/watch?v=edcqMvXVGi4',
       thumb: 'assets/icons/che-fill.svg'
     },
     {
       subject: 'Maths',
-      link: 'https://www.youtube.com/watch?v=64643Op6WJo',
+      link: 'https://www.youtube.com/watch?v=edcqMvXVGi4',
       thumb: 'assets/icons/math-fill.svg'
     }
+    // {
+    //   subject: 'Biology',
+    //   link: 'https://www.youtube.com/watch?v=URrXh0LJ6JE',
+    //   thumb: 'assets/icons/bio-fill.svg'
+    // },
+    // {
+    //   subject: 'Physics',
+    //   link: 'https://www.youtube.com/watch?v=uh6bHORgC-Y',
+    //   thumb: 'assets/icons/phy-fill.svg'
+    // },
+    // {
+    //   subject: 'Chemistry',
+    //   link: 'https://www.youtube.com/watch?v=t8x3wdXZGEY',
+    //   thumb: 'assets/icons/che-fill.svg'
+    // },
+    // {
+    //   subject: 'Maths',
+    //   link: 'https://www.youtube.com/watch?v=64643Op6WJo',
+    //   thumb: 'assets/icons/math-fill.svg'
+    // }
   ];
 
   constructor() { }
