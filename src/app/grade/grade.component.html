@@ -8,7 +8,8 @@
                     {{grade.name}} </h3>
 
                 <!-- <p class="my-4">{{grade.description}} </p> -->
-                <h5 class="text-uppercase mt-2 gr-heading">Available Packages</h5>
+                <h5 *ngIf="grade.packages.length" class="text-uppercase mt-2 gr-heading">Available Packages</h5>
+                <h5 *ngIf="!grade.packages.length" class="text-uppercase mt-2 gr-heading">Coming Soon</h5>
             </div>
 
             <div class="row">
@@ -21,70 +22,75 @@
                         classes with the option of purchasing a tablet computer at an extra cost upon subscription.</p>
                 </div>
             </div>
-            <div class="row ">
-                <div class="col">
-                    <mat-tab-group animationDuration="500ms">
-                        <mat-tab label="All Packages">
-                            <div class="container-fluid mt-4">
-                                <div class="row justify-content-md-center">
-                                    <div *ngFor="let package of grade.packages;" class="col-sm-6 col-md-4 mb-4">
-                                        <package-card [package]="package" [courseSlug]="courseSlug"
-                                            [gradeSlug]="gradeSlug">
-                                        </package-card>
+
+            <ng-container *ngIf="grade.packages.length;">
+                <div class="row ">
+                    <div class="col">
+            
+            
+                        <mat-tab-group animationDuration="500ms">
+                            <mat-tab label="All Packages">
+                                <div class="container-fluid mt-4">
+                                    <div class="row justify-content-md-center">
+                                        <div *ngFor="let package of grade.packages;" class="col-sm-6 col-md-4 mb-4">
+                                            <package-card [package]="package" [courseSlug]="courseSlug" [gradeSlug]="gradeSlug">
+                                            </package-card>
+                                        </div>
+            
+            
+            
                                     </div>
-
-
-
                                 </div>
-                            </div>
-                        </mat-tab>
-                        <mat-tab label="Online Packages">
-
-                            <div class="container-fluid mt-4">
-                                <div class="row justify-content-md-center">
-                                    <ng-container *ngIf="grade.onlinePacks.length; else noPacksBlock;">
-                                        <div *ngFor="let package of grade.onlinePacks;" class="col-sm-6 col-md-4 mb-4">
-
-                                            <package-card [package]="package" [courseSlug]="courseSlug"
-                                                [gradeSlug]="gradeSlug">
-                                            </package-card>
-
-
-                                        </div>
-                                    </ng-container>
-
-
-
+                            </mat-tab>
+                            <mat-tab label="Online Packages">
+            
+                                <div class="container-fluid mt-4">
+                                    <div class="row justify-content-md-center">
+                                        <ng-container *ngIf="grade.onlinePacks.length; else noPacksBlock;">
+                                            <div *ngFor="let package of grade.onlinePacks;" class="col-sm-6 col-md-4 mb-4">
+            
+                                                <package-card [package]="package" [courseSlug]="courseSlug" [gradeSlug]="gradeSlug">
+                                                </package-card>
+            
+            
+                                            </div>
+                                        </ng-container>
+            
+            
+            
+                                    </div>
                                 </div>
-                            </div>
-                        </mat-tab>
-                        <mat-tab label="Offline Packages">
-                            <div class="container-fluid mt-4">
-                                <div class="row justify-content-md-center">
-                                    <ng-container *ngIf="grade.offlinePacks.length; else noPacksBlock;">
-                                        <div *ngFor="let package of grade.offlinePacks;" class="col-sm-6 col-md-4 mb-4">
-                                            <package-card [package]="package" [courseSlug]="courseSlug"
-                                                [gradeSlug]="gradeSlug">
-                                            </package-card>
-                                        </div>
-                                    </ng-container>
-
-
+                            </mat-tab>
+                            <mat-tab label="Offline Packages">
+                                <div class="container-fluid mt-4">
+                                    <div class="row justify-content-md-center">
+                                        <ng-container *ngIf="grade.offlinePacks.length; else noPacksBlock;">
+                                            <div *ngFor="let package of grade.offlinePacks;" class="col-sm-6 col-md-4 mb-4">
+                                                <package-card [package]="package" [courseSlug]="courseSlug" [gradeSlug]="gradeSlug">
+                                                </package-card>
+                                            </div>
+                                        </ng-container>
+            
+            
+                                    </div>
                                 </div>
+                            </mat-tab>
+                        </mat-tab-group>
+            
+                        <ng-template #noPacksBlock class="text-center">
+                            <div class="text-center">
+                                <img src="assets/images/no-content.svg" height="210" alt="no package availabe image">
+                                <h5 class="mt-4">Currently No Packages Available 🙁</h5>
                             </div>
-                        </mat-tab>
-                    </mat-tab-group>
-
-                    <ng-template #noPacksBlock class="text-center">
-                        <div class="text-center">
-                            <img src="assets/images/no-content.svg" height="210" alt="no package availabe image">
-                            <h5 class="mt-4">Currently No Packages Available 🙁</h5>
-                        </div>
-
-                    </ng-template>
-
+            
+                        </ng-template>
+            
+                    </div>
                 </div>
-            </div>
+            </ng-container>
+
+
+            
 
 
 

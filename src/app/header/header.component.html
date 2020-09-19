@@ -5,7 +5,7 @@
   <div class="container">
     <!-- <a class="navbar-brand" href="index.html"><span class="fa fa-diamond"></span>WIW Learn</a> -->
     <!-- if logo is image enable this    -->
-    <a class="navbar-brand pointer" (click)="logoClick()" >
+    <a class="navbar-brand pointer" (click)="logoClick()" (click)="isMenuCollapsed = true" >
       <img src="assets/images/wiw-logo-full.png" alt="wiw learn logo" title="wiw learn" style="height: 55px;" />
     </a>
     <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" (click)="isCollapsed = !isCollapsed" data-target="#navbarSupportedContent"
@@ -32,9 +32,9 @@
         <li class="nav-item">
           <a class="nav-link pointer" routerLink="/contact" (click)="isMenuCollapsed = true" >Contact</a>
         </li>
-        <!-- <li class="nav-item">
-          <a class="nav-link" routerLink="/packages">Packages</a>
-        </li> -->
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/faq" (click)="isMenuCollapsed = true" >FAQs</a>
+        </li>
         
         <mat-menu #courseMenu="matMenu">
           <ng-container *ngFor="let course of courses; let i = index;">
@@ -86,7 +86,7 @@
         <div>
           <strong  style="color:#0062A6 !important ;">Let's Talk.. </strong> <br>
           <!-- <span style="color:#AF227A"></span> -->
-          <a href="tel:0495-2760366" style="text-decoration: none !important; color:#0062A6 !important;" title="contact now">0495-2760366</a>
+          <a href="tel:18008903411" style="text-decoration: none !important; color:#0062A6 !important;" title="contact now" (click)="isMenuCollapsed = true" >1800 8903411 (Toll Free)</a>
           
          
         </div>
