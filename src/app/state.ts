@@ -2,7 +2,7 @@ import { Course } from './models/course' ;
 
 export const state: Course[] = [
     {
-      slug: 'kerala-state',
+      slug: 'kerala-state-board',
       name: 'Kerala State Board',
       description: '',
       image: 'assets/images/sylabus-icons/wiw-coinbackks.png',
@@ -15,23 +15,8 @@ export const state: Course[] = [
           image: '',
           isLive: true,
           packages: [
-            // {
-            //   slug: 'Kerala-state-plus-two-offline-bundle-pack',
-            //   name: 'Kerala State Plus Two Offline Bundle Pack',
-            //   description: 'Our offline package comes with an encrypted pendrive that contains our video classes with the option of purchasing a tablet computer at an extra cost upon subscription.',
-            //   image: 'ks-pl-off.png',
-            //   isOnlinePack: false,
-            //   isComboPack: true,
-            //   validityDays: 150,
-            //   price: 8500,
-            //   subjects: [
-            //     { name: 'Biology', icon: 'assets/icons/bio.svg' },
-            //     { name: 'Physics', icon: 'assets/icons/phy.svg' },
-            //     { name: 'Chemistry', icon: 'assets/icons/che.svg' }
-            //   ],
-            // },
             {
-              slug: 'Kerala-state-plus-two-online-bundle-pack',
+              slug: 'kerala-state-plus-two-online-bundle-pack',
               name: 'Kerala State Plus Two Online Bundle Pack',
               description: 'Our online package gives you the ability to stream high quality classes, give mock tests and clear doubts if you have an Internet connection.',
               image: 'ks-pl-off.png',
@@ -88,7 +73,6 @@ export const state: Course[] = [
           isLive: false,
           packages: [],
         },
-        
         {
           slug: 'class-vi',
           name: 'Class- VI ',
@@ -108,7 +92,7 @@ export const state: Course[] = [
       ],
     },
     {
-      slug: 'cbse',
+      slug: 'cbse-board',
       name: 'CBSE Board',
       description: ' CbseLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.',
       image: 'assets/images/sylabus-icons/wiw-coinCBSE.png',
