@@ -1,6 +1,6 @@
 <!-- contacts -->
 <div class="page-wrapper">
-  <section class="wiw-contact">
+  <!-- <section class="wiw-contact">
     <div class="contacts-9 py-3 ">
       <div class="container py-lg-3">
         <div class="row top-map">
@@ -13,8 +13,7 @@
                 <span class="fa fa-phone text-primary"></span>
               </div>
               <div class="cont-right">
-                <p><a href="tel:18008903411">1800 8903411 (Toll Free)</a></p>
-
+                <p style="vertical-align: top;"><a href="tel:18008903411">1800 8903411 (Toll Free)</a></p>
               </div>
             </div>
             <div class="cont-top">
@@ -70,32 +69,36 @@
                       <div>Name is required</div>
                     </div>
                   </div>
-                  
+
                   <div class="row">
-                    <div class="col-6"><div class="form-group">
-                    <label for="mobile">Mobile</label>
-                    <input class="form-control" id="mobile" type="tel" name="mobile" formControlName="mobile" [ngClass]="{
+                    <div class="col-6">
+                      <div class="form-group">
+                        <label for="mobile">Mobile</label>
+                        <input class="form-control" id="mobile" type="tel" name="mobile" formControlName="mobile"
+                          [ngClass]="{
                       'is-invalid':form.get('mobile').touched && form.get('mobile').invalid
                     }">
-                    <!-- <span>{{form.get('mobile').errors | json}}</span> -->
-                    <div *ngIf="form.get('mobile').touched && form.get('mobile').invalid" class="invalid-feedback">
-                      <div *ngIf="form.get('mobile').errors.required">Mobile Number is required</div>
-                      <div *ngIf="form.get('mobile').errors.minlength">Minimum 10 Digits Mobile Number</div>
-                      <!-- <div *ngIf="form.get('mobile').errors.pattern">Minimum 10 Digits Mobile Number</div> -->
+                        <div *ngIf="form.get('mobile').touched && form.get('mobile').invalid" class="invalid-feedback">
+                          <div *ngIf="form.get('mobile').errors.required">Mobile Number is required</div>
+                          <div *ngIf="form.get('mobile').errors.minlength">Minimum 10 Digits Mobile Number</div>
+                        </div>
+                      </div>
                     </div>
-                  </div></div>
-                    <div class="col-6"><div class="form-group">
-                    <label for="email">Email</label>
-                    <input class="form-control" id="email" type="email" name="email" formControlName="email" [ngClass]="{
+                    <div class="col-6">
+                      <div class="form-group">
+                        <label for="email">Email</label>
+                        <input class="form-control" id="email" type="email" name="email" formControlName="email"
+                          [ngClass]="{
                       'is-invalid':form.get('email').touched && form.get('email').invalid
                     }">
-                    <div *ngIf="form.get('email').touched && form.get('email').invalid" class="invalid-feedback">
-                      <div *ngIf="form.get('email').errors.required">Email is required</div>
-                      <div *ngIf="form.get('email').errors.email">Email must be a valid email Address</div>
+                        <div *ngIf="form.get('email').touched && form.get('email').invalid" class="invalid-feedback">
+                          <div *ngIf="form.get('email').errors.required">Email is required</div>
+                          <div *ngIf="form.get('email').errors.email">Email must be a valid email Address</div>
+                        </div>
+                      </div>
                     </div>
-                  </div></div>
                   </div>
-                  
+
                   <div class="form-group">
                     <label for="message">Message</label>
                     <textarea class="form-control" id="message" rows="3" name="message" formControlName="message"
@@ -107,18 +110,11 @@
                       <div *ngIf="form.get('message').errors.minlength">Minimum 5 charecters are required</div>
                     </div>
                   </div>
-                  <!-- <div class="form-group"> -->
-                    <input type="hidden" name="remarks">
-                    <!-- <input  type="button" value="Submit"> -->
-                    <button class="btn btn-outline-primary download-button" [ngClass]="{disabled:!form.valid || onLoading}" [disabled]="!form.valid || onLoading"
-                      type="submit">Submit</button>
-                      <!--  -->
-                  <!-- </div> -->
+                  <input type="hidden" name="remarks">
+                  <button class="btn btn-outline-primary download-button"
+                    [ngClass]="{disabled:!form.valid || onLoading}" [disabled]="!form.valid || onLoading"
+                    type="submit">Submit</button>
                 </form>
-                
-               
-
-
 
               </div>
             </div>
@@ -130,7 +126,116 @@
       </div>
     </div>
 
+  </section> -->
+
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 pt-3">
+          <h3 class="head gr-heading mb-3">Contact  Us.</h3>
+          <ul class="details">
+            <li>
+              <p class="py-2"><span class="fa fa-phone text-primary icon" ></span><a class="text-dark" href="tel:18008903411">1800 8903411 (Toll Free)</a></p>
+            </li>
+            <li>
+              <p class="py-2"><span class="fa fa-phone text-primary icon" ></span><a class="text-dark" href="tel:+916282016844">+91 6282016844</a></p>
+            </li>
+            <li>
+              <p class="py-2"><span class="fa fa-whatsapp text-success icon"></span><a class="text-dark" href="tel:+916282016854">+91 6282016854</a></p>
+            </li>
+            <li>
+              <p class="py-2"><span class="fa fa-envelope-o text-primary icon"></span><a class="text-dark" href="mailto:support@wiwlearn.com">support@wiwlearn.com</a></p>
+            </li>
+            <li>
+              <p class="py-2"><span class="fa fa-map-marker text-primary icon" ></span>
+                3rd Floor MSons Arcade, Cherooty Road, <br>
+                 <span class="ml-4"> Calicut - 673001,  Kerala, India </span>
+                </p>
+            </li>
+            <li>
+              <p class="py-2"><span class="fa fa-clock-o text-primary icon " aria-hidden="true"></span> Working Hours : 9 AM to 5 PM (Monday to saturday)</p>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <div class="card radius-15">
+            <div class="card-body">
+              <div class="mb-3">
+                <h3 class="head gr-heading mb-3">Have a doubt ? Ask Us.</h3>
+                <!-- <h4>Have a doubt ? Ask Us.</h4> -->
+                <small class="head gr-heading mb-3">we are happy to help you..</small>
+              </div>
+
+              <form action="" name="form" [formGroup]="form" (ngSubmit)="form.valid && onSubmit()">
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input class="form-control" id="name" type="text" name="name" formControlName="name" [ngClass]="{
+                    'is-invalid':form.get('name').touched && form.get('name').invalid
+                  }">
+                  <div class="invalid-feedback">
+                    <div>Name is required</div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-6">
+                    <div class="form-group">
+                      <label for="mobile">Mobile</label>
+                      <input class="form-control" id="mobile" type="tel" name="mobile" formControlName="mobile"
+                        [ngClass]="{
+                    'is-invalid':form.get('mobile').touched && form.get('mobile').invalid
+                  }">
+                      <!-- <span>{{form.get('mobile').errors | json}}</span> -->
+                      <div *ngIf="form.get('mobile').touched && form.get('mobile').invalid" class="invalid-feedback">
+                        <div *ngIf="form.get('mobile').errors.required">Mobile Number is required</div>
+                        <div *ngIf="form.get('mobile').errors.minlength">Minimum 10 Digits Mobile Number</div>
+                        <!-- <div *ngIf="form.get('mobile').errors.pattern">Minimum 10 Digits Mobile Number</div> -->
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="form-group">
+                      <label for="email">Email</label>
+                      <input class="form-control" id="email" type="email" name="email" formControlName="email"
+                        [ngClass]="{
+                    'is-invalid':form.get('email').touched && form.get('email').invalid
+                  }">
+                      <div *ngIf="form.get('email').touched && form.get('email').invalid" class="invalid-feedback">
+                        <div *ngIf="form.get('email').errors.required">Email is required</div>
+                        <div *ngIf="form.get('email').errors.email">Email must be a valid email Address</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="message">Message</label>
+                  <textarea class="form-control" id="message" rows="3" name="message" formControlName="message"
+                    [ngClass]="{
+                    'is-invalid':form.get('message').touched && form.get('message').invalid
+                  }"></textarea>
+                  <div *ngIf="form.get('message').touched && form.get('message').invalid" class="invalid-feedback">
+                    <div *ngIf="form.get('message').errors.required">Message is required</div>
+                    <div *ngIf="form.get('message').errors.minlength">Minimum 5 charecters are required</div>
+                  </div>
+                </div>
+                <!-- <div class="form-group"> -->
+                <input type="hidden" name="remarks">
+                <!-- <input  type="button" value="Submit"> -->
+                <button class="btn btn-outline-primary download-button"
+                  [ngClass]="{disabled:!form.valid || onLoading}" [disabled]="!form.valid || onLoading"
+                  type="submit">Submit</button>
+                <!--  -->
+                <!-- </div> -->
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
+
   <section class="wiw-about4">
     <div class="contact1-bg pt-2">
       <div class="container py-lg-3">
@@ -147,7 +252,8 @@
           </div>
           <div class="col-md-6">
             <div class="column">
-              <h3 class="header mb-4">We Are Here For You, Always.</h3>
+              <h3 class="head gr-heading mb-3">We Are Here For You, Always.</h3>
+              <!-- <h3 class="header mb-4">We Are Here For You, Always.</h3> -->
             </div>
             <div class="column2">
 

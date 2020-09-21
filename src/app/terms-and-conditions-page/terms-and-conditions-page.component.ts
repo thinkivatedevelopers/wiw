@@ -14,7 +14,7 @@ export class TermsAndConditionsPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.seoService.updateTitle('Terms and Conditions - WIW Learn');
-    this.seoService.updateDescription('Our Terms and conditions ');
+    this.seoService.updateDescription('Our Terms and conditions');
   }
 
 }

@@ -10,3 +10,13 @@
     background:#fff;
     color: #0062A6 !important; 
   }
+
+.details li {
+    list-style: none;
+    text-decoration: none;
+    font-size: 1.2em;
+  }
+
+  .icon {
+      margin-right: 15px;
+  }
