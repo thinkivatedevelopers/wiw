@@ -14,7 +14,7 @@ export class FeaturesPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.seoService.updateTitle('Features - WIW Learn');
-    this.seoService.updateDescription('Features of WIW Learn App')
+    this.seoService.updateDescription('We offer Flexible Subscriptions, Watch Video Online & Offline, Practice Questions & Answers, Sample Question Papers, Raise Your Doubt, Performance Analytics')
   }
 
 }

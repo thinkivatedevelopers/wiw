@@ -3,6 +3,7 @@ import {Title, Meta} from '@angular/platform-browser';
 
 import * as $ from 'jquery';
 import 'magnific-popup';
+import { SEOService } from '../seo.service';
 
 @Component({
   selector: 'app-about-page',
@@ -11,13 +12,12 @@ import 'magnific-popup';
 })
 export class AboutPageComponent implements OnInit {
 
-  constructor(
-    private title: Title,
-    private mete: Meta
+  constructor(private seoService: SEOService
   ) { }
 
   ngOnInit(): void {
-    this.title.setTitle('About us - WIW Learn')
+    this.seoService.updateTitle('About us - WIW Learn');
+    this.seoService.updateDescription('Wiw Learn is a One-App-One-Solution for Students. It allows students to access learning solutions mapped to their curriculum. Learn from anywhere, anytime while simultaneously allowing parents to track and evaluate the student’s performance.');
 
     $('.video-popup').magnificPopup({
       type: 'iframe',

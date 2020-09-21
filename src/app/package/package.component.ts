@@ -31,6 +31,7 @@ export class PackageComponent implements OnInit {
 
   ngOnInit(): void {
     this.package = this.data.getPackage(this.courseSlug, this.gradeSlug, this.packageSlug );
+    
     if (this.package){
       this.seoService.updateTitle(`${this.package.name} - Wiw Learn`);
       this.seoService.updateDescription(`${this.package.description}`);
