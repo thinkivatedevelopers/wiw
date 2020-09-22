@@ -19,16 +19,16 @@
 
     <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse">
       <ul class="navbar-nav mr-auto">
-        
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/about" (click)="isMenuCollapsed = true">About Us</a>
+        </li>
         <li class="nav-item ">
           <a class="nav-link" routerLink="/features" (click)="isMenuCollapsed = true">Features</a>
         </li>
         <li class="nav-item">
           <a class="nav-link pointer" [matMenuTriggerFor]="courseMenu">Courses</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/about" (click)="isMenuCollapsed = true">About Us</a>
-        </li>
+        
         <li class="nav-item">
           <a class="nav-link pointer" routerLink="/contact" (click)="isMenuCollapsed = true" >Contact</a>
         </li>

@@ -16,21 +16,47 @@ export const state: Course[] = [
           isLive: true,
           packages: [
             {
-              slug: 'kerala-state-plus-two-online-bundle-pack',
-              name: 'Kerala State Plus Two Online Bundle Pack',
+              slug: 'kerala-state-plus-two-physics-online-streaming',
+              name: 'Kerala State +2 Phyics (Online Streaming)',
+              description: 'Our online package gives you the ability to stream high quality classes, give mock tests and clear doubts if you have an Internet connection.',
+              image: 'ks-pl-off.png',
+              isOnlinePack: true,
+              isComboPack: false,
+              validityDays: 365,
+              price: 5999,
+              subjects: [
+                { name: 'Physics', icon: 'assets/icons/phy.svg' },
+              ],
+            },
+            {
+              slug: 'kerala-state-plus-two-chemistry-online-streaming',
+              name: 'Kerala State +2 Chemistry (Online Streaming)',
+              description: 'Our online package gives you the ability to stream high quality classes, give mock tests and clear doubts if you have an Internet connection.',
+              image: 'ks-pl-off.png',
+              isOnlinePack: true,
+              isComboPack: false,
+              validityDays: 365,
+              price: 5999,
+              subjects: [
+                { name: 'Chemistry', icon: 'assets/icons/che.svg' },
+              ],
+            },
+            {
+              slug: 'kerala-state-plus-two-combo-pack',
+              name: 'Kerala State +2 Combo Pack - Physics, Chemistry (Mathematics Free)',
               description: 'Our online package gives you the ability to stream high quality classes, give mock tests and clear doubts if you have an Internet connection.',
               image: 'ks-pl-off.png',
               isOnlinePack: true,
               isComboPack: true,
-              validityDays: 150,
-              price: 11000,
+              validityDays: 365,
+              price: 11998,
               subjects: [
-                { name: 'Biology', icon: 'assets/icons/bio.svg' },
                 { name: 'Physics', icon: 'assets/icons/phy.svg' },
                 { name: 'Chemistry', icon: 'assets/icons/che.svg' },
                 { name: 'Mathmatics', icon: 'assets/icons/math.svg' },
               ],
-            }
+            },
+            
           ],
         },
         {
@@ -105,20 +131,48 @@ export const state: Course[] = [
           image: '',
           isLive: true,
           packages: [
-            // {
-            //   slug: 'Kerala-state-plus-two-offline-bundle-pack',
-            //   name: 'Kerala State Plus Two Offline Bundle Pack',
-            //   description: 'Our offline package comes with an encrypted pendrive that contains our video classes with the option of purchasing a tablet computer at an extra cost upon subscription.',
-            //   image: 'ks-pl-off.png',
-            //   isOnlinePack: false,
-            //   isComboPack: true,
-            //   validityDays: 150,
-            //   price: 12000,
-            //   subjects: [
-            //     { name: 'Biology', icon: 'assets/icons/bio.svg' },
-            //     { name: 'Physics', icon: 'assets/icons/phy.svg' },
-            //   ],
-            // },
+            {
+              slug: 'cbse-12th-class-physics-online-streaming',
+              name: 'CBSE 12th Class Phyics (Online Streaming)',
+              description: 'Our online package gives you the ability to stream high quality classes, give mock tests and clear doubts if you have an Internet connection.',
+              image: 'ks-pl-off.png',
+              isOnlinePack: true,
+              isComboPack: false,
+              validityDays: 365,
+              price: 5999,
+              subjects: [
+                { name: 'Physics', icon: 'assets/icons/phy.svg' },
+              ],
+            },
+            {
+              slug: 'cbse-12th-class-chemistry-online-streaming',
+              name: 'CBSE 12th Class Chemistry (Online Streaming)',
+              description: 'Our online package gives you the ability to stream high quality classes, give mock tests and clear doubts if you have an Internet connection.',
+              image: 'ks-pl-off.png',
+              isOnlinePack: true,
+              isComboPack: false,
+              validityDays: 365,
+              price: 5999,
+              subjects: [
+                { name: 'Chemistry', icon: 'assets/icons/che.svg' },
+              ],
+            },
+            {
+              slug: 'cbse-12th-class-combo-pack',
+              name: 'CBSE 12th Class Combo Pack - Physics, Chemistry (Mathematics Free)',
+              description: 'Our online package gives you the ability to stream high quality classes, give mock tests and clear doubts if you have an Internet connection.',
+              image: 'ks-pl-off.png',
+              isOnlinePack: true,
+              isComboPack: true,
+              validityDays: 365,
+              price: 11998,
+              subjects: [
+                { name: 'Physics', icon: 'assets/icons/phy.svg' },
+                { name: 'Chemistry', icon: 'assets/icons/che.svg' },
+                { name: 'Mathmatics', icon: 'assets/icons/math.svg' },
+              ],
+            },
+            
           ],
         },
         {

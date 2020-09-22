@@ -1,7 +1,28 @@
-.card-body:hover .overlay {
+/* .card-body:hover .overlay {
     opacity: 0.5
 }
   
 .card-body:hover .demo-image {
     opacity: 0.3;
-}
+} */
+
+.play-icon {
+    /* background: rgba(255, 255, 255, 0.5);
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    border-radius: 50%; */
+    transition: 0.3s ease-in-out; }
+  
+  .play-icon span {
+    color: #FF0000; }
+  
+ .card span.play-icon:hover {
+    transform: scale(1.3);
+    transition: 0.3s ease-in-out; }
+
+.card:hover ~ .play-icon span {
+    transform: scale(1.3);
+    transition: 0.3s ease-in-out; 
+} 
