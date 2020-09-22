@@ -6,15 +6,17 @@
 
   <div *ngFor="let video of videos; let videoIndex=index;" class="col-xs-6 col-sm-6 col-md-3 my-1">
     <div class="card shadow border-none radius-15" style="background-color: rgb(175 34 122 / 8%)">
-      <div class="card-body position-relative  text-center" style="margin-left: auto; margin-right: auto;">
+      <div class="wiw-about5 card-body position-relative  text-center " style="margin-left: auto; margin-right: auto;">
+        
         <a class="video-popup overlay stretched-link play-view " href="{{video.link}}" title="open {{video.subject}} demo video">
-          <img src="{{video.thumb}}" alt="{{video.subject}} icon" class="img-responsive demo-image" height="100">
+          
+        <img src="{{video.thumb}}" alt="{{video.subject}} icon" class="img-responsive demo-image" height="100">
           
         </a>
         <div class="mt-4 text-center">
           <span class="h5 text-dark latest-font text-uppercase">{{video.subject}}</span>
         </div>
-        <span class="video-play-icon text-danger" style="font-size: 2.5em;">
+        <span class="play-icon text-danger" style="font-size: 2.5em;">
           <span class="fa fa-youtube-play"></span>
         </span>
       </div>
