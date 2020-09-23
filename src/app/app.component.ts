@@ -19,24 +19,24 @@ export class AppComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    // const isDisplayed = localStorage.getItem('isOnamDisplayed')
+    const isDisplayed = localStorage.getItem('isLaunchDisplayed')
     
-    // if (isDisplayed != 'true') {
+    if (isDisplayed != 'true') {
 
-    //   $.magnificPopup.open({
-    //     items: [
-    //       {
-    //         src: 'assets/images/popup-ads/onam.png'
-    //       }
-    //     ],
-    //     type: 'image', 
-    //     // gallery: {
-    //     //   enabled: true
-    //     // }
-    //   })
+      $.magnificPopup.open({
+        items: [
+          {
+            src: 'assets/images/popup-ads/launch.jpg'
+          }
+        ],
+        type: 'image', 
+        // gallery: {
+        //   enabled: true
+        // }
+      })
 
-    //   localStorage.setItem('isOnamDisplayed', 'true')
-    // }
+      localStorage.setItem('isLaunchDisplayed', 'true')
+    }
 
     
 
