@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { fadeAnimation } from './animations';
 
 import * as $ from 'jquery';
@@ -19,24 +18,25 @@ export class AppComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    const isDisplayed = localStorage.getItem('isLaunchDisplayed')
+    // const isDisplayed = localStorage.getItem('isLaunchDisplayed')
     
-    if (isDisplayed != 'true') {
+    // if (isDisplayed != 'true') {
 
-      $.magnificPopup.open({
-        items: [
-          {
-            src: 'assets/images/popup-ads/launch.jpg'
-          }
-        ],
-        type: 'image', 
-        // gallery: {
-        //   enabled: true
-        // }
-      })
+    //   $.magnificPopup.open({
+    //     items: [
+    //       {
+    //         src: 'assets/images/popup-ads/launch.jpg'
+    //       }
+    //     ],
+    //     type: 'image', 
+    //     // gallery: {
+    //     //   enabled: true
+    //     // }
+    //   })
 
-      localStorage.setItem('isLaunchDisplayed', 'true')
-    }
+    //   localStorage.setItem('isLaunchDisplayed', 'true')
+    // }
+   
 
     
 
